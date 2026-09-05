@@ -386,9 +386,100 @@
   }
 
   // --------------------------------------------------------------------------
+  // 8. Site Preloader & Page Entrance Animation (Home Initial Visit Only)
+  // --------------------------------------------------------------------------
+  function initSitePreloader() {
+    const preloader = document.getElementById('site-preloader');
+    if (!preloader) {
+      document.body.classList.add('page-loaded');
+      return;
+    }
+
+    // Check if this is a page reload vs internal navigation
+    const navEntry = window.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    const isReload = (navEntry && navEntry.type === 'reload') || (window.performance && performance.navigation && performance.navigation.type === 1);
+
+    // If already visited in this session and NOT a page reload, skip preloader immediately
+    const alreadyVisited = sessionStorage.getItem('i3codex_intro_seen');
+    if (alreadyVisited && !isReload) {
+      preloader.style.display = 'none';
+      document.body.classList.add('page-loaded');
+      return;
+    }
+
+    // Mark as visited in session
+    sessionStorage.setItem('i3codex_intro_seen', 'true');
+
+    const startTime = performance.now();
+    const minDisplayDuration = 1200; // Calibrated duration to showcase logo animation
+    const maxSafetyDuration = 2000;  // Fallback safety timeout
+
+    let isDismissed = false;
+
+    function dismissPreloader() {
+      if (isDismissed) return;
+      isDismissed = true;
+
+      document.body.classList.add('page-loaded');
+
+      // Once exit animation finishes, remove from layout to free GPU layers
+      setTimeout(function () {
+        preloader.style.display = 'none';
+      }, 750);
+    }
+
+    function scheduleDismissal() {
+      const elapsed = performance.now() - startTime;
+      const remaining = Math.max(0, minDisplayDuration - elapsed);
+
+      setTimeout(dismissPreloader, remaining);
+    }
+
+    if (document.readyState === 'complete') {
+      scheduleDismissal();
+    } else {
+      window.addEventListener('load', scheduleDismissal);
+    }
+
+    // Safety fallback: ensure dismissal even if external resources or network hang
+    setTimeout(dismissPreloader, maxSafetyDuration);
+  }
+
+  // --------------------------------------------------------------------------
+  // 9. Career Role Filter (Careers Page)
+  // --------------------------------------------------------------------------
+  function initCareerFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn[data-category]');
+    const jobCards = document.querySelectorAll('.job-card[data-category]');
+
+    if (!filterBtns.length || !jobCards.length) return;
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const cat = this.getAttribute('data-category');
+
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+
+        jobCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (cat === 'all' || cardCat.includes(cat)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // --------------------------------------------------------------------------
   // Initialize All Modules on DOM Ready
   // --------------------------------------------------------------------------
+  initSitePreloader();
+
   document.addEventListener('DOMContentLoaded', function () {
+    initSitePreloader();
     initNavbarScroll();
     initMobileNav();
     initPracticeTabs();
@@ -396,5 +487,7 @@
     initEstimator();
     initReviewModal();
     initContactForm();
+    initCareerFilters();
   });
 })();
+
