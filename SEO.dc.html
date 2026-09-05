@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+  <style>
+    body { margin: 0; background: #F6F4EF; }
+    a { color: #1B5FB8; text-decoration: none; }
+    a:hover { color: #16181C; }
+    * { box-sizing: border-box; }
+    .seo-card { transition: transform .4s cubic-bezier(.2,.7,.3,1), box-shadow .4s ease; }
+    .seo-card:hover { transform: translateY(-4px); box-shadow: 0 24px 42px -20px rgba(22,24,28,.26), 0 8px 14px -8px rgba(22,24,28,.12), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.06); }
+  </style>
+</helmet>
+
+<div style="width: 1200px; min-height: 2540px; background: #F6F4EF; color: #16181C; font-family: 'IBM Plex Sans', system-ui, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; position: relative;">
+
+  <div style="padding: 56px 60px 0;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: #9AA0A8; margin-bottom: 20px;">
+      <span style="display: block; width: 34px; height: 1px; background: #C9C3B7;"></span>
+      Search &amp; social &mdash; what the design is responsible for
+    </div>
+    <h1 style="margin: 0 0 12px; font-family: 'Newsreader', Georgia, serif; font-size: 54px; line-height: 1.06; font-weight: 300; letter-spacing: -.014em; color: #16181C;">How this looks before<br>anyone clicks</h1>
+    <p style="margin: 0; max-width: 66ch; font-size: 16.5px; line-height: 1.66; color: #4E535B;">Most of SEO is a build concern, not a design one. What the <em style="font-family: 'Newsreader', Georgia, serif;">design</em> owns is on this artboard: the heading structure, the indexable text, the title and description that appear in results, and the card that appears when someone shares a link. Get these wrong and no amount of technical work rescues the page.</p>
+  </div>
+
+  <div style="padding: 52px 60px 0;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 26px;">01 &nbsp;/&nbsp; search result preview</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 400px; gap: 24px; align-items: start;">
+      <div class="seo-card" style="padding: 28px 30px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-size: 13px; color: #9AA0A8; margin-bottom: 20px;">Desktop result &mdash; how the homepage should read</div>
+
+        <div style="max-width: 600px; margin-bottom: 26px;">
+          <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 5px;">
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; background: #16181C; color: #FFFFFF; font-size: 11px; font-weight: 600;">i3</span>
+            <div>
+              <div style="font-size: 13px; color: #16181C; line-height: 1.3;">i3Codex</div>
+              <div style="font-size: 12.5px; color: #6D737C; line-height: 1.3;">https://i3codex.com</div>
+            </div>
+          </div>
+          <div style="font-size: 21px; line-height: 1.3; color: #1B5FB8; margin: 6px 0 4px;">i3Codex &mdash; Cloud, Data &amp; AI Engineering in [City]</div>
+          <div style="font-size: 14px; line-height: 1.58; color: #4E535B;">We build and run the cloud platforms, data pipelines and integrations behind [type of client] &mdash; and stay on call afterwards. Architecture reviews, [6]-week landing zones, [99.9]% availability.</div>
+        </div>
+
+        <div style="padding-top: 22px; border-top: 1px solid #EDE9E1;">
+          <div style="font-size: 13px; color: #9AA0A8; margin-bottom: 14px;">A services page result</div>
+          <div style="max-width: 600px;">
+            <div style="font-size: 12.5px; color: #6D737C; margin-bottom: 4px;">https://i3codex.com &rsaquo; services &rsaquo; cloud-platform</div>
+            <div style="font-size: 21px; line-height: 1.3; color: #1B5FB8; margin-bottom: 4px;">Cloud &amp; Platform Engineering &mdash; i3Codex</div>
+            <div style="font-size: 14px; line-height: 1.58; color: #4E535B;">Landing zones, Kubernetes and release pipelines built to hand over. Terraform you own, runbooks for every failure mode, [6&ndash;10] weeks to production.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="seo-card" style="padding: 24px 24px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-size: 13px; color: #9AA0A8; margin-bottom: 16px;">Length budget</div>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 7px;">
+              <span style="font-size: 14px; font-weight: 600; color: #16181C;">Title</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #0E8C7A;">48 / 60</span>
+            </div>
+            <div style="height: 6px; border-radius: 3px; background: #EDE9E1; overflow: hidden;">
+              <div style="width: 80%; height: 100%; background: #0E8C7A;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 7px;">
+              <span style="font-size: 14px; font-weight: 600; color: #16181C;">Description</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #0E8C7A;">148 / 160</span>
+            </div>
+            <div style="height: 6px; border-radius: 3px; background: #EDE9E1; overflow: hidden;">
+              <div style="width: 92%; height: 100%; background: #0E8C7A;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 7px;">
+              <span style="font-size: 14px; font-weight: 600; color: #16181C;">URL depth</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #0E8C7A;">2 / 3 max</span>
+            </div>
+            <div style="height: 6px; border-radius: 3px; background: #EDE9E1; overflow: hidden;">
+              <div style="width: 66%; height: 100%; background: #0E8C7A;"></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 20px; padding-top: 18px; border-top: 1px solid #EDE9E1; font-size: 13.5px; line-height: 1.56; color: #6D737C;">Lead the title with what you do, not the company name &mdash; the brand already wins its own name. Put the city in: local intent is most of the qualified traffic for a firm this size.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 52px 60px 0;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 26px;">02 &nbsp;/&nbsp; share card &mdash; 1200 &times; 630</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 400px; gap: 24px; align-items: start;">
+      <div style="border-radius: 5px; overflow: hidden; box-shadow: 0 20px 44px -20px rgba(22,24,28,.24), 0 6px 12px -6px rgba(22,24,28,.10), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="position: relative; height: 396px; background: #F6F4EF; background-image: linear-gradient(rgba(22,24,28,.042) 1px, transparent 1px), linear-gradient(90deg, rgba(22,24,28,.042) 1px, transparent 1px); background-size: 48px 48px; padding: 46px 52px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="font-size: 26px; font-weight: 600; letter-spacing: -.02em; color: #16181C;">
+            <span style="background: linear-gradient(100deg, #08C4DE, #287AED); -webkit-background-clip: text; background-clip: text; color: transparent;">i3</span>Codex
+          </div>
+          <div>
+            <div style="font-family: 'Newsreader', Georgia, serif; font-size: 52px; font-weight: 300; line-height: 1.06; letter-spacing: -.014em; color: #16181C; max-width: 16ch;">We build the systems that don&#39;t go down.</div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 15px; color: #4E535B;">i3codex.com</span>
+            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 15px; color: #9AA0A8;">cloud &middot; data &middot; ai</span>
+          </div>
+        </div>
+        <div style="padding: 14px 20px; background: #FFFFFF; border-top: 1px solid #EDE9E1;">
+          <div style="font-size: 12.5px; color: #6D737C; margin-bottom: 3px;">i3codex.com</div>
+          <div style="font-size: 15.5px; font-weight: 600; color: #16181C; margin-bottom: 2px;">i3Codex &mdash; Cloud, Data &amp; AI Engineering in [City]</div>
+          <div style="font-size: 13.5px; line-height: 1.5; color: #4E535B;">We build and run the cloud platforms, data pipelines and integrations behind [type of client].</div>
+        </div>
+      </div>
+
+      <div class="seo-card" style="padding: 24px 24px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-size: 13px; color: #9AA0A8; margin-bottom: 16px;">Rules for the card</div>
+        <div style="display: flex; flex-direction: column; gap: 13px;">
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Exactly 1200 &times; 630. Anything else gets cropped unpredictably.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Keep text inside a 60px safe margin &mdash; some clients crop to 1.91:1 tighter than others.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">One sentence, max 16 characters per line at this size. No paragraph.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#B0553A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M10 5v6M10 14.4v.1"></path><circle cx="10" cy="10" r="7.5"></circle></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Generate one per page. A single site-wide card kills click-through on shared deep links.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 52px 60px 0;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 26px;">03 &nbsp;/&nbsp; heading structure &mdash; homepage</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 400px; gap: 24px; align-items: start;">
+      <div style="padding: 26px 30px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="display: flex; flex-direction: column; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13.5px;">
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; padding: 9px 0;">
+            <span style="color: #1B5FB8;">h1</span>
+            <span style="color: #16181C;">We build the systems that don&#39;t go down.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #0B6E86; padding-left: 14px;">h2</span>
+            <span style="color: #4E535B; padding-left: 14px;">What we take on</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #9AA0A8; padding-left: 28px;">h3</span>
+            <span style="color: #6D737C; padding-left: 28px;">Landing zones that pass an audit the first time</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #0B6E86; padding-left: 14px;">h2</span>
+            <span style="color: #4E535B; padding-left: 14px;">Four layers, one accountable team.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #0B6E86; padding-left: 14px;">h2</span>
+            <span style="color: #4E535B; padding-left: 14px;">Proof</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 46px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #0B6E86; padding-left: 14px;">h2</span>
+            <span style="color: #4E535B; padding-left: 14px;">Tell us what keeps breaking.</span>
+          </div>
+        </div>
+        <div style="margin-top: 18px; padding-top: 16px; border-top: 1px solid #EDE9E1; font-size: 13.5px; line-height: 1.56; color: #6D737C;">One h1 per page. Never skip a level for visual reasons &mdash; if a heading needs to look smaller, style it smaller; don&#39;t demote the tag.</div>
+      </div>
+
+      <div class="seo-card" style="padding: 24px 24px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-size: 13px; color: #9AA0A8; margin-bottom: 16px;">Indexable-text audit</div>
+        <div style="display: flex; flex-direction: column; gap: 13px;">
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Every headline is real text, not an image.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">The 3D objects and dashboards are decorative &mdash; mark them <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px;">aria-hidden</span>.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Practice tab panels ship in the HTML, hidden with CSS &mdash; not injected on click.</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#B0553A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M10 5v6M10 14.4v.1"></path><circle cx="10" cy="10" r="7.5"></circle></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Team and case-study photos need real alt text describing the content, not &ldquo;team photo&rdquo;.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 52px 60px 60px;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 26px;">04 &nbsp;/&nbsp; handover to the build</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px;">
+      <div style="padding: 26px 28px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-size: 15px; font-weight: 600; color: #16181C; margin-bottom: 16px;">Per-page metadata to author</div>
+        <div style="display: flex; flex-direction: column; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px;">
+          <div style="display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #9AA0A8;">title</span><span style="color: #4E535B;">&le;60 chars, benefit first</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #9AA0A8;">description</span><span style="color: #4E535B;">&le;160 chars, one concrete number</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #9AA0A8;">canonical</span><span style="color: #4E535B;">absolute, https, no trailing slash</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #9AA0A8;">og:image</span><span style="color: #4E535B;">1200&times;630, per page</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #9AA0A8;">twitter:card</span><span style="color: #4E535B;">summary_large_image</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #9AA0A8;">schema.org</span><span style="color: #4E535B;">Organization + LocalBusiness</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 9px 0; border-top: 1px solid #F2EFE9;">
+            <span style="color: #9AA0A8;">schema, cases</span><span style="color: #4E535B;">Article + BreadcrumbList</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding: 26px 28px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-size: 15px; font-weight: 600; color: #16181C; margin-bottom: 8px;">Not a design problem &mdash; but don&#39;t skip it</div>
+        <p style="margin: 0 0 16px; font-size: 14.5px; line-height: 1.58; color: #4E535B;">These decide most of the ranking outcome and none of them live in this canvas. Whoever builds the site owns them.</p>
+        <div style="display: flex; flex-direction: column; gap: 11px; font-size: 14.5px; line-height: 1.54; color: #4E535B;">
+          <div style="display: grid; grid-template-columns: 16px 1fr; gap: 11px;"><span style="color: #9AA0A8;">&middot;</span><span>Server-rendered HTML. A client-only render is a ranking handicap for a site this small.</span></div>
+          <div style="display: grid; grid-template-columns: 16px 1fr; gap: 11px;"><span style="color: #9AA0A8;">&middot;</span><span>Core Web Vitals &mdash; the hero solid and the grid are cheap, but self-host the fonts and preload the two weights actually used.</span></div>
+          <div style="display: grid; grid-template-columns: 16px 1fr; gap: 11px;"><span style="color: #9AA0A8;">&middot;</span><span>Sitemap, robots.txt, and a canonical host (pick www or apex, redirect the other).</span></div>
+          <div style="display: grid; grid-template-columns: 16px 1fr; gap: 11px;"><span style="color: #9AA0A8;">&middot;</span><span>A Google Business Profile for [City] &mdash; for a firm this size it will out-earn most on-page work.</span></div>
+          <div style="display: grid; grid-template-columns: 16px 1fr; gap: 11px;"><span style="color: #9AA0A8;">&middot;</span><span>Case studies are the pages that rank for buying intent. Publish them as their own URLs, not tabs.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

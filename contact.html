@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &mdash; i3Codex</title>
+  <meta name="description" content="Direct communication with senior engineers. Discuss mobile app development, web platforms, DevOps, AI solutions, blockchain, or cybersecurity. Guaranteed reply within one working day.">
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="site-container site-header-inner">
+      <div style="display: flex; align-items: center; gap: 42px;">
+        <a href="./index.html" class="brand-logo" aria-label="i3Codex Home">
+          <div class="brand-logo-pill">
+            <img src="./logo.png" alt="i3Codex" class="brand-logo-img">
+          </div>
+        </a>
+        <nav aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <li><a href="./services.html" class="nav-link">Services</a></li>
+            <li><a href="./case-study.html" class="nav-link">Work</a></li>
+            <li><a href="./about.html" class="nav-link">Company</a></li>
+            <li><a href="./contact.html" class="nav-link active">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nav-actions">
+        <span class="lang-badge">EN</span>
+        <button type="button" class="btn btn-sm btn-primary" data-open-modal="review">Start a Project</button>
+        <button type="button" class="mobile-menu-btn" id="mobile-nav-toggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-drawer-content">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid var(--color-hairline);">
+        <a href="./index.html" class="brand-logo" aria-label="i3Codex Home">
+          <div class="brand-logo-pill" style="padding: 4px 12px;">
+            <img src="./logo.png" alt="i3Codex" class="brand-logo-img" style="height: 18px;">
+          </div>
+        </a>
+        <button type="button" class="modal-close-btn" id="mobile-drawer-close" aria-label="Close menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <ul class="mobile-drawer-links">
+        <li><a href="./index.html" class="mobile-drawer-link">Home</a></li>
+        <li><a href="./services.html" class="mobile-drawer-link">Services</a></li>
+        <li><a href="./case-study.html" class="mobile-drawer-link">Work &amp; Case Studies</a></li>
+        <li><a href="./about.html" class="mobile-drawer-link">Company &amp; Team</a></li>
+        <li><a href="./contact.html" class="mobile-drawer-link">Contact</a></li>
+      </ul>
+      <div style="margin-top: auto;">
+        <button type="button" class="btn btn-lg btn-primary" style="width: 100%;" data-open-modal="review">Start a Project</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero-section" style="padding-bottom: 80px;">
+      <div class="site-container">
+        <div class="contact-layout-grid">
+          
+          <!-- Left Column: Context & Guarantees -->
+          <div>
+            <div class="eyebrow">
+              <span class="eyebrow-line"></span>
+              Direct Engineering Access
+            </div>
+
+            <h1 style="margin-bottom: 24px;">
+              Start with what<br>needs to be built.
+            </h1>
+
+            <p class="lead" style="margin-bottom: 44px;">
+              You don&#39;t need an exhaustive RFP to start. Tell us your product scope, platform vision, or infrastructure bottleneck and we&#39;ll tell you straight how we&#39;d engineer it.
+            </p>
+
+            <!-- What Happens Next Strip -->
+            <div style="margin-bottom: 48px;">
+              <div class="mono" style="font-size: 12px; color: var(--color-muted); margin-bottom: 20px;">
+                what happens next &mdash; our commitment
+              </div>
+
+              <div style="display: flex; flex-direction: column;">
+                <div style="display: grid; grid-template-columns: 44px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--color-hairline);">
+                  <span class="mono" style="font-size: 13px; color: var(--color-accent); font-weight: 500;">01</span>
+                  <div>
+                    <div style="font-size: 16px; font-weight: 600; color: var(--color-ink); margin-bottom: 4px;">
+                      A reply within one working day
+                    </div>
+                    <div style="font-size: 14.5px; color: var(--color-body); line-height: 1.5;">
+                      Directly from an engineering lead who builds production systems, not an account executive.
+                    </div>
+                  </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 44px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--color-hairline);">
+                  <span class="mono" style="font-size: 13px; color: var(--color-accent); font-weight: 500;">02</span>
+                  <div>
+                    <div style="font-size: 16px; font-weight: 600; color: var(--color-ink); margin-bottom: 4px;">
+                      A 45-minute technical review session
+                    </div>
+                    <div style="font-size: 14.5px; color: var(--color-body); line-height: 1.5;">
+                      Discuss technical specs, architecture tradeoffs, and delivery schedules without sales fluff.
+                    </div>
+                  </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 44px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--color-hairline); border-bottom: 1px solid var(--color-hairline);">
+                  <span class="mono" style="font-size: 13px; color: var(--color-accent); font-weight: 500;">03</span>
+                  <div>
+                    <div style="font-size: 16px; font-weight: 600; color: var(--color-ink); margin-bottom: 4px;">
+                      An actionable technical proposal &amp; roadmap
+                    </div>
+                    <div style="font-size: 14.5px; color: var(--color-body); line-height: 1.5;">
+                      Concrete deliverables, team pod composition, and fixed-price or sprint-based cost tiers.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Contact Info -->
+            <div style="display: flex; gap: 48px; flex-wrap: wrap;">
+              <div>
+                <div class="mono" style="font-size: 12px; color: var(--color-muted); margin-bottom: 8px;">direct email</div>
+                <div class="mono" style="font-size: 14.5px; color: var(--color-ink);">hello@i3codex.com</div>
+              </div>
+              <div>
+                <div class="mono" style="font-size: 12px; color: var(--color-muted); margin-bottom: 8px;">engineering office</div>
+                <div style="font-size: 14.5px; color: var(--color-ink); line-height: 1.4;">240 2nd Street, San Francisco</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Form -->
+          <div class="card" style="padding: clamp(28px, 4vw, 44px); box-shadow: var(--elevation-e3);">
+            <div style="margin-bottom: 16px;">
+              <div class="brand-logo-pill" style="padding: 4px 12px; display: inline-flex;">
+                <img src="./logo.png" alt="i3Codex" style="height: 16px; width: auto; display: block;">
+              </div>
+            </div>
+            <h3 style="margin-bottom: 8px;">Tell us about your project</h3>
+            <p style="font-size: 14.5px; color: var(--color-subtle); margin-bottom: 24px;">
+              All inquiries confidential. Handled directly under technical privilege.
+            </p>
+
+            <form id="site-contact-form">
+              <input type="hidden" id="contact-stage-input" value="mobile">
+
+              <div class="form-group">
+                <label class="form-label">Primary Engineering Domain</label>
+                <div class="chips-group">
+                  <span class="chip active" data-stage="mobile">Mobile App Development</span>
+                  <span class="chip" data-stage="web">Website &amp; Web Platform</span>
+                  <span class="chip" data-stage="devops">DevOps &amp; Cloud Infra</span>
+                  <span class="chip" data-stage="ai">AI / ML Solutions</span>
+                  <span class="chip" data-stage="blockchain">Blockchain &amp; Web3</span>
+                  <span class="chip" data-stage="security">Cybersecurity &amp; Audits</span>
+                </div>
+              </div>
+
+              <div class="form-row-2col">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="Jordan Bell" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-company" class="form-label">Company</label>
+                  <input type="text" id="contact-company" class="form-input" placeholder="Acme Systems">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Work Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="jordan@acme.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">What needs to be engineered?</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Describe your mobile app features, web platform requirements, cloud migration timeline, AI workflow, or security audit needs..." required></textarea>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 24px;">
+                <span style="font-family: var(--font-mono); font-size: 11.5px; color: var(--color-muted);">// 24-hr reply guarantee</span>
+                <button type="submit" class="btn btn-lg btn-primary">Send to Engineers</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Offices Grid -->
+    <section class="site-container" style="padding-bottom: 80px;">
+      <div class="mono" style="font-size: 12px; color: var(--color-muted); margin-bottom: 20px;">locations &mdash; where we sit</div>
+      <div class="offices-layout-grid">
+        <div class="card" style="padding: 28px;">
+          <div class="mono" style="font-size: 12px; color: var(--color-accent); margin-bottom: 12px;">hq &middot; san francisco</div>
+          <h3 style="margin-bottom: 8px;">240 2nd Street</h3>
+          <p style="font-size: 14.5px; color: var(--color-subtle); margin: 0; line-height: 1.6;">
+            San Francisco, CA 94105<br>
+            Primary systems architecture lab &middot; +1 (415) 890-4321
+          </p>
+        </div>
+
+        <div class="card" style="padding: 28px;">
+          <div class="mono" style="font-size: 12px; color: var(--color-accent); margin-bottom: 12px;">emea &middot; london</div>
+          <h3 style="margin-bottom: 8px;">18 Rivington Street</h3>
+          <p style="font-size: 14.5px; color: var(--color-subtle); margin: 0; line-height: 1.6;">
+            Shoreditch, London EC2A 3DU<br>
+            European operations &amp; 24/7 on-call hub &middot; +44 20 7946 0912
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-columns">
+        <div>
+          <a href="./index.html" class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-logo-pill" style="padding: 7px 16px;">
+              <img src="./logo.png" alt="i3Codex" class="brand-logo-img" style="height: 24px;">
+            </div>
+          </a>
+          <p style="font-size: 14.5px; color: var(--color-subtle); max-width: 32ch; line-height: 1.6;">
+            End-to-end mobile apps, modern web platforms, cloud DevOps, applied AI, smart contracts, and cybersecurity engineering.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>services</h5>
+          <ul class="footer-links">
+            <li><a href="./services.html#mobile" class="footer-link">Mobile App Dev</a></li>
+            <li><a href="./services.html#web" class="footer-link">Web Apps &amp; SaaS</a></li>
+            <li><a href="./services.html#devops" class="footer-link">DevOps &amp; Cloud</a></li>
+            <li><a href="./services.html#ai" class="footer-link">AI &amp; Machine Learning</a></li>
+            <li><a href="./services.html#blockchain" class="footer-link">Blockchain &amp; Web3</a></li>
+            <li><a href="./services.html#security" class="footer-link">Cybersecurity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>company</h5>
+          <ul class="footer-links">
+            <li><a href="./about.html" class="footer-link">About</a></li>
+            <li><a href="./case-study.html" class="footer-link">Work &amp; Case Studies</a></li>
+            <li><a href="./about.html#careers" class="footer-link">Careers</a></li>
+            <li><a href="./contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>direct contact</h5>
+          <ul class="footer-links">
+            <li class="mono" style="font-size: 13.5px; color: var(--color-body);">hello@i3codex.com</li>
+            <li class="mono" style="font-size: 13.5px; color: var(--color-body);">+1 (415) 890-4321</li>
+            <li style="font-size: 13.5px; color: var(--color-subtle); line-height: 1.5;">240 2nd Street<br>San Francisco, CA</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 i3Codex Systems Inc. All rights reserved.</span>
+        <div style="display: flex; gap: 24px;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Security Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Book a Review Modal Dialog -->
+  <div class="modal-backdrop" id="review-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" data-close-modal aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+        <div class="brand-logo-pill" style="padding: 4px 10px;">
+          <img src="./logo.png" alt="i3Codex" class="brand-logo-img" style="height: 16px;">
+        </div>
+        <span class="mono" style="font-size: 11.5px; color: var(--color-muted);">// direct technical consultation</span>
+      </div>
+
+      <div class="eyebrow" style="margin-bottom: 12px;">
+        <span class="eyebrow-line"></span>
+        Direct with a Senior Engineer
+      </div>
+
+      <h2 id="modal-title" style="margin-bottom: 10px;">Start a project with i3Codex</h2>
+      <p style="font-size: 15px; color: var(--color-subtle); margin-bottom: 24px;">
+        45 minutes. No sales pitch, no deck. Discuss your product specs directly with a principal engineer.
+      </p>
+
+      <form id="review-booking-form">
+        <div class="form-group">
+          <label class="form-label">What is your primary engineering domain?</label>
+          <div class="chips-group">
+            <span class="chip active" data-chip="mobile">Mobile App</span>
+            <span class="chip" data-chip="web">Web Application</span>
+            <span class="chip" data-chip="devops">DevOps &amp; Cloud</span>
+            <span class="chip" data-chip="ai">AI / ML Solutions</span>
+            <span class="chip" data-chip="blockchain">Blockchain &amp; Web3</span>
+            <span class="chip" data-chip="security">Cybersecurity</span>
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label for="review-name" class="form-label">Your Name</label>
+            <input type="text" id="review-name" class="form-input" placeholder="Alex Rivers" required>
+          </div>
+          <div class="form-group">
+            <label for="review-email" class="form-label">Work Email</label>
+            <input type="email" id="review-email" class="form-input" placeholder="alex@company.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="review-notes" class="form-label">Brief project goals or challenges</label>
+          <textarea id="review-notes" class="form-textarea" placeholder="e.g. Building an iOS/Android fintech app with automated Kubernetes backend and biometric security..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Preferred Session Slot</label>
+          <select class="form-select" id="review-slot">
+            <option>Tuesday &mdash; 10:00 AM PST (45 mins)</option>
+            <option>Wednesday &mdash; 2:00 PM PST (45 mins)</option>
+            <option>Thursday &mdash; 11:30 AM PST (45 mins)</option>
+            <option>Friday &mdash; 1:00 PM PST (45 mins)</option>
+          </select>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 28px;">
+          <span style="font-family: var(--font-mono); font-size: 11.5px; color: var(--color-muted);">// no NDAs required to talk</span>
+          <button type="submit" class="btn btn-md btn-primary">Confirm 45-min Session</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

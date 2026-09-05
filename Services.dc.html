@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+  <style>
+    body { margin: 0; background: #F6F4EF; }
+    a { color: #1B5FB8; text-decoration: none; }
+    a:hover { color: #16181C; }
+    * { box-sizing: border-box; }
+
+    .ab-link { transition: color .28s ease; }
+    .ab-link:hover { color: #16181C; }
+
+    .ab-btn { transition: transform .32s cubic-bezier(.2,.7,.3,1), box-shadow .32s ease, background .32s ease; }
+    .ab-btn:hover { transform: translateY(-2px); background: #16181C; box-shadow: 0 14px 26px -10px rgba(22,24,28,.42), 0 4px 8px -4px rgba(22,24,28,.24); }
+
+    .ab-btn2 { transition: border-color .32s ease, transform .32s cubic-bezier(.2,.7,.3,1), box-shadow .32s ease; }
+    .ab-btn2:hover { border-color: #16181C; color: #16181C; transform: translateY(-2px); box-shadow: 0 10px 18px -8px rgba(22,24,28,.24); }
+
+    .ab-card { transition: transform .4s cubic-bezier(.2,.7,.3,1), box-shadow .4s ease; }
+    .ab-card:hover { transform: translateY(-6px); box-shadow: 0 28px 46px -20px rgba(22,24,28,.28), 0 8px 14px -8px rgba(22,24,28,.13), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.06); }
+
+    .ab-practice { transition: background .45s cubic-bezier(.2,.7,.3,1); }
+    .ab-practice:hover { background: rgba(255,255,255,.62); }
+    .ab-practice .ab-slug { transition: color .4s ease; }
+    .ab-practice:hover .ab-slug { color: #0B6E86; }
+  </style>
+</helmet>
+
+<div style="width: 1200px; min-height: 2860px; background: #F6F4EF; background-image: {{gridImg}}; background-size: 48px 48px; color: #16181C; font-family: 'IBM Plex Sans', system-ui, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; position: relative;">
+
+  <div style="position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; height: 78px; padding: 0 60px; border-bottom: 1px solid #E3DFD7; background: rgba(251,250,247,.9); box-shadow: 0 1px 3px rgba(22,24,28,.04);">
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <div style="font-size: 20px; font-weight: 600; letter-spacing: -.02em; color: #16181C;">
+        <span style="background: linear-gradient(100deg, #08C4DE, #287AED); -webkit-background-clip: text; background-clip: text; color: transparent;">i3</span>Codex
+      </div>
+      <div style="display: flex; align-items: center; gap: 28px; font-size: 14.5px; font-weight: 500; color: #6D737C;">
+        <span style="color: #16181C; box-shadow: inset 0 -2px 0 {{accent}}; padding-bottom: 3px;">Services</span>
+        <span class="ab-link">Work</span>
+        <span class="ab-link">Approach</span>
+        <span class="ab-link">Company</span>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 18px;">
+      <span style="font-family: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace; font-size: 12px; color: #9AA0A8;">EN</span>
+      <span class="ab-btn" style="display: inline-flex; align-items: center; height: 42px; padding: 0 21px; border-radius: 3px; background: {{accent}}; color: #FFFFFF; font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 2px 5px -1px rgba(27,95,184,.4);">Book a review</span>
+    </div>
+  </div>
+
+  <div style="position: relative; padding: 84px 60px 0; background: linear-gradient(180deg, rgba(255,255,255,.7) 0%, rgba(255,255,255,0) 100%);">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: #9AA0A8; margin-bottom: 26px;">
+      <span style="display: block; width: 34px; height: 1px; background: #C9C3B7;"></span>
+      Services
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: end; padding-bottom: 56px;">
+      <h1 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 68px; line-height: 1.06; font-weight: 300; letter-spacing: -.014em; color: #16181C; text-wrap: pretty;">
+        Four practices.<br>One accountable team.
+      </h1>
+      <p style="margin: 0; font-size: 17px; line-height: 1.68; color: #4E535B;">
+        We don&#39;t sell staff by the hour. Each engagement has a named lead, a written definition of done, and a handover that leaves your team able to run what we built.
+      </p>
+    </div>
+  </div>
+
+  <div style="position: relative; padding: 0 60px;">
+
+    <div class="ab-practice" style="display: grid; grid-template-columns: 1fr 420px; gap: 56px; padding: 44px 24px 44px; margin: 0 -24px; border-top: 1px solid #E3DFD7;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+          <span class="ab-slug" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; color: #9AA0A8;">01 / cloud-platform</span>
+        </div>
+        <h2 style="margin: 0 0 14px; font-family: 'Newsreader', Georgia, serif; font-size: 40px; font-weight: 300; line-height: 1.12; letter-spacing: -.012em; color: #16181C;">Cloud &amp; Platform Engineering</h2>
+        <p style="margin: 0 0 20px; max-width: 56ch; font-size: 16.5px; line-height: 1.68; color: #4E535B;">
+          Multi-account AWS or Azure foundations, network segmentation, IAM boundaries and infrastructure as code. We build the landing zone, then the release pipeline on top of it, so deploying stops being an event people schedule around.
+        </p>
+        <p style="margin: 0; max-width: 56ch; font-size: 16.5px; line-height: 1.68; color: #4E535B;">
+          Typical engagement: [6&ndash;10] weeks to production, then an optional retainer.
+        </p>
+      </div>
+
+      <div style="padding: 26px 26px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 16px;">what you get</div>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px;">
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Terraform modules you own, not a black box</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Runbooks for every failure mode we found</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">A release pipeline with rollback that has been tested</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Two weeks of pairing with your engineers at handover</span>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 7px; padding-top: 18px; border-top: 1px solid #EDE9E1; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">terraform</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">kubernetes</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">argo</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">aws</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">azure</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ab-practice" style="display: grid; grid-template-columns: 1fr 420px; gap: 56px; padding: 44px 24px 44px; margin: 0 -24px; border-top: 1px solid #E3DFD7;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+          <span class="ab-slug" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; color: #9AA0A8;">02 / data</span>
+        </div>
+        <h2 style="margin: 0 0 14px; font-family: 'Newsreader', Georgia, serif; font-size: 40px; font-weight: 300; line-height: 1.12; letter-spacing: -.012em; color: #16181C;">Data &amp; Analytics</h2>
+        <p style="margin: 0 0 20px; max-width: 56ch; font-size: 16.5px; line-height: 1.68; color: #4E535B;">
+          Ingestion, modelling and a warehouse with tested transformations and lineage you can point at in a board meeting. We instrument data quality before we build the dashboard &mdash; not after someone spots a wrong total.
+        </p>
+        <p style="margin: 0; max-width: 56ch; font-size: 16.5px; line-height: 1.68; color: #4E535B;">
+          Typical engagement: [8&ndash;12] weeks from first source to signed-off reporting.
+        </p>
+      </div>
+
+      <div style="padding: 26px 26px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 16px;">what you get</div>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px;">
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">A warehouse schema your analysts helped design</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Tests on every transformation, running in CI</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Column-level lineage from source to report</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Freshness and quality alerts that page someone</span>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 7px; padding-top: 18px; border-top: 1px solid #EDE9E1; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">dbt</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">snowflake</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">airflow</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">kafka</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ab-practice" style="display: grid; grid-template-columns: 1fr 420px; gap: 56px; padding: 44px 24px 44px; margin: 0 -24px; border-top: 1px solid #E3DFD7;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+          <span class="ab-slug" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; color: #9AA0A8;">03 / applied-ai</span>
+        </div>
+        <h2 style="margin: 0 0 14px; font-family: 'Newsreader', Georgia, serif; font-size: 40px; font-weight: 300; line-height: 1.12; letter-spacing: -.012em; color: #16181C;">Applied AI</h2>
+        <p style="margin: 0 0 20px; max-width: 56ch; font-size: 16.5px; line-height: 1.68; color: #4E535B;">
+          We scope AI to a single expensive workflow, build the retrieval and the evaluation harness together, and show you accuracy numbers on your own documents before anyone commits to a rollout. If the numbers don&#39;t clear the bar, we say so.
+        </p>
+        <p style="margin: 0; max-width: 56ch; font-size: 16.5px; line-height: 1.68; color: #4E535B;">
+          Typical engagement: [4] weeks to a measured pilot.
+        </p>
+      </div>
+
+      <div style="padding: 26px 26px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 16px;">what you get</div>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px;">
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">An eval set built from your real cases</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">A baseline you can hold future changes against</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Guardrails, logging and a human review path</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">An honest recommendation, including &ldquo;not yet&rdquo;</span>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 7px; padding-top: 18px; border-top: 1px solid #EDE9E1; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">retrieval</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">evals</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">guardrails</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">observability</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ab-practice" style="display: grid; grid-template-columns: 1fr 420px; gap: 56px; padding: 44px 24px 44px; margin: 0 -24px; border-top: 1px solid #E3DFD7; border-bottom: 1px solid #E3DFD7;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+          <span class="ab-slug" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; color: #9AA0A8;">04 / run-and-operate</span>
+        </div>
+        <h2 style="margin: 0 0 14px; font-family: 'Newsreader', Georgia, serif; font-size: 40px; font-weight: 300; line-height: 1.12; letter-spacing: -.012em; color: #16181C;">Managed Operations</h2>
+        <p style="margin: 0 0 20px; max-width: 56ch; font-size: 16.5px; line-height: 1.68; color: #4E535B;">
+          Observability, alerting that fires on symptoms rather than noise, incident review, and monthly cloud cost work. You get a named engineer who already knows your stack &mdash; not a ticket queue and a stranger.
+        </p>
+        <p style="margin: 0; max-width: 56ch; font-size: 16.5px; line-height: 1.68; color: #4E535B;">
+          Monthly retainer, [30]-day notice, service levels in writing.
+        </p>
+      </div>
+
+      <div style="padding: 26px 26px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 16px;">what you get</div>
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px;">
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">A written SLO, and a credit if we miss it</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">Blameless incident reviews you are invited to</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">A monthly cost review with actions, not a chart</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 18px 1fr; gap: 11px; align-items: start;">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="#0E8C7A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 3px;"><path d="M4 10.5 8 14.5 16 6"></path></svg>
+            <span style="font-size: 14.5px; line-height: 1.54; color: #4E535B;">No lock-in: everything stays in your accounts</span>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 7px; padding-top: 18px; border-top: 1px solid #EDE9E1; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">slo</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">on-call</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">finops</span>
+          <span style="padding: 5px 9px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">grafana</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; padding: 72px 60px 0;">
+    <h2 style="margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-size: 36px; font-weight: 300; letter-spacing: -.012em; color: #16181C;">How we engage</h2>
+    <p style="margin: 0 0 30px; max-width: 58ch; font-size: 16.5px; line-height: 1.66; color: #4E535B;">Three shapes, chosen at the start and written down. Changing shape mid-engagement is fine &mdash; changing it silently is not.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;">
+      <div class="ab-card" style="padding: 28px 26px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 16px;">fixed-scope</div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; color: #16181C; margin-bottom: 12px;">Project</div>
+        <p style="margin: 0 0 18px; font-size: 14.5px; line-height: 1.6; color: #4E535B;">A defined outcome with a fixed price and a date. Best when the problem is already understood and the risk is in the execution.</p>
+        <div style="padding-top: 16px; border-top: 1px solid #EDE9E1; font-size: 14px; color: #6D737C;">From [amount] &middot; [6&ndash;12] weeks</div>
+      </div>
+
+      <div class="ab-card" style="padding: 28px 26px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 10px 24px -10px rgba(22,24,28,.20), 0 3px 6px -3px rgba(22,24,28,.10), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(27,95,184,.28);">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+          <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">ongoing</span>
+          <span style="padding: 3px 9px; border-radius: 3px; background: #E8EFFA; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10.5px; color: {{accent}};">most common</span>
+        </div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; color: #16181C; margin-bottom: 12px;">Retainer</div>
+        <p style="margin: 0 0 18px; font-size: 14.5px; line-height: 1.6; color: #4E535B;">A standing share of the team each month, with on-call included. Best when the platform is live and the work is continuous.</p>
+        <div style="padding-top: 16px; border-top: 1px solid #EDE9E1; font-size: 14px; color: #6D737C;">From [amount]/month &middot; [30]-day notice</div>
+      </div>
+
+      <div class="ab-card" style="padding: 28px 26px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 16px;">integrated</div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 28px; font-weight: 400; color: #16181C; margin-bottom: 12px;">Embedded</div>
+        <p style="margin: 0 0 18px; font-size: 14.5px; line-height: 1.6; color: #4E535B;">Our engineers work inside your team, your process, your standups. Best when you are hiring and need capability now.</p>
+        <div style="padding-top: 16px; border-top: 1px solid #EDE9E1; font-size: 14px; color: #6D737C;">From [amount]/month &middot; [3]-month minimum</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; margin-top: 80px; padding: 64px 60px 0; border-top: 1px solid #E3DFD7; background: linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,0));">
+    <div style="display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: center; padding-bottom: 54px; border-bottom: 1px solid #E3DFD7;">
+      <div>
+        <h2 style="margin: 0 0 14px; font-family: 'Newsreader', Georgia, serif; font-size: 42px; font-weight: 300; line-height: 1.12; letter-spacing: -.014em; color: #16181C;">Tell us what keeps<br>breaking.</h2>
+        <p style="margin: 0; max-width: 46ch; font-size: 16.5px; line-height: 1.64; color: #4E535B;">A 45-minute architecture review, no charge and no deck. You leave with a written summary of what we&#39;d change first, whether or not you hire us.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="ab-btn" style="display: inline-flex; align-items: center; justify-content: center; height: 54px; padding: 0 28px; border-radius: 3px; background: {{accent}}; color: #FFFFFF; font-size: 15.5px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 11px -2px rgba(27,95,184,.42), 0 1px 3px rgba(22,24,28,.14);">Book an architecture review</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #9AA0A8; text-align: center;">or email [hello@i3codex.com]</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; padding: 48px 0;">
+      <div>
+        <div style="font-size: 19px; font-weight: 600; letter-spacing: -.02em; color: #16181C; margin-bottom: 14px;">
+          <span style="background: linear-gradient(100deg, #08C4DE, #287AED); -webkit-background-clip: text; background-clip: text; color: transparent;">i3</span>Codex
+        </div>
+        <p style="margin: 0; max-width: 34ch; font-size: 14.5px; line-height: 1.62; color: #6D737C;">Cloud platforms, data systems and applied AI for [type of client]. Built to be handed over, kept on call.</p>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 15px;">services</div>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14.5px; color: #4E535B;">
+          <span class="ab-link" style="cursor: pointer;">Cloud &amp; platform</span>
+          <span class="ab-link" style="cursor: pointer;">Data &amp; analytics</span>
+          <span class="ab-link" style="cursor: pointer;">Applied AI</span>
+          <span class="ab-link" style="cursor: pointer;">Run &amp; operate</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 15px;">company</div>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14.5px; color: #4E535B;">
+          <span class="ab-link" style="cursor: pointer;">About</span>
+          <span class="ab-link" style="cursor: pointer;">Work</span>
+          <span class="ab-link" style="cursor: pointer;">Careers</span>
+          <span class="ab-link" style="cursor: pointer;">Writing</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 15px;">contact</div>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14.5px; color: #4E535B;">
+          <span>[hello@i3codex.com]</span>
+          <span>[+00 000 000 0000]</span>
+          <span style="line-height: 1.5;">[Street address]<br>[City, Country]</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0 30px; border-top: 1px solid #E3DFD7; font-size: 13px; color: #9AA0A8;">
+      <span>&copy; [Year] i3Codex. All rights reserved.</span>
+      <div style="display: flex; gap: 24px;">
+        <span class="ab-link" style="cursor: pointer;">Privacy</span>
+        <span class="ab-link" style="cursor: pointer;">Terms</span>
+        <span class="ab-link" style="cursor: pointer;">Security</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#1B5FB8","options":["#1B5FB8","#0B6E86","#16181C","#8A5A1F"],"section":"Brand"},"blueprint":{"editor":"boolean","default":true,"section":"Style"},"$preview":{"width":1200,"height":2860}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const blueprint = this.props.blueprint ?? true;
+    return {
+      accent: this.props.accent ?? '#1B5FB8',
+      gridImg: blueprint
+        ? 'linear-gradient(rgba(22,24,28,.042) 1px, transparent 1px), linear-gradient(90deg, rgba(22,24,28,.042) 1px, transparent 1px)'
+        : 'none'
+    };
+  }
+}
+</script>
+</body>
+</html>

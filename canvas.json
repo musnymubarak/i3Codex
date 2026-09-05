@@ -1,0 +1,100 @@
+{
+  "pages": [
+    { "id": "page-1", "name": "Pages" },
+    { "id": "page-2", "name": "Mobile" },
+    { "id": "page-3", "name": "System" },
+    { "id": "page-4", "name": "Archive" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html",      "x": 0,    "y": 0, "w": 1200, "h": 3420, "title": "Home", "page": "page-1", "is_interactive": true },
+    { "file": "Services.dc.html",  "x": 1320, "y": 0, "w": 1200, "h": 2860, "title": "Services", "page": "page-1", "is_interactive": true },
+    { "file": "CaseStudy.dc.html", "x": 2640, "y": 0, "w": 1200, "h": 2980, "title": "Case Study", "page": "page-1", "is_interactive": true },
+    { "file": "About.dc.html",     "x": 3960, "y": 0, "w": 1200, "h": 2660, "title": "About", "page": "page-1", "is_interactive": true },
+    { "file": "Contact.dc.html",   "x": 5280, "y": 0, "w": 1200, "h": 1980, "title": "Contact", "page": "page-1", "is_interactive": true },
+
+    { "file": "MobileHome.dc.html",    "x": 0,   "y": 0, "w": 390, "h": 2440, "title": "Home — mobile", "page": "page-2", "is_interactive": true },
+    { "file": "MobileContact.dc.html", "x": 520, "y": 0, "w": 390, "h": 1680, "title": "Contact — mobile", "page": "page-2", "is_interactive": true },
+
+    { "file": "Components.dc.html", "x": 0,    "y": 0, "w": 1200, "h": 3060, "title": "Components & tokens", "page": "page-3", "is_interactive": true },
+    { "file": "SEO.dc.html",        "x": 1320, "y": 0, "w": 1200, "h": 2540, "title": "Search & social", "page": "page-3", "is_interactive": true },
+
+    { "file": "DeepSpace.dc.html", "x": 0,    "y": 0, "w": 1200, "h": 2280, "title": "A — Precision (parent)", "page": "page-4", "is_interactive": true },
+    { "file": "Blueprint.dc.html", "x": 1320, "y": 0, "w": 1200, "h": 2320, "title": "B — Engineering Blueprint (parent)", "page": "page-4", "is_interactive": true },
+    { "file": "Kinetic.dc.html",   "x": 2640, "y": 0, "w": 1200, "h": 2180, "title": "C — Kinetic Poster (not chosen)", "page": "page-4", "is_interactive": true }
+  ],
+  "annotations": [
+    {
+      "id": "set-overview",
+      "x": -740,
+      "y": 0,
+      "w": 660,
+      "page": "page-1",
+      "text": "i3CODEX — THE FULL SET\n\nFive desktop pages here. Mobile, the component sheet and the search/social artboards are on the other canvas pages (toolbar, top left). The two parent directions and the unchosen third are on Archive.\n\nEverything runs the A+B rule: Newsreader is the VOICE (anything the company says), IBM Plex Sans and Mono are the EVIDENCE (everything it shows). Full tokens on the System page.\n\nWHAT I NEED FROM YOU — every [square bracket] is a real fact I invented a shape for but can't know:\n  · City, founding year, team size\n  · Your actual service list, if it isn't these four\n  · Client names and the real numbers (uptime, timelines, savings)\n  · One client quote — the specific, slightly unflattering kind\n  · Prices or 'from' figures, if you publish them\n\nTWO THINGS THAT NEED A DECISION:\n  1. logo.png is dark-mode only — the hex mark and 'odex' are white and vanish on this ground. You need a light lockup. I'm drawing the wordmark as gradient 'i3' + ink 'Codex' meanwhile.\n  2. Photos. I can't generate them here. Drop JPGs into this folder (team-01.jpg, team-wide.jpg, case-[client]-hero.png) and say the word — every slot is already sized."
+    },
+    {
+      "id": "home-note",
+      "x": 0,
+      "y": -300,
+      "w": 620,
+      "page": "page-1",
+      "text": "HOME\n\nHero, product panel breaking out over the hero, four working practice tabs, the architecture section with the extruded four-layer stack, proof, testimonial, team photo slot, full footer.\n\nThe dashboard is drawn as vector, not a screenshot — chart colours are validated for colour-blind separation. Swap it for a real screenshot once a client clears one.\n\nTry it: switch the practice tabs; hover the dashboard, cards and buttons."
+    },
+    {
+      "id": "services-note",
+      "x": 1320,
+      "y": -300,
+      "w": 620,
+      "page": "page-1",
+      "text": "SERVICES\n\nFour practices, each with a 'what you get' panel that promises deliverables rather than adjectives, plus the three engagement shapes.\n\nThe engagement pricing is the part most firms hide. Showing a 'from' figure filters out the enquiries you'd turn down anyway — but if you'd rather not publish numbers, tell me and I'll swap those lines for a qualifier."
+    },
+    {
+      "id": "case-note",
+      "x": 2640,
+      "y": -300,
+      "w": 620,
+      "page": "page-1",
+      "text": "CASE STUDY\n\nThe template for every case you publish. Brief → what we did → result, with a before/after chart and the architecture you left behind.\n\nThe numbers strip near the top is the part buyers actually read. Three results, each with a denominator — '[99.98]% through [Black Friday]' beats '99.98% uptime'.\n\nThe hero is a screenshot slot: this is the one page where a real product image matters more than anything I can draw."
+    },
+    {
+      "id": "about-note",
+      "x": 3960,
+      "y": -300,
+      "w": 620,
+      "page": "page-1",
+      "text": "ABOUT\n\nWide team photo, three principles, the team grid, the numbers, and a hiring block.\n\nThe three principles are written as commitments you could be held to — 'measure before touching anything', 'build so you can fire us', 'say no to work we'd do badly'. Rewrite them in your own words, but keep them falsifiable. Generic values copy is worse than no About page."
+    },
+    {
+      "id": "contact-note",
+      "x": 5280,
+      "y": -300,
+      "w": 620,
+      "page": "page-1",
+      "text": "CONTACT\n\nThe form is live — click any field to see focus, click the stage chips to select. All targets are 48px+.\n\n'What happens next' is doing the real work here: naming the reply time, who replies, and what they leave with removes the main reason people don't fill in agency forms.\n\nDelete the offices you don't have. One honest location beats three invented ones."
+    },
+    {
+      "id": "mobile-note",
+      "x": -740,
+      "y": 0,
+      "w": 620,
+      "page": "page-2",
+      "text": "MOBILE — 390 × 844 viewport\n\nTwo screens, enough to fix the rules: the desktop practice tabs become an accordion (tap to open), buttons go full width and stack, the hero solid shrinks to 156px, the grid drops from 48 to 32px, and the display size steps 78 → 44.\n\nNo fake status bar and no fake keyboard — on a real phone the OS draws those on top, and a painted one reads as doubled up.\n\nEvery target is at least 44px, including the menu button.\n\nThe rest of the pages follow the same three rules; say the word if you want them all drawn."
+    },
+    {
+      "id": "system-note",
+      "x": -740,
+      "y": 0,
+      "w": 620,
+      "page": "page-3",
+      "text": "SYSTEM\n\nCOMPONENTS & TOKENS is what you hand a developer — type ramp, colour tokens, the five-step elevation ladder, buttons and form states, icons, motion. The values there are the source of truth, not the page mockups.\n\nSEARCH & SOCIAL answers your SEO ask honestly: it covers what the DESIGN owns — heading structure, indexable text, the result snippet and the 1200×630 share card. The last panel lists what the design can't fix and the build must (server rendering, Core Web Vitals, sitemap, the Google Business Profile).\n\nOne thing on that page is worth reading before anything ships: the brand cyan #08C4DE is about 1.9:1 on this ground. It's a graphic colour only. Use #0B6E86 wherever cyan has to carry meaning."
+    },
+    {
+      "id": "archive-note",
+      "x": -740,
+      "y": 0,
+      "w": 620,
+      "page": "page-4",
+      "text": "ARCHIVE\n\nThe two parents of the chosen direction, plus the one you didn't take. Kept so you can check the merge against where it came from, and so C's stepped type extrusion is still available if you ever want a louder campaign page.\n\nSay the word and I'll delete them."
+    }
+  ],
+  "launch": { "view": "canvas", "page": "page-1" }
+}

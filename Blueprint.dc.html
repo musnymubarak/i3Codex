@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+  <style>
+    body { margin: 0; background: #EDF1F6; }
+    a { color: #1E63C8; text-decoration: none; }
+    a:hover { color: #0F1620; }
+    * { box-sizing: border-box; }
+
+    .le-link { transition: color .28s ease; }
+    .le-link:hover { color: #0F1620; }
+
+    .le-btn { transition: transform .3s cubic-bezier(.2,.7,.3,1), box-shadow .3s ease, background .3s ease; }
+    .le-btn:hover { transform: translateY(-2px); background: #0A4FA8; box-shadow: 0 12px 22px -8px rgba(30,99,200,.55), 0 4px 8px -4px rgba(15,22,32,.2); }
+
+    .le-btn2 { transition: border-color .3s ease, background .3s ease, transform .3s cubic-bezier(.2,.7,.3,1), box-shadow .3s ease; }
+    .le-btn2:hover { border-color: #0F1620; transform: translateY(-2px); box-shadow: 0 10px 18px -8px rgba(15,22,32,.28); }
+
+    .le-tab { transition: color .28s ease, background .28s ease, border-color .28s ease, box-shadow .28s ease, transform .28s ease; cursor: pointer; }
+    .le-tab:hover { color: #0F1620; border-color: #9FB2C4; transform: translateY(-1px); }
+
+    .le-card { transition: transform .4s cubic-bezier(.2,.7,.3,1), box-shadow .4s ease; }
+    .le-card:hover { transform: translateY(-6px); box-shadow: 0 26px 44px -20px rgba(15,22,32,.30), 0 8px 14px -8px rgba(15,22,32,.14), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(15,22,32,.07); }
+    .le-card .le-idx { transition: color .4s ease; }
+    .le-card:hover .le-idx { color: #0B6E86; }
+
+    .le-panel { transition: transform .5s cubic-bezier(.2,.7,.3,1), box-shadow .5s ease; }
+    .le-panel:hover { transform: translateY(-5px); box-shadow: 0 44px 76px -26px rgba(15,22,32,.34), 0 14px 26px -14px rgba(15,22,32,.18), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(15,22,32,.07); }
+
+    .le-stack { animation: leFloat 13s ease-in-out infinite; }
+    @keyframes leFloat {
+      0%, 100% { transform: rotateX(56deg) rotateZ(-42deg) translateZ(0px); }
+      50%      { transform: rotateX(56deg) rotateZ(-42deg) translateZ(18px); }
+    }
+    .le-groundshadow { animation: leGround 13s ease-in-out infinite; }
+    @keyframes leGround {
+      0%, 100% { opacity: .26; transform: scale(1); }
+      50%      { opacity: .15; transform: scale(.92); }
+    }
+    .le-scan { animation: leScan 6s linear infinite; }
+    @keyframes leScan {
+      0%   { opacity: 0; transform: translateY(0px); }
+      14%  { opacity: 1; }
+      86%  { opacity: 1; }
+      100% { opacity: 0; transform: translateY(232px); }
+    }
+    .le-swatch { transition: transform .38s cubic-bezier(.2,.7,.3,1), box-shadow .38s ease; }
+    .le-swatch:hover { transform: translateY(-6px); box-shadow: 0 14px 22px -10px rgba(15,22,32,.35); }
+  </style>
+</helmet>
+
+<div style="width: 1200px; min-height: 2320px; background: #EDF1F6; background-image: {{gridImg}}; background-size: 48px 48px; color: #0F1620; font-family: 'IBM Plex Sans', system-ui, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; position: relative;">
+
+  <div style="position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; height: 72px; padding: 0 56px; border-bottom: 1px solid #D8E1EA; background: rgba(255,255,255,.88); box-shadow: 0 1px 3px rgba(15,22,32,.05);">
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <div style="font-size: 19px; font-weight: 700; letter-spacing: -.02em; color: #0F1620;">
+        <span style="background: linear-gradient(100deg, #08C4DE, {{accent}}); -webkit-background-clip: text; background-clip: text; color: transparent;">i3</span>Codex
+      </div>
+      <div style="display: flex; align-items: center; gap: 28px; font-size: 14.5px; font-weight: 500; color: #5C6B7A;">
+        <span class="le-link">Services</span>
+        <span class="le-link">Work</span>
+        <span class="le-link">Labs</span>
+        <span class="le-link">Company</span>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 18px;">
+      <span style="font-family: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace; font-size: 12px; color: #8496A6;">EN</span>
+      <span class="le-btn" style="display: inline-flex; align-items: center; height: 40px; padding: 0 20px; border-radius: 4px; background: {{accent}}; color: #FFFFFF; font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 2px 5px -1px rgba(30,99,200,.4);">Book a review</span>
+    </div>
+  </div>
+
+  <div style="position: relative; background: linear-gradient(180deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,0) 100%); padding: 80px 56px 140px;">
+    <div style="position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: center;">
+
+      <div>
+        <div style="display: inline-flex; align-items: center; gap: 9px; height: 30px; padding: 0 12px; border: 1px solid #BCD9E2; border-radius: 3px; background: #E6F5F9; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #0B6E86; margin-bottom: 28px; box-shadow: 0 1px 2px rgba(15,22,32,.05);">
+          <span style="display: block; width: 5px; height: 5px; border-radius: 50%; background: #0B6E86;"></span>
+          systems&nbsp;engineering &nbsp;&middot;&nbsp; [City]
+        </div>
+
+        <h1 style="margin: 0; font-size: 64px; line-height: 1.08; font-weight: 600; letter-spacing: -.022em; color: #0F1620; text-wrap: pretty;">
+          We build the systems<br>that don&#39;t go down.
+        </h1>
+
+        <p style="margin: 26px 0 0; max-width: 50ch; font-size: 17px; line-height: 1.66; color: #4C5A69;">
+          i3Codex is a [size]-person engineering team for [type of client]. We take on the cloud platforms, data pipelines and integrations that other teams are afraid to touch &mdash; and we stay on call for them afterwards.
+        </p>
+
+        <div style="display: flex; align-items: center; gap: 12px; margin-top: 34px;">
+          <span class="le-btn" style="display: inline-flex; align-items: center; height: 50px; padding: 0 26px; border-radius: 4px; background: {{accent}}; color: #FFFFFF; font-size: 15.5px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 10px -2px rgba(30,99,200,.42), 0 1px 3px rgba(15,22,32,.14);">Book an architecture review</span>
+          <span class="le-btn2" style="display: inline-flex; align-items: center; height: 50px; padding: 0 24px; border-radius: 4px; border: 1px solid #C3CEDA; background: #FFFFFF; color: #37434F; font-size: 15.5px; font-weight: 500; cursor: pointer; box-shadow: 0 1px 3px rgba(15,22,32,.07);">See how we work</span>
+        </div>
+      </div>
+
+      <div style="position: relative; width: 420px; height: 420px;">
+        <div class="le-groundshadow" style="position: absolute; left: 96px; bottom: 42px; width: 240px; height: 40px; border-radius: 50%; background: rgba(15,22,32,.6); filter: blur(22px);"></div>
+
+        <div style="position: absolute; inset: 0; perspective: 1300px;">
+          <div class="le-stack" style="position: absolute; left: 210px; top: 210px; width: 0; height: 0; transform-style: preserve-3d;">
+            <div style="position: absolute; left: -118px; top: -118px; width: 236px; height: 236px; border: 1px solid #4FA6BC; background: linear-gradient(150deg, rgba(8,196,222,.28), rgba(8,196,222,.10)); box-shadow: 7px 7px 0 -1px #57B3C6, 14px 14px 20px -8px rgba(15,22,32,.42); transform: translateZ(96px);"></div>
+            <div style="position: absolute; left: -118px; top: -118px; width: 236px; height: 236px; border: 1px solid #A9BACB; background: linear-gradient(150deg, #FFFFFF, #F0F4F8); background-image: linear-gradient(rgba(15,22,32,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(15,22,32,.07) 1px, transparent 1px); background-size: 23.6px 23.6px; box-shadow: 7px 7px 0 -1px #C9D5E0, 14px 14px 20px -8px rgba(15,22,32,.34); transform: translateZ(32px);"></div>
+            <div style="position: absolute; left: -118px; top: -118px; width: 236px; height: 236px; border: 1px solid #B4C3D2; background: linear-gradient(150deg, #FBFCFD, #EAF0F6); background-image: linear-gradient(rgba(15,22,32,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(15,22,32,.05) 1px, transparent 1px); background-size: 47.2px 47.2px; box-shadow: 7px 7px 0 -1px #CFDAE4, 14px 14px 20px -8px rgba(15,22,32,.28); transform: translateZ(-32px);"></div>
+            <div style="position: absolute; left: -118px; top: -118px; width: 236px; height: 236px; border: 1px solid #6D95D4; background: linear-gradient(150deg, rgba(30,99,200,.26), rgba(30,99,200,.10)); box-shadow: 7px 7px 0 -1px #7FA2D8, 14px 14px 20px -8px rgba(15,22,32,.3); transform: translateZ(-96px);"></div>
+          </div>
+        </div>
+
+        <div class="le-scan" style="position: absolute; left: 92px; top: 100px; width: 236px; height: 1.5px; background: linear-gradient(90deg, transparent, #0B6E86, transparent); pointer-events: none;"></div>
+
+        <div style="position: absolute; left: 2px; top: 82px; display: flex; flex-direction: column; gap: 3px; font-family: 'IBM Plex Mono', ui-monospace, monospace;">
+          <span style="font-size: 11.5px; font-weight: 600; color: #0B6E86;">edge</span>
+          <span style="font-size: 11px; color: #8496A6;">cdn &middot; waf</span>
+        </div>
+        <div style="position: absolute; left: 2px; top: 170px; display: flex; flex-direction: column; gap: 3px; font-family: 'IBM Plex Mono', ui-monospace, monospace;">
+          <span style="font-size: 11.5px; font-weight: 600; color: #37434F;">services</span>
+          <span style="font-size: 11px; color: #8496A6;">k8s &middot; mesh</span>
+        </div>
+        <div style="position: absolute; left: 2px; top: 258px; display: flex; flex-direction: column; gap: 3px; font-family: 'IBM Plex Mono', ui-monospace, monospace;">
+          <span style="font-size: 11.5px; font-weight: 600; color: #37434F;">pipelines</span>
+          <span style="font-size: 11px; color: #8496A6;">stream &middot; etl</span>
+        </div>
+        <div style="position: absolute; left: 2px; top: 346px; display: flex; flex-direction: column; gap: 3px; font-family: 'IBM Plex Mono', ui-monospace, monospace;">
+          <span style="font-size: 11.5px; font-weight: 600; color: #1E63C8;">data</span>
+          <span style="font-size: 11px; color: #8496A6;">oltp &middot; lake</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; z-index: 3; margin: -96px 56px 0;">
+    <div class="le-panel" style="border-radius: 8px; background: #FFFFFF; box-shadow: 0 36px 64px -24px rgba(15,22,32,.28), 0 10px 20px -10px rgba(15,22,32,.14), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(15,22,32,.07); overflow: hidden;">
+      <div style="display: flex; align-items: center; justify-content: space-between; height: 46px; padding: 0 18px; border-bottom: 1px solid #E4EAF0; background: linear-gradient(180deg, #FBFCFE, #F2F6FA);">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 7px;">
+            <span style="display: block; width: 9px; height: 9px; border-radius: 50%; background: #D6DEE7;"></span>
+            <span style="display: block; width: 9px; height: 9px; border-radius: 50%; background: #D6DEE7;"></span>
+            <span style="display: block; width: 9px; height: 9px; border-radius: 50%; background: #D6DEE7;"></span>
+          </div>
+          <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #8496A6;">i3codex/platform &mdash; production</span>
+        </div>
+        <span style="display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 3px; background: #E8F4F0; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #0E8C7A;">
+          <span style="display: block; width: 6px; height: 6px; border-radius: 50%; background: #0E8C7A;"></span>all systems nominal
+        </span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 320px;">
+        <div style="padding: 24px 26px; border-right: 1px solid #E4EAF0;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 18px;">
+            <div>
+              <div style="font-size: 13.5px; color: #8496A6; margin-bottom: 5px;">Request latency, p95</div>
+              <div style="font-size: 32px; font-weight: 600; letter-spacing: -.028em; color: #0F1620; line-height: 1; font-variant-numeric: tabular-nums;">[142] ms</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px; font-size: 12.5px; color: #5C6B7A;">
+              <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="display: block; width: 9px; height: 9px; border-radius: 2px; background: #1E63C8;"></span>Edge</span>
+              <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="display: block; width: 9px; height: 9px; border-radius: 2px; background: #0E8C7A;"></span>Origin</span>
+            </div>
+          </div>
+
+          <svg viewBox="0 0 600 160" style="width: 100%; height: 160px; display: block; overflow: visible;">
+            <line x1="0" y1="18" x2="600" y2="18" stroke="#EDF1F6" stroke-width="1"></line>
+            <line x1="0" y1="66" x2="600" y2="66" stroke="#EDF1F6" stroke-width="1"></line>
+            <line x1="0" y1="114" x2="600" y2="114" stroke="#EDF1F6" stroke-width="1"></line>
+            <line x1="0" y1="154" x2="600" y2="154" stroke="#DCE4EC" stroke-width="1"></line>
+            <path d="M0,114 C48,106 78,82 126,88 C174,94 204,56 252,50 C300,44 330,72 378,64 C426,56 456,32 504,38 C552,44 578,26 600,22 L600,154 L0,154 Z" fill="#1E63C8" opacity="0.09"></path>
+            <path d="M0,114 C48,106 78,82 126,88 C174,94 204,56 252,50 C300,44 330,72 378,64 C426,56 456,32 504,38 C552,44 578,26 600,22" fill="none" stroke="#1E63C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M0,136 C48,132 78,124 126,127 C174,130 204,114 252,111 C300,108 330,120 378,115 C426,110 456,98 504,101 C552,104 578,94 600,91" fill="none" stroke="#0E8C7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="600" cy="22" r="4.5" fill="#1E63C8" stroke="#FFFFFF" stroke-width="2"></circle>
+            <circle cx="600" cy="91" r="4.5" fill="#0E8C7A" stroke="#FFFFFF" stroke-width="2"></circle>
+          </svg>
+          <div style="display: flex; justify-content: space-between; margin-top: 8px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9DAEBD;">
+            <span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>now</span>
+          </div>
+
+          <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid #E4EAF0;">
+            <div style="font-size: 13.5px; color: #8496A6; margin-bottom: 12px;">Deploy pipeline &mdash; build [4812]</div>
+            <div style="display: flex; align-items: center; gap: 0;">
+              <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 3px 0 0 3px; background: #E8F4F0; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #0E7A6B;">build</span>
+              <span style="width: 22px; height: 1px; background: #C9D5E0;"></span>
+              <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 3px; background: #E8F4F0; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #0E7A6B;">test</span>
+              <span style="width: 22px; height: 1px; background: #C9D5E0;"></span>
+              <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 3px; background: #E8F4F0; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #0E7A6B;">scan</span>
+              <span style="width: 22px; height: 1px; background: #C9D5E0;"></span>
+              <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 3px; background: #E7EFFB; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #1E63C8; box-shadow: 0 0 0 1px #BFD3F2;">deploy&nbsp;&middot;&nbsp;62%</span>
+              <span style="width: 22px; height: 1px; background: #E4EAF0;"></span>
+              <span style="display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 0 3px 3px 0; background: #F2F6FA; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9DAEBD;">verify</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 24px 22px; background: #FAFCFE;">
+          <div style="font-size: 13.5px; color: #8496A6; margin-bottom: 16px;">Services</div>
+          <div style="display: flex; flex-direction: column; gap: 13px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #0F1620;"><span style="display: block; width: 8px; height: 8px; border-radius: 2px; background: #0E8C7A;"></span>api-gateway</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #5C6B7A;">99.99</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #0F1620;"><span style="display: block; width: 8px; height: 8px; border-radius: 2px; background: #0E8C7A;"></span>auth</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #5C6B7A;">99.98</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #0F1620;"><span style="display: block; width: 8px; height: 8px; border-radius: 2px; background: #B0553A;"></span>billing-sync</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #B0553A;">degraded</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #0F1620;"><span style="display: block; width: 8px; height: 8px; border-radius: 2px; background: #0E8C7A;"></span>warehouse-etl</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #5C6B7A;">99.95</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid #E4EAF0;">
+            <div style="font-size: 13.5px; color: #8496A6; margin-bottom: 12px;">Cloud spend, month to date</div>
+            <div style="display: flex; align-items: flex-end; gap: 6px; height: 62px;">
+              <div style="flex-grow: 1; height: 46%; border-radius: 3px 3px 0 0; background: #C9D5E0;"></div>
+              <div style="flex-grow: 1; height: 58%; border-radius: 3px 3px 0 0; background: #C9D5E0;"></div>
+              <div style="flex-grow: 1; height: 52%; border-radius: 3px 3px 0 0; background: #C9D5E0;"></div>
+              <div style="flex-grow: 1; height: 71%; border-radius: 3px 3px 0 0; background: #C9D5E0;"></div>
+              <div style="flex-grow: 1; height: 63%; border-radius: 3px 3px 0 0; background: #C9D5E0;"></div>
+              <div style="flex-grow: 1; height: 44%; border-radius: 3px 3px 0 0; background: #1E63C8;"></div>
+            </div>
+            <div style="margin-top: 9px; font-size: 12.5px; color: #5C6B7A;">[38]% below the same period last year</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 11px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #8496A6;">// illustrative product view &mdash; swap for a real screenshot once [client] clears it</div>
+  </div>
+
+  <div style="position: relative; padding: 70px 56px 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 22px;">
+      <h2 style="margin: 0; font-size: 27px; font-weight: 600; letter-spacing: -.018em; color: #0F1620;">What we take on</h2>
+      <span style="font-size: 14px; color: #8496A6;">Four practices, one team</span>
+    </div>
+
+    <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+      <span class="le-tab" onClick="{{ pick0 }}" style="display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 4px; border: 1px solid {{b0}}; background: {{g0}}; color: {{c0}}; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; box-shadow: {{s0}};">cloud-platform</span>
+      <span class="le-tab" onClick="{{ pick1 }}" style="display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 4px; border: 1px solid {{b1}}; background: {{g1}}; color: {{c1}}; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; box-shadow: {{s1}};">data</span>
+      <span class="le-tab" onClick="{{ pick2 }}" style="display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 4px; border: 1px solid {{b2}}; background: {{g2}}; color: {{c2}}; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; box-shadow: {{s2}};">applied-ai</span>
+      <span class="le-tab" onClick="{{ pick3 }}" style="display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 4px; border: 1px solid {{b3}}; background: {{g3}}; color: {{c3}}; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; box-shadow: {{s3}};">run-and-operate</span>
+    </div>
+
+    <div style="position: relative; min-height: 208px; padding: 30px 32px; border-radius: 6px; background: #FFFFFF; box-shadow: 0 8px 20px -10px rgba(15,22,32,.16), 0 2px 5px -2px rgba(15,22,32,.08), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(15,22,32,.06);">
+      <div style="display: {{d0}};">
+        <div style="font-size: 24px; font-weight: 600; letter-spacing: -.018em; color: #0F1620; margin-bottom: 11px;">Landing zones that pass an audit the first time</div>
+        <p style="margin: 0; max-width: 72ch; font-size: 15.5px; line-height: 1.68; color: #4C5A69;">Multi-account AWS or Azure foundations, network segmentation, IAM boundaries and infrastructure as code &mdash; delivered with the runbooks and the Terraform your own team can keep extending after we leave.</p>
+        <div style="display: flex; gap: 8px; margin-top: 20px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #5C6B7A;">
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">terraform</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">kubernetes</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">ci/cd</span>
+        </div>
+      </div>
+      <div style="display: {{d1}};">
+        <div style="font-size: 24px; font-weight: 600; letter-spacing: -.018em; color: #0F1620; margin-bottom: 11px;">Numbers your finance team will sign off on</div>
+        <p style="margin: 0; max-width: 72ch; font-size: 15.5px; line-height: 1.68; color: #4C5A69;">Ingestion, modelling and a warehouse with tested transformations and lineage you can point at in a board meeting. We instrument data quality before we build the dashboard, not after someone spots a wrong total.</p>
+        <div style="display: flex; gap: 8px; margin-top: 20px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #5C6B7A;">
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">dbt</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">snowflake</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">airflow</span>
+        </div>
+      </div>
+      <div style="display: {{d2}};">
+        <div style="font-size: 24px; font-weight: 600; letter-spacing: -.018em; color: #0F1620; margin-bottom: 11px;">One workflow, measured before it ships</div>
+        <p style="margin: 0; max-width: 72ch; font-size: 15.5px; line-height: 1.68; color: #4C5A69;">We scope AI to a single expensive workflow, build the retrieval and the evaluation harness together, and show you the accuracy numbers on your own documents before anyone commits to a rollout.</p>
+        <div style="display: flex; gap: 8px; margin-top: 20px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #5C6B7A;">
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">retrieval</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">evals</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">guardrails</span>
+        </div>
+      </div>
+      <div style="display: {{d3}};">
+        <div style="font-size: 24px; font-weight: 600; letter-spacing: -.018em; color: #0F1620; margin-bottom: 11px;">On call, to an agreed service level</div>
+        <p style="margin: 0; max-width: 72ch; font-size: 15.5px; line-height: 1.68; color: #4C5A69;">Observability, alerting that fires on symptoms rather than noise, incident review, and monthly cloud cost work. A named engineer who already knows your stack &mdash; not a ticket queue.</p>
+        <div style="display: flex; gap: 8px; margin-top: 20px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #5C6B7A;">
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">slo</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">on-call</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F2F6FA; box-shadow: inset 0 0 0 1px #E0E8F0;">finops</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; padding: 56px 56px 0; display: grid; grid-template-columns: 700px 1fr; gap: 20px;">
+    <div style="position: relative; height: 320px; border-radius: 6px; background: repeating-linear-gradient(135deg, #E3EAF2 0px, #E3EAF2 12px, #DCE4EE 12px, #DCE4EE 24px); box-shadow: inset 0 0 0 1px #D2DCE7, 0 2px 6px -2px rgba(15,22,32,.10); display: flex; align-items: center; justify-content: center;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 24px; border-radius: 4px; background: rgba(255,255,255,.95); box-shadow: 0 3px 10px -3px rgba(15,22,32,.2);">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8496A6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h1.2a1 1 0 0 0 .83-.45l.94-1.4A1 1 0 0 1 9.3 3.7h5.4a1 1 0 0 1 .83.45l.94 1.4A1 1 0 0 0 17.3 6h1.2A2.5 2.5 0 0 1 21 8.5v8A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-8Z"></path><circle cx="12" cy="12.2" r="3.6"></circle></svg>
+        <div style="font-size: 13px; font-weight: 600; color: #37434F;">PHOTO &mdash; the team, mid-work</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #8496A6;">1400 &times; 640 &middot; drop in as team-01.jpg</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; padding: 30px 30px; border-radius: 6px; background: #FFFFFF; box-shadow: 0 8px 20px -10px rgba(15,22,32,.16), 0 2px 5px -2px rgba(15,22,32,.08), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(15,22,32,.06);">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#BCD9E2" stroke-width="1.6" style="margin-bottom: 16px;"><path d="M9 11H5.5A1.5 1.5 0 0 1 4 9.5V7a3 3 0 0 1 3-3M19 11h-3.5A1.5 1.5 0 0 1 14 9.5V7a3 3 0 0 1 3-3M9 11v3a6 6 0 0 1-5 5.9M19 11v3a6 6 0 0 1-5 5.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <p style="margin: 0 0 18px; font-size: 17px; line-height: 1.6; color: #0F1620; font-style: italic;">[One real sentence from a client about what changed after i3Codex took the platform on.]</p>
+      <div style="display: flex; align-items: center; gap: 11px; padding-top: 16px; border-top: 1px solid #E4EAF0;">
+        <div style="width: 38px; height: 38px; border-radius: 50%; background: #E3EAF2; box-shadow: inset 0 0 0 1px #D2DCE7;"></div>
+        <div>
+          <div style="font-size: 14px; font-weight: 600; color: #0F1620;">[Name]</div>
+          <div style="font-size: 12.5px; color: #8496A6;">[Role], [Company]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; padding: 48px 56px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+    <div class="le-card" style="padding: 24px 22px; border-radius: 6px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(15,22,32,.14), 0 2px 4px -2px rgba(15,22,32,.07), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(15,22,32,.06);">
+      <div class="le-idx" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #8496A6; margin-bottom: 16px;">proof/01</div>
+      <div style="font-size: 33px; font-weight: 600; letter-spacing: -.028em; color: #0F1620; line-height: 1; font-variant-numeric: tabular-nums;">[99.9]%</div>
+      <div style="margin-top: 9px; font-size: 14.5px; line-height: 1.58; color: #4C5A69;">Platform availability held across [N] months for [client name], measured at the edge.</div>
+    </div>
+    <div class="le-card" style="padding: 24px 22px; border-radius: 6px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(15,22,32,.14), 0 2px 4px -2px rgba(15,22,32,.07), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(15,22,32,.06);">
+      <div class="le-idx" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #8496A6; margin-bottom: 16px;">proof/02</div>
+      <div style="font-size: 33px; font-weight: 600; letter-spacing: -.028em; color: #0F1620; line-height: 1; font-variant-numeric: tabular-nums;">[6] weeks</div>
+      <div style="margin-top: 9px; font-size: 14.5px; line-height: 1.58; color: #4C5A69;">From first workshop to a production landing zone on [cloud], including handover.</div>
+    </div>
+    <div class="le-card" style="padding: 24px 22px; border-radius: 6px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(15,22,32,.14), 0 2px 4px -2px rgba(15,22,32,.07), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(15,22,32,.06);">
+      <div class="le-idx" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #8496A6; margin-bottom: 16px;">proof/03</div>
+      <div style="font-size: 33px; font-weight: 600; letter-spacing: -.028em; color: #0F1620; line-height: 1; font-variant-numeric: tabular-nums;">[38]% less</div>
+      <div style="margin-top: 9px; font-size: 14.5px; line-height: 1.58; color: #4C5A69;">Monthly cloud spend after the first FinOps cycle with [client name].</div>
+    </div>
+  </div>
+
+  <div style="position: relative; margin: 52px 56px 0; padding: 28px 30px; border-radius: 6px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(15,22,32,.14), 0 2px 4px -2px rgba(15,22,32,.07), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(15,22,32,.06);">
+    <div style="font-size: 13px; color: #8496A6; margin-bottom: 20px;">Direction B &mdash; the type system</div>
+    <div style="display: grid; grid-template-columns: 1fr 280px; gap: 42px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 11px;">
+        <div style="display: flex; align-items: baseline; gap: 18px;">
+          <span style="font-size: 31px; font-weight: 600; letter-spacing: -.025em; color: #0F1620;">IBM Plex Sans</span>
+          <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 16px; color: #5C6B7A;">IBM Plex Mono</span>
+        </div>
+        <div style="font-size: 13.5px; color: #8496A6;">Display 64 / 1.08 &nbsp;&middot;&nbsp; Body 17 / 1.66 &nbsp;&middot;&nbsp; measure 50ch &nbsp;&middot;&nbsp; grid 48px &nbsp;&middot;&nbsp; tabular figures</div>
+        <div style="font-size: 15px; line-height: 1.6; color: #4C5A69; max-width: 64ch;">Plex was drawn for a technology company and carries that voice honestly. Depth comes from an extruded isometric stack, a five-step elevation ladder and a product panel that breaks the hero boundary &mdash; chart colours are validated for colour-blind separation.</div>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <div class="le-swatch" style="flex-grow: 1; height: 72px; border-radius: 4px; background: #EDF1F6; box-shadow: inset 0 0 0 1px #D8E1EA;"></div>
+        <div class="le-swatch" style="flex-grow: 1; height: 72px; border-radius: 4px; background: #D8E1EA;"></div>
+        <div class="le-swatch" style="flex-grow: 1; height: 72px; border-radius: 4px; background: #08C4DE;"></div>
+        <div class="le-swatch" style="flex-grow: 1; height: 72px; border-radius: 4px; background: {{accent}};"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#1E63C8","options":["#1E63C8","#0B6E86","#0F1620","#1F7A5C"],"section":"Brand"},"blueprint":{"editor":"boolean","default":true,"section":"Style"},"$preview":{"width":1200,"height":2320}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 0 };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#1E63C8';
+    const blueprint = this.props.blueprint ?? true;
+    const t = this.state.tab;
+    const out = {
+      accent: accent,
+      gridImg: blueprint
+        ? 'linear-gradient(rgba(15,22,32,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(15,22,32,.05) 1px, transparent 1px)'
+        : 'none'
+    };
+    for (let i = 0; i < 4; i++) {
+      const on = i === t;
+      out['c' + i] = on ? '#0F1620' : '#5C6B7A';
+      out['b' + i] = on ? '#0F1620' : '#D5DDE6';
+      out['g' + i] = on ? '#FFFFFF' : 'rgba(255,255,255,.55)';
+      out['s' + i] = on ? '0 4px 10px -4px rgba(15,22,32,.28), inset 0 1px 0 rgba(255,255,255,.95)' : 'none';
+      out['d' + i] = on ? 'block' : 'none';
+      out['pick' + i] = () => this.setState({ tab: i });
+    }
+    return out;
+  }
+}
+</script>
+</body>
+</html>

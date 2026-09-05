@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+  <style>
+    body { margin: 0; background: #F6F4EF; }
+    a { color: #1B5FB8; text-decoration: none; }
+    a:hover { color: #16181C; }
+    * { box-sizing: border-box; }
+
+    .cs-btn { transition: transform .32s cubic-bezier(.2,.7,.3,1), box-shadow .32s ease, background .32s ease; }
+    .cs-btn:hover { transform: translateY(-2px); background: #16181C; box-shadow: 0 14px 26px -10px rgba(22,24,28,.42), 0 4px 8px -4px rgba(22,24,28,.24); }
+
+    .cs-btn2 { transition: border-color .32s ease, transform .32s cubic-bezier(.2,.7,.3,1), box-shadow .32s ease; }
+    .cs-btn2:hover { border-color: #16181C; color: #16181C; transform: translateY(-2px); box-shadow: 0 10px 18px -8px rgba(22,24,28,.24); }
+
+    .cs-ghost { transition: background .3s ease, color .3s ease; }
+    .cs-ghost:hover { background: rgba(22,24,28,.05); color: #16181C; }
+
+    .cs-swatch { transition: transform .38s cubic-bezier(.2,.7,.3,1); }
+    .cs-swatch:hover { transform: translateY(-5px); }
+
+    .cs-lift { transition: transform .4s cubic-bezier(.2,.7,.3,1); }
+    .cs-lift:hover { transform: translateY(-5px); }
+  </style>
+</helmet>
+
+<div style="width: 1200px; min-height: 3060px; background: #F6F4EF; color: #16181C; font-family: 'IBM Plex Sans', system-ui, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; position: relative;">
+
+  <div style="padding: 56px 60px 0;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: #9AA0A8; margin-bottom: 20px;">
+      <span style="display: block; width: 34px; height: 1px; background: #C9C3B7;"></span>
+      i3Codex design system &mdash; v[1.0]
+    </div>
+    <h1 style="margin: 0 0 12px; font-family: 'Newsreader', Georgia, serif; font-size: 54px; line-height: 1.06; font-weight: 300; letter-spacing: -.014em; color: #16181C;">Components &amp; tokens</h1>
+    <p style="margin: 0; max-width: 62ch; font-size: 16.5px; line-height: 1.66; color: #4E535B;">Everything on the site is built from what follows. Hand this artboard to whoever writes the CSS &mdash; the values here are the source of truth, not the page mockups.</p>
+  </div>
+
+  <div style="padding: 56px 60px 0;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 30px;">01 &nbsp;/&nbsp; the two-voice rule</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px;">
+      <div style="padding: 30px 32px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #0B6E86; margin-bottom: 16px;">voice &mdash; Newsreader</div>
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 44px; font-weight: 300; letter-spacing: -.012em; line-height: 1.06; color: #16181C; margin-bottom: 16px;">Anything the company <em style="font-style: italic; font-weight: 300;">says</em></div>
+        <div style="font-size: 15px; line-height: 1.6; color: #4E535B;">Headlines, section leads, pull quotes, and numbers that make a claim. Weight 300 for display, 400 for anything under 30px. Tracking stays near normal &mdash; never below &minus;0.014em.</div>
+      </div>
+      <div style="padding: 30px 32px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.13), 0 2px 4px -2px rgba(22,24,28,.06), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #0B6E86; margin-bottom: 16px;">evidence &mdash; IBM Plex Sans / Mono</div>
+        <div style="font-size: 36px; font-weight: 600; letter-spacing: -.022em; line-height: 1.1; color: #16181C; margin-bottom: 16px;">Everything it shows</div>
+        <div style="font-size: 15px; line-height: 1.6; color: #4E535B;">UI, body copy, labels, tables, dashboards. Mono is reserved for genuine technical identifiers &mdash; service names, slugs, metrics, code. Never a decorative heading.</div>
+      </div>
+    </div>
+    <div style="margin-top: 14px; padding: 14px 18px; border-radius: 4px; background: #FBF3EF; box-shadow: inset 0 0 0 1px #E8D5CC; font-size: 14.5px; line-height: 1.56; color: #8A4530;">
+      The system holds only if this rule holds. A heading set in Plex, or a UI label set in the serif, breaks it &mdash; that is the single thing to police in review.
+    </div>
+  </div>
+
+  <div style="padding: 56px 60px 0;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 26px;">02 &nbsp;/&nbsp; type ramp</div>
+
+    <div style="display: flex; flex-direction: column;">
+      <div style="display: grid; grid-template-columns: 150px 1fr 210px; gap: 24px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">display</span>
+        <span style="font-family: 'Newsreader', Georgia, serif; font-size: 60px; font-weight: 300; letter-spacing: -.014em; line-height: 1; color: #16181C;">Built to outlast</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">78/1.03 &middot; w300 &middot; &minus;.012em</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr 210px; gap: 24px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">h2</span>
+        <span style="font-family: 'Newsreader', Georgia, serif; font-size: 38px; font-weight: 300; letter-spacing: -.012em; line-height: 1.12; color: #16181C;">Section heading</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">38/1.12 &middot; w300</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr 210px; gap: 24px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">h3</span>
+        <span style="font-family: 'Newsreader', Georgia, serif; font-size: 26px; font-weight: 400; line-height: 1.2; color: #16181C;">Card and block heading</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">26/1.20 &middot; w400</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr 210px; gap: 24px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">ui-strong</span>
+        <span style="font-size: 16px; font-weight: 600; color: #16181C;">Interface label, emphasised</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">16 &middot; Plex w600</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr 210px; gap: 24px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">body</span>
+        <span style="font-size: 17px; line-height: 1.68; color: #4E535B;">Body copy runs at 17px with 1.68 line-height and a measure capped at 50 characters. Long-form blocks may go to 72ch.</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">17/1.68 &middot; 50ch max</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr 210px; gap: 24px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">small</span>
+        <span style="font-size: 14.5px; line-height: 1.58; color: #4E535B;">Secondary copy, captions, card descriptions.</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">14.5/1.58</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr 210px; gap: 24px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">mono</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #4E535B;">api-gateway &middot; 99.99 &middot; proof/01 &middot; terraform</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">12.5 &middot; identifiers only</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 150px 1fr 210px; gap: 24px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">figures</span>
+        <span style="font-family: 'Newsreader', Georgia, serif; font-size: 38px; font-weight: 300; color: #16181C; font-variant-numeric: tabular-nums;">[99.9]% &nbsp; [142] ms &nbsp; [38]%</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">tabular-nums always</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 56px 60px 0;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 26px;">03 &nbsp;/&nbsp; colour tokens</div>
+
+    <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; margin-bottom: 22px;">
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #F6F4EF; box-shadow: inset 0 0 0 1px #E3DFD7;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">ground</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#F6F4EF</div>
+      </div>
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #FFFFFF; box-shadow: inset 0 0 0 1px #E3DFD7;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">surface</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#FFFFFF</div>
+      </div>
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #E3DFD7;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">hairline</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#E3DFD7</div>
+      </div>
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #9AA0A8;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">muted</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#9AA0A8</div>
+      </div>
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #4E535B;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">body</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#4E535B</div>
+      </div>
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #16181C;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">ink</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#16181C</div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px;">
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #1B5FB8;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">accent</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#1B5FB8</div>
+      </div>
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #0B6E86;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">technical</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#0B6E86</div>
+      </div>
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: linear-gradient(100deg, #08C4DE, #287AED);"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">brand mark</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#08C4DE&rarr;#287AED</div>
+      </div>
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #1E63C8;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">chart 1</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#1E63C8</div>
+      </div>
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #0E8C7A;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">chart 2 / good</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#0E8C7A</div>
+      </div>
+      <div>
+        <div class="cs-swatch" style="height: 82px; border-radius: 4px; background: #B0553A;"></div>
+        <div style="margin-top: 9px; font-size: 13px; font-weight: 600; color: #16181C;">chart 3 / alert</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #9AA0A8;">#B0553A</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 18px; padding: 14px 18px; border-radius: 4px; background: #FBF3EF; box-shadow: inset 0 0 0 1px #E8D5CC; font-size: 14.5px; line-height: 1.56; color: #8A4530;">
+      The brand cyan <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace;">#08C4DE</span> is a graphic colour only &mdash; roughly 1.9:1 on this ground, so it fails for text and for any UI element that must be legible. Use <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace;">#0B6E86</span> when cyan needs to carry meaning. The three chart colours are validated for colour-blind separation as a set; don&#39;t substitute them individually.
+    </div>
+  </div>
+
+  <div style="padding: 56px 60px 0;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 30px;">04 &nbsp;/&nbsp; elevation ladder</div>
+
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px;">
+      <div>
+        <div class="cs-lift" style="height: 104px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 0 0 1px rgba(22,24,28,.055), inset 0 1px 0 rgba(255,255,255,.95);"></div>
+        <div style="margin-top: 11px; font-size: 13.5px; font-weight: 600; color: #16181C;">e0 &mdash; flush</div>
+        <div style="margin-top: 4px; font-size: 12.5px; line-height: 1.5; color: #6D737C;">Hairline only. Table rows, inline chips.</div>
+      </div>
+      <div>
+        <div class="cs-lift" style="height: 104px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 1px 3px rgba(22,24,28,.07), 0 0 0 1px rgba(22,24,28,.055), inset 0 1px 0 rgba(255,255,255,.95);"></div>
+        <div style="margin-top: 11px; font-size: 13.5px; font-weight: 600; color: #16181C;">e1 &mdash; resting</div>
+        <div style="margin-top: 4px; font-size: 12.5px; line-height: 1.5; color: #6D737C;">Inputs, secondary buttons.</div>
+      </div>
+      <div>
+        <div class="cs-lift" style="height: 104px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.14), 0 2px 4px -2px rgba(22,24,28,.07), 0 0 0 1px rgba(22,24,28,.055), inset 0 1px 0 rgba(255,255,255,.95);"></div>
+        <div style="margin-top: 11px; font-size: 13.5px; font-weight: 600; color: #16181C;">e2 &mdash; card</div>
+        <div style="margin-top: 4px; font-size: 12.5px; line-height: 1.5; color: #6D737C;">Proof cards, practice panels.</div>
+      </div>
+      <div>
+        <div class="cs-lift" style="height: 104px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 20px 44px -20px rgba(22,24,28,.24), 0 6px 12px -6px rgba(22,24,28,.10), 0 0 0 1px rgba(22,24,28,.055), inset 0 1px 0 rgba(255,255,255,.95);"></div>
+        <div style="margin-top: 11px; font-size: 13.5px; font-weight: 600; color: #16181C;">e3 &mdash; raised</div>
+        <div style="margin-top: 4px; font-size: 12.5px; line-height: 1.5; color: #6D737C;">Forms, hovered cards.</div>
+      </div>
+      <div>
+        <div class="cs-lift" style="height: 104px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 38px 66px -24px rgba(22,24,28,.26), 0 10px 20px -10px rgba(22,24,28,.13), 0 0 0 1px rgba(22,24,28,.055), inset 0 1px 0 rgba(255,255,255,.95);"></div>
+        <div style="margin-top: 11px; font-size: 13.5px; font-weight: 600; color: #16181C;">e4 &mdash; hero panel</div>
+        <div style="margin-top: 4px; font-size: 12.5px; line-height: 1.5; color: #6D737C;">The product panel that breaks the hero.</div>
+      </div>
+    </div>
+    <div style="margin-top: 16px; font-size: 14px; line-height: 1.56; color: #6D737C; max-width: 84ch;">Every step pairs a wide soft shadow with a tight dark one, plus a 1px white inset along the top edge. That inset is what makes a white card read as lit from above rather than painted on &mdash; do not drop it.</div>
+  </div>
+
+  <div style="padding: 56px 60px 0;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 30px;">05 &nbsp;/&nbsp; buttons &amp; controls</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+      <div>
+        <div style="font-size: 13.5px; font-weight: 600; color: #16181C; margin-bottom: 16px;">Buttons &mdash; hover each</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px;">
+          <span class="cs-btn" style="display: inline-flex; align-items: center; height: 52px; padding: 0 27px; border-radius: 3px; background: #1B5FB8; color: #FFFFFF; font-size: 15.5px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 11px -2px rgba(27,95,184,.42), 0 1px 3px rgba(22,24,28,.14);">Primary</span>
+          <span class="cs-btn2" style="display: inline-flex; align-items: center; height: 52px; padding: 0 25px; border-radius: 3px; border: 1px solid #C9C3B7; background: #FFFFFF; color: #4E535B; font-size: 15.5px; font-weight: 500; cursor: pointer; box-shadow: 0 1px 3px rgba(22,24,28,.06);">Secondary</span>
+          <span class="cs-ghost" style="display: inline-flex; align-items: center; height: 52px; padding: 0 20px; border-radius: 3px; color: #4E535B; font-size: 15.5px; font-weight: 500; cursor: pointer;">Ghost</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 20px;">
+          <span class="cs-btn" style="display: inline-flex; align-items: center; height: 42px; padding: 0 21px; border-radius: 3px; background: #1B5FB8; color: #FFFFFF; font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 2px 5px -1px rgba(27,95,184,.4);">Primary, small</span>
+          <span style="display: inline-flex; align-items: center; height: 42px; padding: 0 21px; border-radius: 3px; background: #E7E3DA; color: #A9A49A; font-size: 14px; font-weight: 500;">Disabled</span>
+        </div>
+        <div style="font-size: 13.5px; line-height: 1.56; color: #6D737C;">Heights 52 / 42. Radius 3. Hover lifts 2px and darkens to ink &mdash; never changes width. Minimum touch target 44px on mobile.</div>
+      </div>
+
+      <div>
+        <div style="font-size: 13.5px; font-weight: 600; color: #16181C; margin-bottom: 16px;">Form controls</div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div>
+            <div style="font-size: 13.5px; font-weight: 500; color: #4E535B; margin-bottom: 8px;">Rest</div>
+            <div style="height: 48px; display: flex; align-items: center; padding: 0 15px; border-radius: 3px; background: #FCFBF8; box-shadow: inset 0 0 0 1px #DED9CF; font-size: 15px; color: #A9A49A;">Placeholder text</div>
+          </div>
+          <div>
+            <div style="font-size: 13.5px; font-weight: 500; color: #4E535B; margin-bottom: 8px;">Focus</div>
+            <div style="height: 48px; display: flex; align-items: center; padding: 0 15px; border-radius: 3px; background: #FCFBF8; box-shadow: inset 0 0 0 2px #1B5FB8, 0 0 0 3px rgba(27,95,184,.14); font-size: 15px; color: #16181C;">Typed value</div>
+          </div>
+          <div>
+            <div style="font-size: 13.5px; font-weight: 500; color: #4E535B; margin-bottom: 8px;">Error</div>
+            <div style="height: 48px; display: flex; align-items: center; padding: 0 15px; border-radius: 3px; background: #FCFBF8; box-shadow: inset 0 0 0 2px #B0553A; font-size: 15px; color: #16181C;">not-an-email</div>
+            <div style="margin-top: 7px; font-size: 13px; color: #B0553A;">Enter a work email address.</div>
+          </div>
+          <div style="display: flex; gap: 8px; margin-top: 4px;">
+            <span style="display: inline-flex; align-items: center; height: 40px; padding: 0 15px; border-radius: 3px; background: #E8EFFA; box-shadow: inset 0 0 0 1.5px #1B5FB8; font-size: 14px; color: #1B5FB8;">Selected chip</span>
+            <span style="display: inline-flex; align-items: center; height: 40px; padding: 0 15px; border-radius: 3px; background: #FCFBF8; box-shadow: inset 0 0 0 1px #DED9CF; font-size: 14px; color: #4E535B;">Unselected</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 56px 60px 0;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 30px;">06 &nbsp;/&nbsp; icons &amp; motion</div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+      <div>
+        <div style="font-size: 13.5px; font-weight: 600; color: #16181C; margin-bottom: 16px;">Icons &mdash; 24px grid, 1.6 stroke, round caps</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 4px; background: #FFFFFF; color: #4E535B; box-shadow: 0 0 0 1px #E3DFD7;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.2 9.4 4.3 4.3 0 0 0 7 18h10.5Z"></path></svg></span>
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 4px; background: #FFFFFF; color: #4E535B; box-shadow: 0 0 0 1px #E3DFD7;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7.5" ry="3"></ellipse><path d="M4.5 6v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3V6M4.5 12v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"></path></svg></span>
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 4px; background: #FFFFFF; color: #4E535B; box-shadow: 0 0 0 1px #E3DFD7;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"></rect><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"></path></svg></span>
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 4px; background: #FFFFFF; color: #4E535B; box-shadow: 0 0 0 1px #E3DFD7;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v5M12 16v5M4.2 7.5l4.3 2.5M15.5 14l4.3 2.5M4.2 16.5l4.3-2.5M15.5 10l4.3-2.5"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 4px; background: #FFFFFF; color: #4E535B; box-shadow: 0 0 0 1px #E3DFD7;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V9M10 18V5M16 18v-6M20.5 18H3.5"></path></svg></span>
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 4px; background: #FFFFFF; color: #4E535B; box-shadow: 0 0 0 1px #E3DFD7;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 20 7v5.5c0 4.2-3.2 7-8 8-4.8-1-8-3.8-8-8V7Z"></path><path d="M9 12.2 11 14.3 15.2 10"></path></svg></span>
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 4px; background: #FFFFFF; color: #4E535B; box-shadow: 0 0 0 1px #E3DFD7;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></span>
+        </div>
+        <div style="margin-top: 14px; font-size: 13.5px; line-height: 1.56; color: #6D737C;">Stroke-based, drawn to a 24px box. Never emoji, never a filled icon next to a stroked one.</div>
+      </div>
+
+      <div>
+        <div style="font-size: 13.5px; font-weight: 600; color: #16181C; margin-bottom: 16px;">Motion tokens</div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 12px 0; border-bottom: 1px solid #E3DFD7;">
+            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">.28s</span>
+            <span style="font-size: 14px; color: #4E535B;">Colour only &mdash; links, label states</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 12px 0; border-bottom: 1px solid #E3DFD7;">
+            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">.32s</span>
+            <span style="font-size: 14px; color: #4E535B;">Buttons &mdash; lift and shadow</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 12px 0; border-bottom: 1px solid #E3DFD7;">
+            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">.40&ndash;.50s</span>
+            <span style="font-size: 14px; color: #4E535B;">Cards and panels &mdash; larger mass, slower</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 12px 0; border-bottom: 1px solid #E3DFD7;">
+            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">13&ndash;15s</span>
+            <span style="font-size: 14px; color: #4E535B;">Ambient float on 3D objects</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 12px 0; border-bottom: 1px solid #E3DFD7;">
+            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">easing</span>
+            <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #4E535B;">cubic-bezier(.2,.7,.3,1)</span>
+          </div>
+        </div>
+        <div style="margin-top: 14px; font-size: 13.5px; line-height: 1.56; color: #6D737C;">One easing curve for everything. Nothing overshoots, nothing bounces &mdash; that belongs to a different direction. Honour <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px;">prefers-reduced-motion</span> by dropping the ambient float and all transforms.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 56px 60px 60px;">
+    <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; padding-bottom: 14px; border-bottom: 2px solid #16181C; margin-bottom: 30px;">07 &nbsp;/&nbsp; layout &amp; spacing</div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px;">
+      <div>
+        <div style="font-size: 13.5px; font-weight: 600; color: #16181C; margin-bottom: 8px;">Page gutter</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; color: #4E535B;">60px desktop<br>20px mobile</div>
+      </div>
+      <div>
+        <div style="font-size: 13.5px; font-weight: 600; color: #16181C; margin-bottom: 8px;">Blueprint grid</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; color: #4E535B;">48px desktop<br>32px mobile<br>rgba(22,24,28,.042)</div>
+      </div>
+      <div>
+        <div style="font-size: 13.5px; font-weight: 600; color: #16181C; margin-bottom: 8px;">Section rhythm</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; color: #4E535B;">72&ndash;80px between<br>major sections</div>
+      </div>
+      <div>
+        <div style="font-size: 13.5px; font-weight: 600; color: #16181C; margin-bottom: 8px;">Radii</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; color: #4E535B;">3px controls<br>5px cards &amp; panels</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

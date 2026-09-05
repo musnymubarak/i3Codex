@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+  <style>
+    body { margin: 0; background: #F6F4EF; }
+    a { color: #1B5FB8; text-decoration: none; }
+    * { box-sizing: border-box; }
+
+    .ab-btn { transition: transform .3s cubic-bezier(.2,.7,.3,1), box-shadow .3s ease, background .3s ease; }
+    .ab-btn:hover { background: #16181C; box-shadow: 0 10px 20px -8px rgba(22,24,28,.38); }
+
+    .ab-field { transition: box-shadow .28s ease; cursor: text; }
+    .ab-field:hover { box-shadow: inset 0 0 0 1px #C0BAAE; }
+
+    .ab-chip { transition: box-shadow .25s ease, background .25s ease, color .25s ease; cursor: pointer; }
+  </style>
+</helmet>
+
+<div style="width: 390px; min-height: 1680px; background: #F6F4EF; background-image: {{gridImg}}; background-size: 32px 32px; color: #16181C; font-family: 'IBM Plex Sans', system-ui, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; position: relative;">
+
+  <div style="position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; height: 58px; padding: 0 20px; border-bottom: 1px solid #E3DFD7; background: rgba(251,250,247,.94);">
+    <div style="font-size: 18px; font-weight: 600; letter-spacing: -.02em; color: #16181C;">
+      <span style="background: linear-gradient(100deg, #08C4DE, #287AED); -webkit-background-clip: text; background-clip: text; color: transparent;">i3</span>Codex
+    </div>
+    <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: -10px; color: #16181C; cursor: pointer;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+    </span>
+  </div>
+
+  <div style="position: relative; padding: 34px 20px 0; background: linear-gradient(180deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,0) 100%);">
+    <div style="display: flex; align-items: center; gap: 11px; font-size: 12.5px; color: #9AA0A8; margin-bottom: 20px;">
+      <span style="display: block; width: 24px; height: 1px; background: #C9C3B7;"></span>
+      Contact
+    </div>
+
+    <h1 style="margin: 0 0 18px; font-family: 'Newsreader', Georgia, serif; font-size: 42px; line-height: 1.06; font-weight: 300; letter-spacing: -.012em; color: #16181C; text-wrap: pretty;">
+      Start with the thing that broke.
+    </h1>
+
+    <p style="margin: 0 0 34px; font-size: 16px; line-height: 1.64; color: #4E535B;">
+      You don&#39;t need a spec or a budget to talk to us. Tell us what went wrong most recently and we&#39;ll tell you whether we&#39;re the right people.
+    </p>
+
+    <div style="margin-bottom: 34px;">
+      <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 16px;">what happens next</div>
+      <div style="display: grid; grid-template-columns: 32px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: {{accent}};">01</span>
+        <div>
+          <div style="font-size: 15px; font-weight: 600; color: #16181C; margin-bottom: 3px;">A reply within one working day</div>
+          <div style="font-size: 14px; line-height: 1.54; color: #4E535B;">From an engineer, not a sales inbox.</div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 32px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: {{accent}};">02</span>
+        <div>
+          <div style="font-size: 15px; font-weight: 600; color: #16181C; margin-bottom: 3px;">A 45-minute call, no charge</div>
+          <div style="font-size: 14px; line-height: 1.54; color: #4E535B;">Bring whoever gets paged.</div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 32px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid #E3DFD7; border-bottom: 1px solid #E3DFD7;">
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: {{accent}};">03</span>
+        <div>
+          <div style="font-size: 15px; font-weight: 600; color: #16181C; margin-bottom: 3px;">A written summary, yours to keep</div>
+          <div style="font-size: 14px; line-height: 1.54; color: #4E535B;">Whether or not you hire us.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 26px 22px 24px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 20px 40px -20px rgba(22,24,28,.24), 0 6px 12px -6px rgba(22,24,28,.10), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+      <div style="font-family: 'Newsreader', Georgia, serif; font-size: 24px; font-weight: 400; color: #16181C; margin-bottom: 22px;">Book an architecture review</div>
+
+      <div style="margin-bottom: 18px;">
+        <div style="font-size: 13.5px; font-weight: 500; color: #4E535B; margin-bottom: 8px;">Your name</div>
+        <div class="ab-field" onClick="{{ f0 }}" style="height: 50px; display: flex; align-items: center; padding: 0 14px; border-radius: 3px; background: #FCFBF8; box-shadow: {{s0}}; font-size: 15px; color: {{t0}};">{{v0}}</div>
+      </div>
+
+      <div style="margin-bottom: 18px;">
+        <div style="font-size: 13.5px; font-weight: 500; color: #4E535B; margin-bottom: 8px;">Work email</div>
+        <div class="ab-field" onClick="{{ f1 }}" style="height: 50px; display: flex; align-items: center; padding: 0 14px; border-radius: 3px; background: #FCFBF8; box-shadow: {{s1}}; font-size: 15px; color: {{t1}};">{{v1}}</div>
+      </div>
+
+      <div style="margin-bottom: 18px;">
+        <div style="font-size: 13.5px; font-weight: 500; color: #4E535B; margin-bottom: 8px;">Company</div>
+        <div class="ab-field" onClick="{{ f2 }}" style="height: 50px; display: flex; align-items: center; padding: 0 14px; border-radius: 3px; background: #FCFBF8; box-shadow: {{s2}}; font-size: 15px; color: {{t2}};">{{v2}}</div>
+      </div>
+
+      <div style="margin-bottom: 18px;">
+        <div style="font-size: 13.5px; font-weight: 500; color: #4E535B; margin-bottom: 8px;">What broke most recently?</div>
+        <div class="ab-field" onClick="{{ f3 }}" style="height: 120px; padding: 13px 14px; border-radius: 3px; background: #FCFBF8; box-shadow: {{s3}}; font-size: 15px; line-height: 1.5; color: {{t3}};">{{v3}}</div>
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <div style="font-size: 13.5px; font-weight: 500; color: #4E535B; margin-bottom: 10px;">Roughly what stage are you at?</div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <span class="ab-chip" onClick="{{ c0 }}" style="display: flex; align-items: center; height: 46px; padding: 0 15px; border-radius: 3px; background: {{cb0}}; box-shadow: {{cs0}}; font-size: 14.5px; color: {{ct0}};">Just exploring</span>
+          <span class="ab-chip" onClick="{{ c1 }}" style="display: flex; align-items: center; height: 46px; padding: 0 15px; border-radius: 3px; background: {{cb1}}; box-shadow: {{cs1}}; font-size: 14.5px; color: {{ct1}};">Have a budget</span>
+          <span class="ab-chip" onClick="{{ c2 }}" style="display: flex; align-items: center; height: 46px; padding: 0 15px; border-radius: 3px; background: {{cb2}}; box-shadow: {{cs2}}; font-size: 14.5px; color: {{ct2}};">Actively on fire</span>
+        </div>
+      </div>
+
+      <span class="ab-btn" style="display: flex; align-items: center; justify-content: center; height: 52px; border-radius: 3px; background: {{accent}}; color: #FFFFFF; font-size: 15.5px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 11px -2px rgba(27,95,184,.42);">Send it over</span>
+
+      <div style="margin-top: 14px; font-size: 12.5px; line-height: 1.55; color: #9AA0A8;">We reply from a real address and never pass your details on.</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 18px; padding: 34px 0 0;">
+      <div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 7px;">email</div>
+        <div style="font-size: 16px; color: #16181C;">[hello@i3codex.com]</div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 7px;">phone</div>
+        <div style="font-size: 16px; color: #16181C;">[+00 000 000 0000]</div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 7px;">office</div>
+        <div style="font-size: 16px; line-height: 1.5; color: #16181C;">[Street address]<br>[City, Country]</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; margin-top: 40px; padding: 18px 20px 28px; border-top: 1px solid #E3DFD7; font-size: 12.5px; color: #9AA0A8;">
+    &copy; [Year] i3Codex. All rights reserved.
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#1B5FB8","options":["#1B5FB8","#0B6E86","#16181C","#8A5A1F"],"section":"Brand"},"blueprint":{"editor":"boolean","default":true,"section":"Style"},"$preview":{"width":390,"height":1680}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { focus: -1, stage: 1 };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#1B5FB8';
+    const blueprint = this.props.blueprint ?? true;
+    const f = this.state.focus;
+    const st = this.state.stage;
+
+    const placeholders = [
+      'Alex Moreau',
+      'alex@company.com',
+      'Company name',
+      'Last month our checkout queued for 40 minutes on payday and nobody could tell us why.'
+    ];
+
+    const out = {
+      accent: accent,
+      gridImg: blueprint
+        ? 'linear-gradient(rgba(22,24,28,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(22,24,28,.04) 1px, transparent 1px)'
+        : 'none'
+    };
+
+    for (let i = 0; i < 4; i++) {
+      const on = i === f;
+      out['s' + i] = on
+        ? 'inset 0 0 0 2px ' + accent + ', 0 0 0 3px rgba(27,95,184,.14)'
+        : 'inset 0 0 0 1px #DED9CF';
+      out['t' + i] = on ? '#16181C' : '#A9A49A';
+      out['v' + i] = placeholders[i];
+      out['f' + i] = () => this.setState({ focus: i });
+    }
+
+    for (let i = 0; i < 3; i++) {
+      const on = i === st;
+      out['cb' + i] = on ? '#E8EFFA' : '#FCFBF8';
+      out['cs' + i] = on ? 'inset 0 0 0 1.5px ' + accent : 'inset 0 0 0 1px #DED9CF';
+      out['ct' + i] = on ? accent : '#4E535B';
+      out['c' + i] = () => this.setState({ stage: i });
+    }
+
+    return out;
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
+  <style>
+    body { margin: 0; background: #F6F4EF; }
+    a { color: #1B5FB8; text-decoration: none; }
+    a:hover { color: #16181C; }
+    * { box-sizing: border-box; }
+
+    .ab-link { transition: color .28s ease; }
+    .ab-link:hover { color: #16181C; }
+
+    .ab-btn { transition: transform .32s cubic-bezier(.2,.7,.3,1), box-shadow .32s ease, background .32s ease; }
+    .ab-btn:hover { transform: translateY(-2px); background: #16181C; box-shadow: 0 14px 26px -10px rgba(22,24,28,.42), 0 4px 8px -4px rgba(22,24,28,.24); }
+
+    .ab-btn2 { transition: border-color .32s ease, transform .32s cubic-bezier(.2,.7,.3,1), box-shadow .32s ease; }
+    .ab-btn2:hover { border-color: #16181C; color: #16181C; transform: translateY(-2px); box-shadow: 0 10px 18px -8px rgba(22,24,28,.24); }
+
+    .ab-tab { transition: color .28s ease, background .28s ease, border-color .28s ease, box-shadow .28s ease, transform .28s ease; cursor: pointer; }
+    .ab-tab:hover { color: #16181C; border-color: #B4ADA0; transform: translateY(-1px); }
+
+    .ab-card { transition: transform .4s cubic-bezier(.2,.7,.3,1), box-shadow .4s ease; }
+    .ab-card:hover { transform: translateY(-6px); box-shadow: 0 28px 46px -20px rgba(22,24,28,.28), 0 8px 14px -8px rgba(22,24,28,.13), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.06); }
+    .ab-card .ab-idx { transition: color .4s ease; }
+    .ab-card:hover .ab-idx { color: #0B6E86; }
+
+    .ab-panel { transition: transform .5s cubic-bezier(.2,.7,.3,1), box-shadow .5s ease; }
+    .ab-panel:hover { transform: translateY(-5px); box-shadow: 0 46px 78px -26px rgba(22,24,28,.32), 0 14px 26px -14px rgba(22,24,28,.16), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.06); }
+
+    .ab-solid { animation: abFloat 13s ease-in-out infinite; }
+    @keyframes abFloat {
+      0%, 100% { transform: rotateX(-16deg) rotateY(-26deg) translateY(0px); }
+      50%      { transform: rotateX(-16deg) rotateY(-26deg) translateY(-16px); }
+    }
+    .ab-solidshadow { animation: abGround 13s ease-in-out infinite; }
+    @keyframes abGround {
+      0%, 100% { opacity: .28; transform: scale(1); }
+      50%      { opacity: .16; transform: scale(.9); }
+    }
+
+    .ab-stack { animation: abStack 15s ease-in-out infinite; }
+    @keyframes abStack {
+      0%, 100% { transform: rotateX(56deg) rotateZ(-42deg) translateZ(0px); }
+      50%      { transform: rotateX(56deg) rotateZ(-42deg) translateZ(16px); }
+    }
+    .ab-scan { animation: abScan 6.5s linear infinite; }
+    @keyframes abScan {
+      0%   { opacity: 0; transform: translateY(0px); }
+      14%  { opacity: 1; }
+      86%  { opacity: 1; }
+      100% { opacity: 0; transform: translateY(214px); }
+    }
+
+    .ab-swatch { transition: transform .38s cubic-bezier(.2,.7,.3,1), box-shadow .38s ease; }
+    .ab-swatch:hover { transform: translateY(-6px); box-shadow: 0 14px 22px -10px rgba(22,24,28,.32); }
+  </style>
+</helmet>
+
+<div style="width: 1200px; min-height: 3420px; background: #F6F4EF; background-image: {{gridImg}}; background-size: 48px 48px; color: #16181C; font-family: 'IBM Plex Sans', system-ui, 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; position: relative;">
+
+  <div style="position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; height: 78px; padding: 0 60px; border-bottom: 1px solid #E3DFD7; background: rgba(251,250,247,.9); box-shadow: 0 1px 3px rgba(22,24,28,.04);">
+    <div style="display: flex; align-items: center; gap: 40px;">
+      <div style="font-size: 20px; font-weight: 600; letter-spacing: -.02em; color: #16181C;">
+        <span style="background: linear-gradient(100deg, #08C4DE, #287AED); -webkit-background-clip: text; background-clip: text; color: transparent;">i3</span>Codex
+      </div>
+      <div style="display: flex; align-items: center; gap: 28px; font-size: 14.5px; font-weight: 500; color: #6D737C;">
+        <span class="ab-link">Services</span>
+        <span class="ab-link">Work</span>
+        <span class="ab-link">Approach</span>
+        <span class="ab-link">Company</span>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 18px;">
+      <span style="font-family: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace; font-size: 12px; color: #9AA0A8;">EN</span>
+      <span class="ab-btn" style="display: inline-flex; align-items: center; height: 42px; padding: 0 21px; border-radius: 3px; background: {{accent}}; color: #FFFFFF; font-size: 14px; font-weight: 500; cursor: pointer; box-shadow: 0 2px 5px -1px rgba(27,95,184,.4);">Book a review</span>
+    </div>
+  </div>
+
+  <div style="position: relative; background: linear-gradient(180deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,0) 100%); padding: 92px 60px 140px;">
+    <div style="position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 400px; gap: 52px; align-items: center;">
+
+      <div>
+        <div style="display: flex; align-items: center; gap: 14px; font-size: 13.5px; color: #9AA0A8; margin-bottom: 32px;">
+          <span style="display: block; width: 34px; height: 1px; background: #C9C3B7;"></span>
+          i3Codex, [City] &mdash; engineering since [Year]
+        </div>
+
+        <h1 style="margin: 0; font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-size: 78px; line-height: 1.03; font-weight: 300; letter-spacing: -.012em; color: #16181C; text-wrap: pretty;">
+          We build the systems<br>that <em style="font-style: italic; font-weight: 300;">don&#39;t</em> go down.
+        </h1>
+
+        <p style="margin: 32px 0 0; max-width: 48ch; font-size: 17px; line-height: 1.68; color: #4E535B;">
+          i3Codex is a [size]-person engineering team for [type of client]. We take on the cloud platforms, data pipelines and integrations that other teams are afraid to touch &mdash; and we stay on call for them afterwards.
+        </p>
+
+        <div style="display: flex; align-items: center; gap: 12px; margin-top: 40px;">
+          <span class="ab-btn" style="display: inline-flex; align-items: center; height: 52px; padding: 0 27px; border-radius: 3px; background: {{accent}}; color: #FFFFFF; font-size: 15.5px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 11px -2px rgba(27,95,184,.42), 0 1px 3px rgba(22,24,28,.14);">Book an architecture review</span>
+          <span class="ab-btn2" style="display: inline-flex; align-items: center; height: 52px; padding: 0 25px; border-radius: 3px; border: 1px solid #C9C3B7; background: #FFFFFF; color: #4E535B; font-size: 15.5px; font-weight: 500; cursor: pointer; box-shadow: 0 1px 3px rgba(22,24,28,.06);">See how we work</span>
+        </div>
+      </div>
+
+      <div style="position: relative; height: 400px; display: flex; align-items: center; justify-content: center; perspective: 1400px;">
+        <div class="ab-solidshadow" style="position: absolute; bottom: 32px; width: 226px; height: 34px; border-radius: 50%; background: rgba(22,24,28,.55); filter: blur(24px);"></div>
+
+        <div class="ab-solid" style="position: relative; width: 222px; height: 246px; transform-style: preserve-3d;">
+          <div style="position: absolute; left: 50%; top: 50%; width: 112px; height: 246px; margin-left: -56px; margin-top: -123px; background: linear-gradient(158deg, #FEFDFB 0%, #F2EFE8 55%, #E8E3DA 100%); transform: rotateY(0deg) translateZ(95.3px);"></div>
+          <div style="position: absolute; left: 50%; top: 50%; width: 112px; height: 246px; margin-left: -56px; margin-top: -123px; background: linear-gradient(158deg, #E4E0D6 0%, #D5CFC4 60%, #C9C2B6 100%); transform: rotateY(60deg) translateZ(95.3px);"></div>
+          <div style="position: absolute; left: 50%; top: 50%; width: 112px; height: 246px; margin-left: -56px; margin-top: -123px; background: linear-gradient(158deg, #C0B9AC 0%, #AFA899 100%); transform: rotateY(120deg) translateZ(95.3px);"></div>
+          <div style="position: absolute; left: 50%; top: 50%; width: 112px; height: 246px; margin-left: -56px; margin-top: -123px; background: linear-gradient(158deg, #AFA899 0%, #9E9687 100%); transform: rotateY(180deg) translateZ(95.3px);"></div>
+          <div style="position: absolute; left: 50%; top: 50%; width: 112px; height: 246px; margin-left: -56px; margin-top: -123px; background: linear-gradient(158deg, #D1CABF 0%, #BFB8AA 100%); transform: rotateY(240deg) translateZ(95.3px);"></div>
+          <div style="position: absolute; left: 50%; top: 50%; width: 112px; height: 246px; margin-left: -56px; margin-top: -123px; background: linear-gradient(158deg, #F8F5EE 0%, #EBE7DE 100%); transform: rotateY(300deg) translateZ(95.3px);"></div>
+
+          <div style="position: absolute; left: 50%; top: 50%; width: 224px; height: 191px; margin-left: -112px; margin-top: -95.5px; background: linear-gradient(158deg, #FFFFFF 0%, #F9F7F2 45%, #EFEBE3 100%); clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); transform: rotateX(90deg) translateZ(123px);"></div>
+          <div style="position: absolute; left: 50%; top: 50%; width: 224px; height: 191px; margin-left: -112px; margin-top: -95.5px; background: #918977; clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); transform: rotateX(90deg) translateZ(-123px);"></div>
+
+          <div style="position: absolute; left: 50%; top: 50%; width: 3px; height: 186px; margin-left: -1.5px; margin-top: -93px; background: linear-gradient(180deg, transparent, #08C4DE 22%, #287AED 78%, transparent); transform: translateZ(96.3px);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; z-index: 3; margin: -98px 60px 0;">
+    <div class="ab-panel" style="border-radius: 5px; background: #FFFFFF; box-shadow: 0 38px 66px -24px rgba(22,24,28,.26), 0 10px 20px -10px rgba(22,24,28,.13), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.06); overflow: hidden;">
+      <div style="display: flex; align-items: center; justify-content: space-between; height: 46px; padding: 0 18px; border-bottom: 1px solid #EDE9E1; background: linear-gradient(180deg, #FDFCFA, #F7F5F0);">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 7px;">
+            <span style="display: block; width: 9px; height: 9px; border-radius: 50%; background: #DED9CF;"></span>
+            <span style="display: block; width: 9px; height: 9px; border-radius: 50%; background: #DED9CF;"></span>
+            <span style="display: block; width: 9px; height: 9px; border-radius: 50%; background: #DED9CF;"></span>
+          </div>
+          <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8;">i3codex/platform &mdash; production</span>
+        </div>
+        <span style="display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 3px; background: #E9F4F1; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #0E7A6B;">
+          <span style="display: block; width: 6px; height: 6px; border-radius: 50%; background: #0E8C7A;"></span>all systems nominal
+        </span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 320px;">
+        <div style="padding: 24px 26px; border-right: 1px solid #EDE9E1;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 18px;">
+            <div>
+              <div style="font-size: 13.5px; color: #9AA0A8; margin-bottom: 6px;">Request latency, p95</div>
+              <div style="font-family: 'Newsreader', Georgia, serif; font-size: 36px; font-weight: 300; color: #16181C; line-height: 1; font-variant-numeric: tabular-nums;">[142] ms</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px; font-size: 12.5px; color: #6D737C;">
+              <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="display: block; width: 9px; height: 9px; border-radius: 2px; background: #1E63C8;"></span>Edge</span>
+              <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="display: block; width: 9px; height: 9px; border-radius: 2px; background: #0E8C7A;"></span>Origin</span>
+            </div>
+          </div>
+
+          <svg viewBox="0 0 600 160" style="width: 100%; height: 160px; display: block; overflow: visible;">
+            <line x1="0" y1="18" x2="600" y2="18" stroke="#F2EFE9" stroke-width="1"></line>
+            <line x1="0" y1="66" x2="600" y2="66" stroke="#F2EFE9" stroke-width="1"></line>
+            <line x1="0" y1="114" x2="600" y2="114" stroke="#F2EFE9" stroke-width="1"></line>
+            <line x1="0" y1="154" x2="600" y2="154" stroke="#E3DFD7" stroke-width="1"></line>
+            <path d="M0,114 C48,106 78,82 126,88 C174,94 204,56 252,50 C300,44 330,72 378,64 C426,56 456,32 504,38 C552,44 578,26 600,22 L600,154 L0,154 Z" fill="#1E63C8" opacity="0.09"></path>
+            <path d="M0,114 C48,106 78,82 126,88 C174,94 204,56 252,50 C300,44 330,72 378,64 C426,56 456,32 504,38 C552,44 578,26 600,22" fill="none" stroke="#1E63C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M0,136 C48,132 78,124 126,127 C174,130 204,114 252,111 C300,108 330,120 378,115 C426,110 456,98 504,101 C552,104 578,94 600,91" fill="none" stroke="#0E8C7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="600" cy="22" r="4.5" fill="#1E63C8" stroke="#FFFFFF" stroke-width="2"></circle>
+            <circle cx="600" cy="91" r="4.5" fill="#0E8C7A" stroke="#FFFFFF" stroke-width="2"></circle>
+          </svg>
+          <div style="display: flex; justify-content: space-between; margin-top: 8px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11px; color: #A9AFB6;">
+            <span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>now</span>
+          </div>
+
+          <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid #EDE9E1;">
+            <div style="font-size: 13.5px; color: #9AA0A8; margin-bottom: 12px;">Deploy pipeline &mdash; build [4812]</div>
+            <div style="display: flex; align-items: center; gap: 0;">
+              <span style="display: inline-flex; align-items: center; padding: 6px 12px; border-radius: 3px; background: #E9F4F1; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #0E7A6B;">build</span>
+              <span style="width: 22px; height: 1px; background: #D8D2C7;"></span>
+              <span style="display: inline-flex; align-items: center; padding: 6px 12px; border-radius: 3px; background: #E9F4F1; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #0E7A6B;">test</span>
+              <span style="width: 22px; height: 1px; background: #D8D2C7;"></span>
+              <span style="display: inline-flex; align-items: center; padding: 6px 12px; border-radius: 3px; background: #E9F4F1; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #0E7A6B;">scan</span>
+              <span style="width: 22px; height: 1px; background: #D8D2C7;"></span>
+              <span style="display: inline-flex; align-items: center; padding: 6px 12px; border-radius: 3px; background: #E8EFFA; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: {{accent}}; box-shadow: 0 0 0 1px #C2D5F0;">deploy&nbsp;&middot;&nbsp;62%</span>
+              <span style="width: 22px; height: 1px; background: #EDE9E1;"></span>
+              <span style="display: inline-flex; align-items: center; padding: 6px 12px; border-radius: 3px; background: #F5F2EC; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #A9AFB6;">verify</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding: 24px 22px; background: #FCFBF8;">
+          <div style="font-size: 13.5px; color: #9AA0A8; margin-bottom: 16px;">Services</div>
+          <div style="display: flex; flex-direction: column; gap: 13px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #16181C;"><span style="display: block; width: 8px; height: 8px; border-radius: 2px; background: #0E8C7A;"></span>api-gateway</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">99.99</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #16181C;"><span style="display: block; width: 8px; height: 8px; border-radius: 2px; background: #0E8C7A;"></span>auth</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">99.98</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #16181C;"><span style="display: block; width: 8px; height: 8px; border-radius: 2px; background: #B0553A;"></span>billing-sync</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #B0553A;">degraded</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #16181C;"><span style="display: block; width: 8px; height: 8px; border-radius: 2px; background: #0E8C7A;"></span>warehouse-etl</span>
+              <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #6D737C;">99.95</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid #EDE9E1;">
+            <div style="font-size: 13.5px; color: #9AA0A8; margin-bottom: 12px;">Cloud spend, month to date</div>
+            <div style="display: flex; align-items: flex-end; gap: 6px; height: 62px;">
+              <div style="flex-grow: 1; height: 46%; border-radius: 3px 3px 0 0; background: #D8D2C7;"></div>
+              <div style="flex-grow: 1; height: 58%; border-radius: 3px 3px 0 0; background: #D8D2C7;"></div>
+              <div style="flex-grow: 1; height: 52%; border-radius: 3px 3px 0 0; background: #D8D2C7;"></div>
+              <div style="flex-grow: 1; height: 71%; border-radius: 3px 3px 0 0; background: #D8D2C7;"></div>
+              <div style="flex-grow: 1; height: 63%; border-radius: 3px 3px 0 0; background: #D8D2C7;"></div>
+              <div style="flex-grow: 1; height: 44%; border-radius: 3px 3px 0 0; background: #1E63C8;"></div>
+            </div>
+            <div style="margin-top: 9px; font-size: 12.5px; color: #6D737C;">[38]% below the same period last year</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 11px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">// illustrative product view &mdash; swap for a real screenshot once [client] clears it</div>
+  </div>
+
+  <div style="position: relative; padding: 76px 60px 0;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 24px;">
+      <h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 34px; font-weight: 300; letter-spacing: -.012em; color: #16181C;">What we take on</h2>
+      <span style="font-size: 14px; color: #9AA0A8;">Four practices, one team</span>
+    </div>
+
+    <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+      <span class="ab-tab" onClick="{{ pick0 }}" style="display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 3px; border: 1px solid {{b0}}; background: {{g0}}; color: {{c0}}; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; box-shadow: {{s0}};">cloud-platform</span>
+      <span class="ab-tab" onClick="{{ pick1 }}" style="display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 3px; border: 1px solid {{b1}}; background: {{g1}}; color: {{c1}}; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; box-shadow: {{s1}};">data</span>
+      <span class="ab-tab" onClick="{{ pick2 }}" style="display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 3px; border: 1px solid {{b2}}; background: {{g2}}; color: {{c2}}; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; box-shadow: {{s2}};">applied-ai</span>
+      <span class="ab-tab" onClick="{{ pick3 }}" style="display: inline-flex; align-items: center; height: 42px; padding: 0 18px; border-radius: 3px; border: 1px solid {{b3}}; background: {{g3}}; color: {{c3}}; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; box-shadow: {{s3}};">run-and-operate</span>
+    </div>
+
+    <div style="position: relative; min-height: 214px; padding: 30px 32px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 8px 20px -10px rgba(22,24,28,.15), 0 2px 5px -2px rgba(22,24,28,.07), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+      <div style="display: {{d0}};">
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 27px; font-weight: 400; letter-spacing: -.008em; color: #16181C; margin-bottom: 12px;">Landing zones that pass an audit the first time</div>
+        <p style="margin: 0; max-width: 72ch; font-size: 15.5px; line-height: 1.68; color: #4E535B;">Multi-account AWS or Azure foundations, network segmentation, IAM boundaries and infrastructure as code &mdash; delivered with the runbooks and the Terraform your own team can keep extending after we leave.</p>
+        <div style="display: flex; gap: 8px; margin-top: 20px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #6D737C;">
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">terraform</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">kubernetes</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">ci/cd</span>
+        </div>
+      </div>
+      <div style="display: {{d1}};">
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 27px; font-weight: 400; letter-spacing: -.008em; color: #16181C; margin-bottom: 12px;">Numbers your finance team will sign off on</div>
+        <p style="margin: 0; max-width: 72ch; font-size: 15.5px; line-height: 1.68; color: #4E535B;">Ingestion, modelling and a warehouse with tested transformations and lineage you can point at in a board meeting. We instrument data quality before we build the dashboard, not after someone spots a wrong total.</p>
+        <div style="display: flex; gap: 8px; margin-top: 20px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #6D737C;">
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">dbt</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">snowflake</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">airflow</span>
+        </div>
+      </div>
+      <div style="display: {{d2}};">
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 27px; font-weight: 400; letter-spacing: -.008em; color: #16181C; margin-bottom: 12px;">One workflow, measured before it ships</div>
+        <p style="margin: 0; max-width: 72ch; font-size: 15.5px; line-height: 1.68; color: #4E535B;">We scope AI to a single expensive workflow, build the retrieval and the evaluation harness together, and show you the accuracy numbers on your own documents before anyone commits to a rollout.</p>
+        <div style="display: flex; gap: 8px; margin-top: 20px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #6D737C;">
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">retrieval</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">evals</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">guardrails</span>
+        </div>
+      </div>
+      <div style="display: {{d3}};">
+        <div style="font-family: 'Newsreader', Georgia, serif; font-size: 27px; font-weight: 400; letter-spacing: -.008em; color: #16181C; margin-bottom: 12px;">On call, to an agreed service level</div>
+        <p style="margin: 0; max-width: 72ch; font-size: 15.5px; line-height: 1.68; color: #4E535B;">Observability, alerting that fires on symptoms rather than noise, incident review, and monthly cloud cost work. A named engineer who already knows your stack &mdash; not a ticket queue.</p>
+        <div style="display: flex; gap: 8px; margin-top: 20px; font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #6D737C;">
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">slo</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">on-call</span>
+          <span style="padding: 5px 10px; border-radius: 3px; background: #F5F2EC; box-shadow: inset 0 0 0 1px #E7E2D9;">finops</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; padding: 78px 60px 0; display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: center;">
+    <div>
+      <h2 style="margin: 0 0 16px; font-family: 'Newsreader', Georgia, serif; font-size: 38px; font-weight: 300; line-height: 1.14; letter-spacing: -.012em; color: #16181C;">Four layers, one accountable team.</h2>
+      <p style="margin: 0 0 26px; max-width: 44ch; font-size: 16.5px; line-height: 1.66; color: #4E535B;">Most failures happen at the seams between layers &mdash; where the edge hands off to services, or the pipeline hands off to the warehouse. We own the whole stack so there is no seam to argue about at 3am.</p>
+      <div style="display: flex; flex-direction: column; gap: 0;">
+        <div style="display: grid; grid-template-columns: 108px 1fr; gap: 18px; align-items: baseline; padding: 13px 0; border-top: 1px solid #E3DFD7;">
+          <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; color: #0B6E86;">edge</span>
+          <span style="font-size: 14.5px; color: #4E535B;">CDN, WAF, TLS termination and rate limiting</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 108px 1fr; gap: 18px; align-items: baseline; padding: 13px 0; border-top: 1px solid #E3DFD7;">
+          <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; color: #4E535B;">services</span>
+          <span style="font-size: 14.5px; color: #4E535B;">Kubernetes, service mesh, autoscaling and rollout policy</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 108px 1fr; gap: 18px; align-items: baseline; padding: 13px 0; border-top: 1px solid #E3DFD7;">
+          <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; color: #4E535B;">pipelines</span>
+          <span style="font-size: 14.5px; color: #4E535B;">Streaming ingest, batch ETL and data quality gates</span>
+        </div>
+        <div style="display: grid; grid-template-columns: 108px 1fr; gap: 18px; align-items: baseline; padding: 13px 0; border-top: 1px solid #E3DFD7; border-bottom: 1px solid #E3DFD7;">
+          <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500; color: {{accent}};">data</span>
+          <span style="font-size: 14.5px; color: #4E535B;">Transactional stores, warehouse and retention policy</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: relative; width: 420px; height: 400px;">
+      <div class="ab-solidshadow" style="position: absolute; left: 96px; bottom: 36px; width: 232px; height: 38px; border-radius: 50%; background: rgba(22,24,28,.55); filter: blur(22px);"></div>
+      <div style="position: absolute; inset: 0; perspective: 1300px;">
+        <div class="ab-stack" style="position: absolute; left: 210px; top: 200px; width: 0; height: 0; transform-style: preserve-3d;">
+          <div style="position: absolute; left: -110px; top: -110px; width: 220px; height: 220px; border: 1px solid #57A8BC; background: linear-gradient(150deg, rgba(8,196,222,.26), rgba(8,196,222,.09)); box-shadow: 7px 7px 0 -1px #62B4C6, 14px 14px 20px -8px rgba(22,24,28,.4); transform: translateZ(92px);"></div>
+          <div style="position: absolute; left: -110px; top: -110px; width: 220px; height: 220px; border: 1px solid #BFB8AA; background: linear-gradient(150deg, #FFFFFF, #F4F1EA); background-image: linear-gradient(rgba(22,24,28,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(22,24,28,.06) 1px, transparent 1px); background-size: 22px 22px; box-shadow: 7px 7px 0 -1px #D8D2C7, 14px 14px 20px -8px rgba(22,24,28,.32); transform: translateZ(30px);"></div>
+          <div style="position: absolute; left: -110px; top: -110px; width: 220px; height: 220px; border: 1px solid #C9C2B6; background: linear-gradient(150deg, #FCFBF8, #EFEBE3); background-image: linear-gradient(rgba(22,24,28,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(22,24,28,.045) 1px, transparent 1px); background-size: 44px 44px; box-shadow: 7px 7px 0 -1px #DED9CF, 14px 14px 20px -8px rgba(22,24,28,.26); transform: translateZ(-30px);"></div>
+          <div style="position: absolute; left: -110px; top: -110px; width: 220px; height: 220px; border: 1px solid #7396D6; background: linear-gradient(150deg, rgba(27,95,184,.24), rgba(27,95,184,.09)); box-shadow: 7px 7px 0 -1px #85A4DA, 14px 14px 20px -8px rgba(22,24,28,.28); transform: translateZ(-92px);"></div>
+        </div>
+      </div>
+      <div class="ab-scan" style="position: absolute; left: 100px; top: 96px; width: 220px; height: 1.5px; background: linear-gradient(90deg, transparent, #0B6E86, transparent); pointer-events: none;"></div>
+    </div>
+  </div>
+
+  <div style="position: relative; padding: 68px 60px 0; display: grid; grid-template-columns: 660px 1fr; gap: 32px; align-items: stretch;">
+    <div style="position: relative; height: 330px; border-radius: 4px; background: repeating-linear-gradient(135deg, #EEEAE2 0px, #EEEAE2 12px, #E6E1D8 12px, #E6E1D8 24px); box-shadow: inset 0 0 0 1px #DED9CF, 0 2px 6px -2px rgba(22,24,28,.10); display: flex; align-items: center; justify-content: center;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 24px; border-radius: 3px; background: rgba(251,250,247,.96); box-shadow: 0 3px 10px -3px rgba(22,24,28,.2);">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#9AA0A8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h1.2a1 1 0 0 0 .83-.45l.94-1.4A1 1 0 0 1 9.3 3.7h5.4a1 1 0 0 1 .83.45l.94 1.4A1 1 0 0 0 17.3 6h1.2A2.5 2.5 0 0 1 21 8.5v8A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-8Z"></path><circle cx="12" cy="12.2" r="3.6"></circle></svg>
+        <div style="font-size: 13px; font-weight: 600; color: #4E535B;">PHOTO &mdash; the team, mid-work</div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8;">1320 &times; 660 &middot; drop in as team-01.jpg</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; justify-content: center; padding: 30px 30px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 8px 20px -10px rgba(22,24,28,.15), 0 2px 5px -2px rgba(22,24,28,.07), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9C3B7" stroke-width="1.6" style="margin-bottom: 16px;"><path d="M9 11H5.5A1.5 1.5 0 0 1 4 9.5V7a3 3 0 0 1 3-3M19 11h-3.5A1.5 1.5 0 0 1 14 9.5V7a3 3 0 0 1 3-3M9 11v3a6 6 0 0 1-5 5.9M19 11v3a6 6 0 0 1-5 5.9" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <p style="margin: 0 0 18px; font-family: 'Newsreader', Georgia, serif; font-size: 20px; font-weight: 300; line-height: 1.48; color: #16181C;">[One real sentence from a client about what changed after i3Codex took the platform on.]</p>
+      <div style="display: flex; align-items: center; gap: 11px; padding-top: 16px; border-top: 1px solid #EDE9E1;">
+        <div style="width: 38px; height: 38px; border-radius: 50%; background: #EEEAE2; box-shadow: inset 0 0 0 1px #DED9CF;"></div>
+        <div>
+          <div style="font-size: 14px; font-weight: 600; color: #16181C;">[Name]</div>
+          <div style="font-size: 12.5px; color: #9AA0A8;">[Role], [Company]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; padding: 48px 60px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+    <div class="ab-card" style="padding: 24px 22px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.14), 0 2px 4px -2px rgba(22,24,28,.07), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+      <div class="ab-idx" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; margin-bottom: 16px;">proof/01</div>
+      <div style="font-family: 'Newsreader', Georgia, serif; font-size: 38px; font-weight: 300; color: #16181C; line-height: 1; font-variant-numeric: tabular-nums;">[99.9]%</div>
+      <div style="margin-top: 10px; font-size: 14.5px; line-height: 1.58; color: #4E535B;">Platform availability held across [N] months for [client name], measured at the edge.</div>
+    </div>
+    <div class="ab-card" style="padding: 24px 22px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.14), 0 2px 4px -2px rgba(22,24,28,.07), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+      <div class="ab-idx" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; margin-bottom: 16px;">proof/02</div>
+      <div style="font-family: 'Newsreader', Georgia, serif; font-size: 38px; font-weight: 300; color: #16181C; line-height: 1; font-variant-numeric: tabular-nums;">[6] weeks</div>
+      <div style="margin-top: 10px; font-size: 14.5px; line-height: 1.58; color: #4E535B;">From first workshop to a production landing zone on [cloud], including handover.</div>
+    </div>
+    <div class="ab-card" style="padding: 24px 22px; border-radius: 5px; background: #FFFFFF; box-shadow: 0 6px 16px -8px rgba(22,24,28,.14), 0 2px 4px -2px rgba(22,24,28,.07), inset 0 1px 0 rgba(255,255,255,.95), 0 0 0 1px rgba(22,24,28,.055);">
+      <div class="ab-idx" style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; color: #9AA0A8; margin-bottom: 16px;">proof/03</div>
+      <div style="font-family: 'Newsreader', Georgia, serif; font-size: 38px; font-weight: 300; color: #16181C; line-height: 1; font-variant-numeric: tabular-nums;">[38]% less</div>
+      <div style="margin-top: 10px; font-size: 14.5px; line-height: 1.58; color: #4E535B;">Monthly cloud spend after the first FinOps cycle with [client name].</div>
+    </div>
+  </div>
+
+  <div style="position: relative; margin-top: 80px; padding: 64px 60px 0; border-top: 1px solid #E3DFD7; background: linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,0));">
+    <div style="display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: center; padding-bottom: 54px; border-bottom: 1px solid #E3DFD7;">
+      <div>
+        <h2 style="margin: 0 0 14px; font-family: 'Newsreader', Georgia, serif; font-size: 42px; font-weight: 300; line-height: 1.12; letter-spacing: -.014em; color: #16181C;">Tell us what keeps<br>breaking.</h2>
+        <p style="margin: 0; max-width: 46ch; font-size: 16.5px; line-height: 1.64; color: #4E535B;">A 45-minute architecture review, no charge and no deck. You leave with a written summary of what we&#39;d change first, whether or not you hire us.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="ab-btn" style="display: inline-flex; align-items: center; justify-content: center; height: 54px; padding: 0 28px; border-radius: 3px; background: {{accent}}; color: #FFFFFF; font-size: 15.5px; font-weight: 500; cursor: pointer; box-shadow: 0 4px 11px -2px rgba(27,95,184,.42), 0 1px 3px rgba(22,24,28,.14);">Book an architecture review</span>
+        <span style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12.5px; color: #9AA0A8; text-align: center;">or email [hello@i3codex.com]</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; padding: 48px 0;">
+      <div>
+        <div style="font-size: 19px; font-weight: 600; letter-spacing: -.02em; color: #16181C; margin-bottom: 14px;">
+          <span style="background: linear-gradient(100deg, #08C4DE, #287AED); -webkit-background-clip: text; background-clip: text; color: transparent;">i3</span>Codex
+        </div>
+        <p style="margin: 0 0 18px; max-width: 34ch; font-size: 14.5px; line-height: 1.62; color: #6D737C;">Cloud platforms, data systems and applied AI for [type of client]. Built to be handed over, kept on call.</p>
+        <div style="display: flex; gap: 10px;">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 3px; background: #FFFFFF; color: #6D737C; box-shadow: 0 0 0 1px #E3DFD7; cursor: pointer;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v7M7 6.6v.02M11.5 17v-4a2.5 2.5 0 0 1 5 0v4M11.5 17v-6"></path><rect x="3" y="3" width="18" height="18" rx="2.5"></rect></svg>
+          </span>
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 3px; background: #FFFFFF; color: #6D737C; box-shadow: 0 0 0 1px #E3DFD7; cursor: pointer;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 19 3.4a4.9 4.9 0 0 0-.1-3.6s-1.1-.3-3.7 1.4a12.6 12.6 0 0 0-6.6 0C6 -.5 4.9-.2 4.9-.2a4.9 4.9 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V21" transform="translate(0 2)"></path></svg>
+          </span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 15px;">services</div>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14.5px; color: #4E535B;">
+          <span class="ab-link" style="cursor: pointer;">Cloud &amp; platform</span>
+          <span class="ab-link" style="cursor: pointer;">Data &amp; analytics</span>
+          <span class="ab-link" style="cursor: pointer;">Applied AI</span>
+          <span class="ab-link" style="cursor: pointer;">Run &amp; operate</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 15px;">company</div>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14.5px; color: #4E535B;">
+          <span class="ab-link" style="cursor: pointer;">About</span>
+          <span class="ab-link" style="cursor: pointer;">Work</span>
+          <span class="ab-link" style="cursor: pointer;">Careers</span>
+          <span class="ab-link" style="cursor: pointer;">Writing</span>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 11.5px; color: #9AA0A8; margin-bottom: 15px;">contact</div>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14.5px; color: #4E535B;">
+          <span>[hello@i3codex.com]</span>
+          <span>[+00 000 000 0000]</span>
+          <span style="line-height: 1.5;">[Street address]<br>[City, Country]</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0 30px; border-top: 1px solid #E3DFD7; font-size: 13px; color: #9AA0A8;">
+      <span>&copy; [Year] i3Codex. All rights reserved.</span>
+      <div style="display: flex; gap: 24px;">
+        <span class="ab-link" style="cursor: pointer;">Privacy</span>
+        <span class="ab-link" style="cursor: pointer;">Terms</span>
+        <span class="ab-link" style="cursor: pointer;">Security</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#1B5FB8","options":["#1B5FB8","#0B6E86","#16181C","#8A5A1F"],"section":"Brand"},"blueprint":{"editor":"boolean","default":true,"section":"Style"},"$preview":{"width":1200,"height":3420}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 0 };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#1B5FB8';
+    const blueprint = this.props.blueprint ?? true;
+    const t = this.state.tab;
+    const out = {
+      accent: accent,
+      gridImg: blueprint
+        ? 'linear-gradient(rgba(22,24,28,.042) 1px, transparent 1px), linear-gradient(90deg, rgba(22,24,28,.042) 1px, transparent 1px)'
+        : 'none'
+    };
+    for (let i = 0; i < 4; i++) {
+      const on = i === t;
+      out['c' + i] = on ? '#16181C' : '#6D737C';
+      out['b' + i] = on ? '#16181C' : '#DAD4C9';
+      out['g' + i] = on ? '#FFFFFF' : 'rgba(255,255,255,.5)';
+      out['s' + i] = on ? '0 4px 10px -4px rgba(22,24,28,.26), inset 0 1px 0 rgba(255,255,255,.95)' : 'none';
+      out['d' + i] = on ? 'block' : 'none';
+      out['pick' + i] = () => this.setState({ tab: i });
+    }
+    return out;
+  }
+}
+</script>
+</body>
+</html>

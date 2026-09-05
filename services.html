@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Practices &mdash; i3Codex</title>
+  <meta name="description" content="End-to-end engineering practices: Mobile App Development, Website &amp; Web Apps, DevOps &amp; Cloud, AI &amp; ML Solutions, Blockchain, and Cybersecurity &amp; Audits.">
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="site-container site-header-inner">
+      <div style="display: flex; align-items: center; gap: 42px;">
+        <a href="./index.html" class="brand-logo" aria-label="i3Codex Home">
+          <div class="brand-logo-pill">
+            <img src="./logo.png" alt="i3Codex" class="brand-logo-img">
+          </div>
+        </a>
+        <nav aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <li><a href="./services.html" class="nav-link active">Services</a></li>
+            <li><a href="./case-study.html" class="nav-link">Work</a></li>
+            <li><a href="./about.html" class="nav-link">Company</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nav-actions">
+        <span class="lang-badge">EN</span>
+        <button type="button" class="btn btn-sm btn-primary" data-open-modal="review">Start a Project</button>
+        <button type="button" class="mobile-menu-btn" id="mobile-nav-toggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-drawer-content">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid var(--color-hairline);">
+        <a href="./index.html" class="brand-logo" aria-label="i3Codex Home">
+          <div class="brand-logo-pill" style="padding: 4px 12px;">
+            <img src="./logo.png" alt="i3Codex" class="brand-logo-img" style="height: 18px;">
+          </div>
+        </a>
+        <button type="button" class="modal-close-btn" id="mobile-drawer-close" aria-label="Close menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <ul class="mobile-drawer-links">
+        <li><a href="./index.html" class="mobile-drawer-link">Home</a></li>
+        <li><a href="./services.html" class="mobile-drawer-link">Services</a></li>
+        <li><a href="./case-study.html" class="mobile-drawer-link">Work &amp; Case Studies</a></li>
+        <li><a href="./about.html" class="mobile-drawer-link">Company &amp; Team</a></li>
+        <li><a href="./contact.html" class="mobile-drawer-link">Contact</a></li>
+      </ul>
+      <div style="margin-top: auto;">
+        <button type="button" class="btn btn-lg btn-primary" style="width: 100%;" data-open-modal="review">Start a Project</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Services Hero -->
+    <section class="hero-section" style="padding-bottom: 60px;">
+      <div class="site-container">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          Engineering Practices &amp; Solutions
+        </div>
+        <div class="services-hero-grid">
+          <div>
+            <h1>
+              Six core practices.<br>One accountable team.
+            </h1>
+          </div>
+          <div>
+            <p class="lead" style="margin-bottom: 0;">
+              From cross-platform mobile apps and cloud-native web architectures to production AI models, audited smart contracts, and zero-trust security. We ship turnkey systems with direct engineering accountability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Practices Breakdown -->
+    <section class="site-container" style="padding-bottom: 60px;">
+
+      <!-- Practice 1: Mobile App Development -->
+      <article class="card" id="mobile" style="padding: clamp(28px, 4vw, 48px); margin-bottom: 32px;">
+        <div class="practice-card-grid">
+          <div>
+            <div class="mono" style="font-size: 13px; color: var(--color-technical); margin-bottom: 14px;">01 / mobile-development</div>
+            <h2>Mobile App Development (iOS &amp; Android)</h2>
+            <p style="font-size: 16.5px; line-height: 1.68;">
+              High-performance native and cross-platform mobile apps using Swift, Kotlin, Flutter, and React Native. Built with offline-first local databases, resilient real-time synchronization, biometric security, and full App Store and Google Play automated CI/CD.
+            </p>
+            <div class="mono" style="font-size: 13px; color: var(--color-subtle); margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--color-hairline);">
+              Typical engagement: 6&ndash;12 weeks to release &middot; From $28,000
+            </div>
+          </div>
+
+          <div style="padding: 26px; border-radius: 4px; background: var(--color-surface-subtle); box-shadow: inset 0 0 0 1px var(--color-hairline);">
+            <div class="mono" style="font-size: 11.5px; color: var(--color-muted); margin-bottom: 16px;">what you get &mdash; deliverables</div>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Cross-platform Flutter / React Native or native Swift/Kotlin clean codebase</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Offline-first SQLite/WatermelonDB sync with automatic conflict resolution</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Automated Fastlane pipelines for TestFlight and Google Play internal testing</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Push notification orchestration, deep linking, and analytics telemetry</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Practice 2: Website & Web App Development -->
+      <article class="card" id="web" style="padding: clamp(28px, 4vw, 48px); margin-bottom: 32px;">
+        <div class="practice-card-grid">
+          <div>
+            <div class="mono" style="font-size: 13px; color: var(--color-technical); margin-bottom: 14px;">02 / web-development</div>
+            <h2>Website &amp; Web Application Development</h2>
+            <p style="font-size: 16.5px; line-height: 1.68;">
+              Modern, responsive web applications and enterprise SaaS platforms built with React, Next.js, and TypeScript. Optimized for sub-second Core Web Vitals, accessible design systems, resilient serverless backends, and internationalization.
+            </p>
+            <div class="mono" style="font-size: 13px; color: var(--color-subtle); margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--color-hairline);">
+              Typical engagement: 4&ndash;10 weeks &middot; From $24,000
+            </div>
+          </div>
+
+          <div style="padding: 26px; border-radius: 4px; background: var(--color-surface-subtle); box-shadow: inset 0 0 0 1px var(--color-hairline);">
+            <div class="mono" style="font-size: 11.5px; color: var(--color-muted); margin-bottom: 16px;">what you get &mdash; deliverables</div>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Modular React/Next.js architecture with SSR, ISR &amp; edge caching</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Accessible, token-driven design system with 100/100 Lighthouse performance</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Headless CMS / API integration with GraphQL and robust offline caching</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Zero-downtime deployment pipelines with Vercel, AWS CloudFront, or Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Practice 3: DevOps & Cloud Infrastructure -->
+      <article class="card" id="devops" style="padding: clamp(28px, 4vw, 48px); margin-bottom: 32px;">
+        <div class="practice-card-grid">
+          <div>
+            <div class="mono" style="font-size: 13px; color: var(--color-technical); margin-bottom: 14px;">03 / devops-cloud</div>
+            <h2>DevOps &amp; Cloud Infrastructure Solutions</h2>
+            <p style="font-size: 16.5px; line-height: 1.68;">
+              Resilient multi-cloud foundations on AWS, GCP, and Azure. We automate provisioning with Terraform IaC, containerize microservices with Kubernetes, and build zero-friction GitOps delivery pipelines so releases become routine non-events.
+            </p>
+            <div class="mono" style="font-size: 13px; color: var(--color-subtle); margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--color-hairline);">
+              Typical engagement: 4&ndash;8 weeks &middot; From $20,000
+            </div>
+          </div>
+
+          <div style="padding: 26px; border-radius: 4px; background: var(--color-surface-subtle); box-shadow: inset 0 0 0 1px var(--color-hairline);">
+            <div class="mono" style="font-size: 11.5px; color: var(--color-muted); margin-bottom: 16px;">what you get &mdash; deliverables</div>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Production Kubernetes (EKS/GKE) clusters with autoscaling and GitOps (ArgoCD)</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Clean, modular Terraform scripts checked directly into your repository</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Automated canary releases, blue-green traffic splits, and instant rollbacks</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Comprehensive Prometheus, Grafana, and OpenTelemetry observability</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Practice 4: Applied AI / ML -->
+      <article class="card" id="ai" style="padding: clamp(28px, 4vw, 48px); margin-bottom: 32px;">
+        <div class="practice-card-grid">
+          <div>
+            <div class="mono" style="font-size: 13px; color: var(--color-technical); margin-bottom: 14px;">04 / applied-ai</div>
+            <h2>AI &amp; Machine Learning Solutions</h2>
+            <p style="font-size: 16.5px; line-height: 1.68;">
+              Custom LLM agent workflows, production-ready Retrieval-Augmented Generation (RAG), and proprietary fine-tuned models. We build automated benchmark harnesses to verify hallucination limits and citation precision on your private data before rollout.
+            </p>
+            <div class="mono" style="font-size: 13px; color: var(--color-subtle); margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--color-hairline);">
+              Typical engagement: 6&ndash;10 weeks &middot; From $30,000
+            </div>
+          </div>
+
+          <div style="padding: 26px; border-radius: 4px; background: var(--color-surface-subtle); box-shadow: inset 0 0 0 1px var(--color-hairline);">
+            <div class="mono" style="font-size: 11.5px; color: var(--color-muted); margin-bottom: 16px;">what you get &mdash; deliverables</div>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Multi-turn autonomous agent architectures with tool calling &amp; human-in-the-loop</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">High-speed vector search (pgvector/Qdrant) with hybrid BM25 and semantic reranking</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Continuous evaluation harnesses testing precision, safety, and citation accuracy</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Enterprise PII sanitization boundaries and prompt injection guardrails</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Practice 5: Blockchain & Web3 -->
+      <article class="card" id="blockchain" style="padding: clamp(28px, 4vw, 48px); margin-bottom: 32px;">
+        <div class="practice-card-grid">
+          <div>
+            <div class="mono" style="font-size: 13px; color: var(--color-technical); margin-bottom: 14px;">05 / blockchain-web3</div>
+            <h2>Blockchain &amp; Web3 Engineering</h2>
+            <p style="font-size: 16.5px; line-height: 1.68;">
+              Battle-tested smart contracts, decentralized applications (dApps), and protocol engineering. We write gas-optimized Solidity and Rust contracts with formal verification, multi-sig governance, and seamless Web3 wallet integrations.
+            </p>
+            <div class="mono" style="font-size: 13px; color: var(--color-subtle); margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--color-hairline);">
+              Typical engagement: 6&ndash;12 weeks &middot; From $32,000
+            </div>
+          </div>
+
+          <div style="padding: 26px; border-radius: 4px; background: var(--color-surface-subtle); box-shadow: inset 0 0 0 1px var(--color-hairline);">
+            <div class="mono" style="font-size: 11.5px; color: var(--color-muted); margin-bottom: 16px;">what you get &mdash; deliverables</div>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Audited EVM / Solana smart contracts with automated Foundry test suites</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Responsive dApp frontends integrating Wagmi, Viem, and WalletConnect</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Multi-signature treasury protocols, automated escrow, and tokenomics logic</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Comprehensive third-party security audit preparations &amp; gas benchmarking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Practice 6: Cybersecurity & Compliance -->
+      <article class="card" id="security" style="padding: clamp(28px, 4vw, 48px);">
+        <div class="practice-card-grid">
+          <div>
+            <div class="mono" style="font-size: 13px; color: var(--color-technical); margin-bottom: 14px;">06 / cybersecurity-compliance</div>
+            <h2>Cybersecurity, DevSecOps &amp; Compliance</h2>
+            <p style="font-size: 16.5px; line-height: 1.68;">
+              End-to-end security posture engineering. From thorough penetration testing and automated vulnerability scanning in CI/CD to Zero-Trust network architecture and rapid SOC2 / ISO 27001 compliance audit readiness.
+            </p>
+            <div class="mono" style="font-size: 13px; color: var(--color-subtle); margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--color-hairline);">
+              Typical engagement: 2&ndash;6 weeks &middot; From $15,000
+            </div>
+          </div>
+
+          <div style="padding: 26px; border-radius: 4px; background: var(--color-surface-subtle); box-shadow: inset 0 0 0 1px var(--color-hairline);">
+            <div class="mono" style="font-size: 11.5px; color: var(--color-muted); margin-bottom: 16px;">what you get &mdash; deliverables</div>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">White-box &amp; black-box penetration testing with detailed remediation roadmaps</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Shift-left DevSecOps with automated SAST/DAST &amp; dependency CVE scans</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Zero-trust network segmentation, audited IAM privilege policies &amp; KMS encryption</span>
+              </div>
+              <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="var(--color-chart-good)" stroke-width="2" style="margin-top: 2px;"><path d="M4 10.5 8 14.5 16 6"/></svg>
+                <span style="font-size: 14.5px; color: var(--color-body);">Full technical compliance gap analysis &amp; documentation for SOC2 / ISO 27001</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Interactive Project Scope & Cost Estimator -->
+    <section class="site-container" style="padding-bottom: 80px;">
+      <div class="card" id="project-estimator" style="padding: clamp(28px, 4vw, 48px); border-left: 3px solid var(--color-accent);">
+        <div class="eyebrow" style="margin-bottom: 12px;">
+          <span class="eyebrow-line"></span>
+          Interactive Sizing Tool
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 24px;">
+          <div>
+            <h2 style="margin-bottom: 8px;">Estimate your project scope &amp; team structure</h2>
+            <p style="font-size: 16px; color: var(--color-subtle); max-width: 65ch; line-height: 1.6;">
+              Select your engineering domain and engagement scale to calculate indicative delivery timeline, dedicated team makeup, and budget ranges based on past sprint metrics.
+            </p>
+          </div>
+          <div class="badge badge-accent mono">Real-time Calculator</div>
+        </div>
+
+        <div class="practice-card-grid" style="align-items: stretch;">
+          <div>
+            <!-- Step 1: Select Service -->
+            <div style="margin-bottom: 28px;">
+              <div class="mono" style="font-size: 12px; color: var(--color-technical); text-transform: uppercase; margin-bottom: 10px;">Step 1 &mdash; Select Engineering Domain</div>
+              <div class="chips-group">
+                <button type="button" class="chip active" data-est-service="mobile">Mobile App</button>
+                <button type="button" class="chip" data-est-service="web">Website &amp; Web App</button>
+                <button type="button" class="chip" data-est-service="devops">DevOps &amp; Cloud</button>
+                <button type="button" class="chip" data-est-service="ai">AI / ML Solutions</button>
+                <button type="button" class="chip" data-est-service="blockchain">Blockchain &amp; Web3</button>
+                <button type="button" class="chip" data-est-service="security">Cybersecurity</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Select Scale -->
+            <div>
+              <div class="mono" style="font-size: 12px; color: var(--color-technical); text-transform: uppercase; margin-bottom: 10px;">Step 2 &mdash; Select Engagement Scale</div>
+              <div class="chips-group">
+                <button type="button" class="chip" data-est-scale="mvp">MVP / Fast Prototype</button>
+                <button type="button" class="chip active" data-est-scale="standard">Full-Scale Production</button>
+                <button type="button" class="chip" data-est-scale="enterprise">Enterprise Stack</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Output Summary Box -->
+          <div style="padding: 26px; border-radius: 4px; background: var(--color-surface-subtle); box-shadow: inset 0 0 0 1px var(--color-hairline); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="mono" style="font-size: 11.5px; color: var(--color-muted); margin-bottom: 18px; display: flex; justify-content: space-between;">
+                <span>indicative engagement model</span>
+                <span style="color: var(--color-accent); font-weight: 600;">ESTIMATION</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 18px;">
+                <div>
+                  <div class="mono" style="font-size: 12px; color: var(--color-subtle); margin-bottom: 4px;">Timeline to Launch</div>
+                  <div id="est-timeline" style="font-family: var(--font-voice); font-size: 26px; font-weight: 500; color: var(--color-ink);">10-14 weeks</div>
+                </div>
+
+                <div>
+                  <div class="mono" style="font-size: 12px; color: var(--color-subtle); margin-bottom: 4px;">Dedicated Team Pod</div>
+                  <div id="est-team" style="font-family: var(--font-mono); font-size: 14.5px; color: var(--color-body); font-weight: 500;">3 Full-Stack/Mobile + 1 Lead + 1 QA</div>
+                </div>
+
+                <div>
+                  <div class="mono" style="font-size: 12px; color: var(--color-subtle); margin-bottom: 4px;">Indicative Budget Range</div>
+                  <div id="est-budget" style="font-family: var(--font-mono); font-size: 24px; font-weight: 600; color: var(--color-accent);">$52k - $74k</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--color-hairline);">
+              <button type="button" class="btn btn-md btn-primary" style="width: 100%;" data-open-modal="review">Book Scoping Session for this Spec</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Review CTA Strip -->
+    <section class="cta-strip">
+      <div class="site-container cta-grid">
+        <div>
+          <h2>Need an honest architectural assessment?</h2>
+          <p class="lead" style="margin-bottom: 0;">
+            A 45-minute technical session directly with a senior engineering lead. You leave with an actionable roadmap, whether you partner with us or build internally.
+          </p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <button type="button" class="btn btn-lg btn-primary" data-open-modal="review">Start a Project</button>
+          <span class="mono" style="font-size: 12.5px; color: var(--color-muted); text-align: center;">or email hello@i3codex.com</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-columns">
+        <div>
+          <a href="./index.html" class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-logo-pill" style="padding: 7px 16px;">
+              <img src="./logo.png" alt="i3Codex" class="brand-logo-img" style="height: 24px;">
+            </div>
+          </a>
+          <p style="font-size: 14.5px; color: var(--color-subtle); max-width: 32ch; line-height: 1.6;">
+            End-to-end mobile apps, modern web platforms, cloud DevOps, applied AI, smart contracts, and cybersecurity engineering.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>services</h5>
+          <ul class="footer-links">
+            <li><a href="./services.html#mobile" class="footer-link">Mobile App Dev</a></li>
+            <li><a href="./services.html#web" class="footer-link">Web Apps &amp; SaaS</a></li>
+            <li><a href="./services.html#devops" class="footer-link">DevOps &amp; Cloud</a></li>
+            <li><a href="./services.html#ai" class="footer-link">AI &amp; Machine Learning</a></li>
+            <li><a href="./services.html#blockchain" class="footer-link">Blockchain &amp; Web3</a></li>
+            <li><a href="./services.html#security" class="footer-link">Cybersecurity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>company</h5>
+          <ul class="footer-links">
+            <li><a href="./about.html" class="footer-link">About</a></li>
+            <li><a href="./case-study.html" class="footer-link">Work &amp; Case Studies</a></li>
+            <li><a href="./about.html#careers" class="footer-link">Careers</a></li>
+            <li><a href="./contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>direct contact</h5>
+          <ul class="footer-links">
+            <li class="mono" style="font-size: 13.5px; color: var(--color-body);">hello@i3codex.com</li>
+            <li class="mono" style="font-size: 13.5px; color: var(--color-body);">+1 (415) 890-4321</li>
+            <li style="font-size: 13.5px; color: var(--color-subtle); line-height: 1.5;">240 2nd Street<br>San Francisco, CA</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 i3Codex Systems Inc. All rights reserved.</span>
+        <div style="display: flex; gap: 24px;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Security Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Book a Review Modal Dialog -->
+  <div class="modal-backdrop" id="review-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" data-close-modal aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+        <div class="brand-logo-pill" style="padding: 4px 10px;">
+          <img src="./logo.png" alt="i3Codex" class="brand-logo-img" style="height: 16px;">
+        </div>
+        <span class="mono" style="font-size: 11.5px; color: var(--color-muted);">// direct technical consultation</span>
+      </div>
+
+      <div class="eyebrow" style="margin-bottom: 12px;">
+        <span class="eyebrow-line"></span>
+        Direct with a Senior Engineer
+      </div>
+
+      <h2 id="modal-title" style="margin-bottom: 10px;">Start a project with i3Codex</h2>
+      <p style="font-size: 15px; color: var(--color-subtle); margin-bottom: 24px;">
+        45 minutes. No sales pitch, no deck. Discuss your product specs directly with a principal engineer.
+      </p>
+
+      <form id="review-booking-form">
+        <div class="form-group">
+          <label class="form-label">What is your primary engineering domain?</label>
+          <div class="chips-group">
+            <span class="chip active" data-chip="mobile">Mobile App</span>
+            <span class="chip" data-chip="web">Web Application</span>
+            <span class="chip" data-chip="devops">DevOps &amp; Cloud</span>
+            <span class="chip" data-chip="ai">AI / ML Solutions</span>
+            <span class="chip" data-chip="blockchain">Blockchain &amp; Web3</span>
+            <span class="chip" data-chip="security">Cybersecurity</span>
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label for="review-name" class="form-label">Your Name</label>
+            <input type="text" id="review-name" class="form-input" placeholder="Alex Rivers" required>
+          </div>
+          <div class="form-group">
+            <label for="review-email" class="form-label">Work Email</label>
+            <input type="email" id="review-email" class="form-input" placeholder="alex@company.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="review-notes" class="form-label">Brief project goals or challenges</label>
+          <textarea id="review-notes" class="form-textarea" placeholder="e.g. Building an iOS/Android fintech app with automated Kubernetes backend and biometric security..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Preferred Session Slot</label>
+          <select class="form-select" id="review-slot">
+            <option>Tuesday &mdash; 10:00 AM PST (45 mins)</option>
+            <option>Wednesday &mdash; 2:00 PM PST (45 mins)</option>
+            <option>Thursday &mdash; 11:30 AM PST (45 mins)</option>
+            <option>Friday &mdash; 1:00 PM PST (45 mins)</option>
+          </select>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 28px;">
+          <span style="font-family: var(--font-mono); font-size: 11.5px; color: var(--color-muted);">// no NDAs required to talk</span>
+          <button type="submit" class="btn btn-md btn-primary">Confirm 45-min Session</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

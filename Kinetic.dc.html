@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+  <style>
+    body { margin: 0; background: #F7F4EE; }
+    a { color: #111114; text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: #7A3BC4; }
+    * { box-sizing: border-box; }
+
+    .kn-link { transition: background-size .35s cubic-bezier(.2,.7,.3,1); background-image: linear-gradient(#111114, #111114); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 2px; padding-bottom: 3px; }
+    .kn-link:hover { background-size: 100% 2px; }
+
+    .kn-cta { transition: transform .32s cubic-bezier(.34,1.5,.44,1), box-shadow .32s ease; }
+    .kn-cta:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 #111114, 12px 14px 22px -8px rgba(17,17,20,.4); }
+
+    .kn-ghost { transition: transform .32s cubic-bezier(.34,1.5,.44,1), box-shadow .32s ease, background .32s ease; }
+    .kn-ghost:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 #111114, 12px 14px 22px -8px rgba(17,17,20,.35); background: #FFFFFF; }
+
+    .kn-card { transition: transform .5s cubic-bezier(.2,.85,.25,1), box-shadow .5s ease; cursor: pointer; will-change: transform; }
+    .kn-card:hover { transform: perspective(1200px) rotateX(0deg) rotateY(0deg) translate(-6px, -12px) !important; }
+    .kn-card .kn-arrow { transition: transform .5s cubic-bezier(.2,.85,.25,1); }
+    .kn-card:hover .kn-arrow { transform: translate(5px, -5px); }
+
+    .kn-hero3d { animation: knHover 13s ease-in-out infinite; }
+    @keyframes knHover {
+      0%, 100% { transform: rotateX(12deg) rotateY(-17deg) translateY(0px); }
+      50%      { transform: rotateX(9deg) rotateY(-12deg) translateY(-18px); }
+    }
+    .kn-groundshadow { animation: knGround 13s ease-in-out infinite; }
+    @keyframes knGround {
+      0%, 100% { opacity: .34; transform: scale(1); }
+      50%      { opacity: .20; transform: scale(.9); }
+    }
+
+    .kn-track { animation: knMarquee 30s linear infinite; }
+    @keyframes knMarquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .kn-panel { transition: transform .45s cubic-bezier(.2,.8,.25,1), box-shadow .45s ease; }
+    .kn-panel:hover { transform: translate(-4px, -6px); box-shadow: 16px 16px 0 #111114, 26px 30px 44px -18px rgba(17,17,20,.42); }
+
+    .kn-swatch { transition: transform .4s cubic-bezier(.34,1.5,.44,1), box-shadow .4s ease; }
+    .kn-swatch:hover { transform: translate(-3px, -6px); box-shadow: 6px 8px 16px -6px rgba(17,17,20,.4); }
+  </style>
+</helmet>
+
+<div style="width: 1200px; min-height: 2180px; background: #F7F4EE; color: #111114; font-family: 'Source Serif 4', Georgia, serif; -webkit-font-smoothing: antialiased; overflow: hidden; position: relative;">
+
+  <svg style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: .26; mix-blend-mode: multiply; pointer-events: none; z-index: 1;">
+    <filter id="knGrain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"></feTurbulence></filter>
+    <rect width="100%" height="100%" filter="url(#knGrain)"></rect>
+  </svg>
+
+  <div style="position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; padding: 26px 44px; border-bottom: 2px solid #111114; background: #FDFCF9;">
+    <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 112, 'wght' 800; font-size: 22px; letter-spacing: -.02em; color: #111114;">
+      <span style="color: {{accent}}; text-shadow: 1px 1px 0 #111114;">i3</span>Codex
+    </div>
+    <div style="display: flex; align-items: center; gap: 30px; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 500; font-size: 14.5px; color: #111114;">
+      <span class="kn-link" style="cursor: pointer;">Work</span>
+      <span class="kn-link" style="cursor: pointer;">Services</span>
+      <span class="kn-link" style="cursor: pointer;">Studio</span>
+      <span class="kn-cta" style="display: inline-flex; align-items: center; height: 42px; padding: 0 22px; border: 2px solid #111114; background: {{accent}}; color: #111114; font-variation-settings: 'wdth' 100, 'wght' 700; font-size: 14px; cursor: pointer; box-shadow: 4px 4px 0 #111114;">Let&#39;s talk</span>
+    </div>
+  </div>
+
+  <div style="position: relative; z-index: 2; padding: 58px 44px 120px; display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: center;">
+    <div>
+      <div style="display: inline-flex; align-items: center; gap: 9px; padding: 6px 13px; border: 2px solid #111114; background: {{accent3}}; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 600; font-size: 12.5px; color: #111114; margin-bottom: 26px; box-shadow: 3px 3px 0 #111114;">
+        Taking [N] new projects for [Quarter]
+      </div>
+
+      <h1 style="margin: 0; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 116, 'wght' 850; font-size: 76px; line-height: .96; letter-spacing: -.028em; color: #111114; text-wrap: pretty; text-shadow: 2px 2px 0 {{accent}}, 4px 4px 0 {{accent}}, 6px 6px 0 {{accent}}, 7px 8px 12px rgba(17,17,20,.22);">
+        Ship faster.<br>Sleep better.
+      </h1>
+
+      <p style="margin: 30px 0 0; max-width: 46ch; font-family: 'Source Serif 4', Georgia, serif; font-size: 18.5px; line-height: 1.6; color: #3A3A40;">
+        i3Codex builds and runs the cloud, data and AI systems behind [type of client] &mdash; so your team can spend its week on the product instead of the plumbing.
+      </p>
+
+      <div style="display: flex; align-items: center; gap: 14px; margin-top: 34px;">
+        <span class="kn-cta" style="display: inline-flex; align-items: center; height: 54px; padding: 0 28px; border: 2px solid #111114; background: {{accent}}; color: #111114; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 104, 'wght' 700; font-size: 16px; cursor: pointer; box-shadow: 4px 4px 0 #111114, 8px 10px 16px -6px rgba(17,17,20,.3);">Start a project</span>
+        <span class="kn-ghost" style="display: inline-flex; align-items: center; height: 54px; padding: 0 26px; border: 2px solid #111114; background: #FDFCF9; color: #111114; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 104, 'wght' 600; font-size: 16px; cursor: pointer; box-shadow: 4px 4px 0 #111114;">See the work</span>
+      </div>
+    </div>
+
+    <div style="position: relative; height: 400px; display: flex; align-items: center; justify-content: center; perspective: 1300px;">
+      <div class="kn-groundshadow" style="position: absolute; bottom: 42px; width: 250px; height: 34px; border-radius: 50%; background: rgba(17,17,20,.7); filter: blur(20px);"></div>
+
+      <div class="kn-hero3d" style="position: relative; width: 290px; height: 290px; transform-style: preserve-3d;">
+        <div style="position: absolute; left: 0; top: 0; width: 290px; height: 182px; border: 2px solid #111114; background: #FFFFFF; box-shadow: 12px 12px 0 {{accent}}, 20px 22px 30px -12px rgba(17,17,20,.45); transform: translateZ(66px);">
+          <div style="padding: 17px 19px;">
+            <div style="width: 52px; height: 6px; background: #111114; margin-bottom: 15px;"></div>
+            <div style="width: 72%; height: 8px; background: #D8D6D0; margin-bottom: 9px;"></div>
+            <div style="width: 50%; height: 8px; background: #E4E2DD; margin-bottom: 20px;"></div>
+            <div style="display: flex; gap: 7px; align-items: flex-end; height: 54px;">
+              <div style="flex-grow: 1; height: 40%; background: #E4E2DD; border: 1px solid #111114;"></div>
+              <div style="flex-grow: 1; height: 68%; background: #E4E2DD; border: 1px solid #111114;"></div>
+              <div style="flex-grow: 1; height: 52%; background: #E4E2DD; border: 1px solid #111114;"></div>
+              <div style="flex-grow: 1; height: 100%; background: {{accent2}}; border: 1px solid #111114;"></div>
+              <div style="flex-grow: 1; height: 76%; background: #E4E2DD; border: 1px solid #111114;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="position: absolute; left: 32px; top: 128px; width: 240px; height: 124px; border: 2px solid #111114; background: #FFFFFF; box-shadow: 10px 10px 0 {{accent3}}, 16px 18px 26px -12px rgba(17,17,20,.4); transform: translateZ(8px);">
+          <div style="padding: 15px 17px; display: flex; flex-direction: column; gap: 11px;">
+            <div style="display: flex; align-items: center; gap: 9px;">
+              <span style="display: block; width: 10px; height: 10px; background: {{accent}}; border: 1px solid #111114;"></span>
+              <span style="width: 56%; height: 7px; background: #D8D6D0;"></span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 9px;">
+              <span style="display: block; width: 10px; height: 10px; background: {{accent2}}; border: 1px solid #111114;"></span>
+              <span style="width: 72%; height: 7px; background: #D8D6D0;"></span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 9px;">
+              <span style="display: block; width: 10px; height: 10px; background: {{accent3}}; border: 1px solid #111114;"></span>
+              <span style="width: 42%; height: 7px; background: #E4E2DD;"></span>
+            </div>
+          </div>
+        </div>
+
+        <div style="position: absolute; left: 92px; top: 226px; width: 164px; height: 62px; border: 2px solid #111114; background: #FFFFFF; box-shadow: 8px 8px 0 {{accent2}}, 12px 14px 20px -10px rgba(17,17,20,.35); transform: translateZ(-48px);"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; z-index: 4; margin: -80px 44px 0;">
+    <div class="kn-panel" style="border: 2px solid #111114; background: #FFFFFF; box-shadow: 12px 12px 0 #111114, 22px 26px 40px -18px rgba(17,17,20,.38); overflow: hidden;">
+      <div style="display: flex; align-items: center; justify-content: space-between; height: 46px; padding: 0 18px; border-bottom: 2px solid #111114; background: {{accent3}};">
+        <span style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 700; font-size: 13px; color: #111114;">[Client] &mdash; platform health</span>
+        <span style="display: inline-flex; align-items: center; gap: 7px; padding: 3px 10px; border: 1.5px solid #111114; background: #FDFCF9; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 600; font-size: 11.5px; color: #111114;">
+          <span style="display: block; width: 7px; height: 7px; border-radius: 50%; background: #0E8C7A;"></span>live
+        </span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 300px;">
+        <div style="padding: 24px 26px; border-right: 2px solid #111114;">
+          <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 18px;">
+            <div>
+              <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 600; font-size: 13px; color: #6A6A72; margin-bottom: 6px;">Request latency, p95</div>
+              <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 110, 'wght' 800; font-size: 34px; letter-spacing: -.03em; color: #111114; line-height: 1; font-variant-numeric: tabular-nums;">[142] ms</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 500; font-size: 12.5px; color: #3A3A40;">
+              <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="display: block; width: 10px; height: 10px; background: #1E63C8; border: 1px solid #111114;"></span>Edge</span>
+              <span style="display: inline-flex; align-items: center; gap: 6px;"><span style="display: block; width: 10px; height: 10px; background: #0E8C7A; border: 1px solid #111114;"></span>Origin</span>
+            </div>
+          </div>
+
+          <svg viewBox="0 0 580 156" style="width: 100%; height: 156px; display: block; overflow: visible;">
+            <line x1="0" y1="18" x2="580" y2="18" stroke="#EBE8E1" stroke-width="1"></line>
+            <line x1="0" y1="64" x2="580" y2="64" stroke="#EBE8E1" stroke-width="1"></line>
+            <line x1="0" y1="110" x2="580" y2="110" stroke="#EBE8E1" stroke-width="1"></line>
+            <line x1="0" y1="150" x2="580" y2="150" stroke="#111114" stroke-width="1.5"></line>
+            <path d="M0,110 C46,102 76,80 122,86 C168,92 196,54 244,48 C292,42 320,70 366,62 C412,54 442,30 488,36 C534,42 558,24 580,20 L580,150 L0,150 Z" fill="#1E63C8" opacity="0.10"></path>
+            <path d="M0,110 C46,102 76,80 122,86 C168,92 196,54 244,48 C292,42 320,70 366,62 C412,54 442,30 488,36 C534,42 558,24 580,20" fill="none" stroke="#1E63C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M0,132 C46,128 76,120 122,123 C168,126 196,110 244,107 C292,104 320,116 366,111 C412,106 442,94 488,97 C534,100 558,90 580,87" fill="none" stroke="#0E8C7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="580" cy="20" r="4.5" fill="#1E63C8" stroke="#FFFFFF" stroke-width="2"></circle>
+            <circle cx="580" cy="87" r="4.5" fill="#0E8C7A" stroke="#FFFFFF" stroke-width="2"></circle>
+          </svg>
+          <div style="display: flex; justify-content: space-between; margin-top: 8px; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 500; font-size: 11.5px; color: #8A8A92;">
+            <span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>now</span>
+          </div>
+        </div>
+
+        <div style="padding: 24px 22px; background: #FDFCF9;">
+          <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 600; font-size: 13px; color: #6A6A72; margin-bottom: 16px;">Services</div>
+          <div style="display: flex; flex-direction: column; gap: 13px; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 500; font-size: 13.5px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; color: #111114;"><span style="display: block; width: 9px; height: 9px; background: #0E8C7A; border: 1px solid #111114;"></span>api-gateway</span>
+              <span style="color: #6A6A72; font-variant-numeric: tabular-nums;">99.99</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; color: #111114;"><span style="display: block; width: 9px; height: 9px; background: #0E8C7A; border: 1px solid #111114;"></span>auth</span>
+              <span style="color: #6A6A72; font-variant-numeric: tabular-nums;">99.98</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; color: #111114;"><span style="display: block; width: 9px; height: 9px; background: #B0553A; border: 1px solid #111114;"></span>billing-sync</span>
+              <span style="color: #B0553A;">degraded</span>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="display: inline-flex; align-items: center; gap: 9px; color: #111114;"><span style="display: block; width: 9px; height: 9px; background: #0E8C7A; border: 1px solid #111114;"></span>warehouse-etl</span>
+              <span style="color: #6A6A72; font-variant-numeric: tabular-nums;">99.95</span>
+            </div>
+          </div>
+          <div style="margin-top: 22px; padding-top: 18px; border-top: 2px solid #111114;">
+            <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 600; font-size: 13px; color: #6A6A72; margin-bottom: 8px;">Deploys today</div>
+            <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 110, 'wght' 800; font-size: 30px; color: #111114; line-height: 1; font-variant-numeric: tabular-nums;">[17]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 11px; font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 14px; color: #6A6A72;">Illustrative product view &mdash; swap for a real screenshot once [client] clears it.</div>
+  </div>
+
+  <div style="position: relative; z-index: 2; margin-top: 52px; padding: 14px 0; border-top: 2px solid #111114; border-bottom: 2px solid #111114; background: {{accent3}}; overflow: hidden;">
+    <div class="kn-track" style="display: flex; gap: 40px; white-space: nowrap; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 108, 'wght' 600; font-size: 15px; color: #111114; width: max-content;">
+      <span>Cloud platforms</span><span>&#8212;</span><span>Data pipelines</span><span>&#8212;</span><span>Applied AI</span><span>&#8212;</span><span>Managed operations</span><span>&#8212;</span><span>Platform migration</span><span>&#8212;</span>
+      <span>Cloud platforms</span><span>&#8212;</span><span>Data pipelines</span><span>&#8212;</span><span>Applied AI</span><span>&#8212;</span><span>Managed operations</span><span>&#8212;</span><span>Platform migration</span><span>&#8212;</span>
+    </div>
+  </div>
+
+  <div style="position: relative; z-index: 2; padding: 56px 44px 0; display: grid; grid-template-columns: 640px 1fr; gap: 40px; align-items: center;">
+    <div style="position: relative; height: 340px; border: 2px solid #111114; background: repeating-linear-gradient(135deg, #EDE9E1 0px, #EDE9E1 12px, #E4E0D7 12px, #E4E0D7 24px); box-shadow: 12px 12px 0 {{accent2}}, 22px 26px 36px -16px rgba(17,17,20,.35); transform: rotate(-1deg); display: flex; align-items: center; justify-content: center;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 24px; border: 2px solid #111114; background: #FDFCF9; box-shadow: 4px 4px 0 #111114;">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#111114" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h1.2a1 1 0 0 0 .83-.45l.94-1.4A1 1 0 0 1 9.3 3.7h5.4a1 1 0 0 1 .83.45l.94 1.4A1 1 0 0 0 17.3 6h1.2A2.5 2.5 0 0 1 21 8.5v8A2.5 2.5 0 0 1 18.5 19h-13A2.5 2.5 0 0 1 3 16.5v-8Z"></path><circle cx="12" cy="12.2" r="3.6"></circle></svg>
+        <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 104, 'wght' 700; font-size: 13.5px; color: #111114;">PHOTO &mdash; the team at work</div>
+        <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 500; font-size: 12px; color: #6A6A72;">1280 &times; 680 &middot; drop in as team-01.jpg</div>
+      </div>
+    </div>
+
+    <div>
+      <h2 style="margin: 0 0 16px; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 112, 'wght' 800; font-size: 38px; line-height: 1.02; letter-spacing: -.03em; color: #111114;">Small team.<br>Big systems.</h2>
+      <p style="margin: 0 0 22px; font-family: 'Source Serif 4', Georgia, serif; font-size: 17px; line-height: 1.58; color: #3A3A40; max-width: 38ch;">[Two or three sentences about who i3Codex actually is &mdash; how the team is structured, what you refuse to do, why clients keep you on retainer.]</p>
+      <div style="display: flex; gap: 12px;">
+        <div style="flex-grow: 1; padding: 14px 14px; border: 2px solid #111114; background: {{accent}}; box-shadow: 4px 4px 0 #111114;">
+          <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 110, 'wght' 800; font-size: 26px; color: #111114; line-height: 1; font-variant-numeric: tabular-nums;">[12]</div>
+          <div style="margin-top: 5px; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 500; font-size: 12.5px; color: #111114;">engineers</div>
+        </div>
+        <div style="flex-grow: 1; padding: 14px 14px; border: 2px solid #111114; background: {{accent2}}; box-shadow: 4px 4px 0 #111114;">
+          <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 110, 'wght' 800; font-size: 26px; color: #111114; line-height: 1; font-variant-numeric: tabular-nums;">[8]</div>
+          <div style="margin-top: 5px; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 500; font-size: 12.5px; color: #111114;">years</div>
+        </div>
+        <div style="flex-grow: 1; padding: 14px 14px; border: 2px solid #111114; background: {{accent3}}; box-shadow: 4px 4px 0 #111114;">
+          <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 110, 'wght' 800; font-size: 26px; color: #111114; line-height: 1; font-variant-numeric: tabular-nums;">[40]+</div>
+          <div style="margin-top: 5px; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 500; font-size: 12.5px; color: #111114;">platforms</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; z-index: 2; padding: 62px 44px 0;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 30px;">
+      <h2 style="margin: 0; font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 112, 'wght' 800; font-size: 40px; letter-spacing: -.028em; color: #111114;">What we take off your plate</h2>
+      <span style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: 15px; color: #6A6A72;">Click a card &mdash; the page answers</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;">
+      <div class="kn-card" onClick="{{ pick0 }}" style="padding: 24px 22px 22px; border: 2px solid #111114; background: {{cg0}}; transform: perspective(1200px) rotateX(5deg) rotateY(-6deg); box-shadow: {{cs0}};">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px;">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 2px solid #111114; background: {{accent}}; color: #111114; box-shadow: 3px 3px 0 #111114;">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.2 9.4 4.3 4.3 0 0 0 7 18h10.5Z"></path></svg>
+          </span>
+          <span class="kn-arrow" style="color: #111114;">
+            <svg width="21" height="21" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14 14 6M8 6h6v6"></path></svg>
+          </span>
+        </div>
+        <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 106, 'wght' 750; font-size: 22px; letter-spacing: -.02em; color: #111114; margin-bottom: 9px;">Cloud platforms</div>
+        <div style="font-family: 'Source Serif 4', Georgia, serif; font-size: 15.5px; line-height: 1.56; color: #3A3A40;">Landing zones, Kubernetes and the release pipeline &mdash; built so deploys stop being an event.</div>
+      </div>
+
+      <div class="kn-card" onClick="{{ pick1 }}" style="padding: 24px 22px 22px; border: 2px solid #111114; background: {{cg1}}; transform: perspective(1200px) rotateX(5deg) rotateY(0deg); box-shadow: {{cs1}};">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px;">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 2px solid #111114; background: {{accent2}}; color: #111114; box-shadow: 3px 3px 0 #111114;">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7.5" ry="3"></ellipse><path d="M4.5 6v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3V6M4.5 12v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"></path></svg>
+          </span>
+          <span class="kn-arrow" style="color: #111114;">
+            <svg width="21" height="21" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14 14 6M8 6h6v6"></path></svg>
+          </span>
+        </div>
+        <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 106, 'wght' 750; font-size: 22px; letter-spacing: -.02em; color: #111114; margin-bottom: 9px;">Data &amp; analytics</div>
+        <div style="font-family: 'Source Serif 4', Georgia, serif; font-size: 15.5px; line-height: 1.56; color: #3A3A40;">Pipelines, warehouse and reporting your finance team will actually trust at month end.</div>
+      </div>
+
+      <div class="kn-card" onClick="{{ pick2 }}" style="padding: 24px 22px 22px; border: 2px solid #111114; background: {{cg2}}; transform: perspective(1200px) rotateX(5deg) rotateY(6deg); box-shadow: {{cs2}};">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px;">
+          <span style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 2px solid #111114; background: {{accent3}}; color: #111114; box-shadow: 3px 3px 0 #111114;">
+            <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"></rect><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"></path></svg>
+          </span>
+          <span class="kn-arrow" style="color: #111114;">
+            <svg width="21" height="21" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14 14 6M8 6h6v6"></path></svg>
+          </span>
+        </div>
+        <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 106, 'wght' 750; font-size: 22px; letter-spacing: -.02em; color: #111114; margin-bottom: 9px;">Applied AI</div>
+        <div style="font-family: 'Source Serif 4', Georgia, serif; font-size: 15.5px; line-height: 1.56; color: #3A3A40;">One expensive workflow at a time, with the evaluation harness built before the rollout.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative; z-index: 2; margin: 56px 44px 0; padding: 28px 30px; border: 2px solid #111114; background: #FFFFFF; box-shadow: 8px 8px 0 #111114;">
+    <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 600; font-size: 13px; color: #6A6A72; margin-bottom: 20px;">Direction C &mdash; the type system</div>
+    <div style="display: grid; grid-template-columns: 1fr 280px; gap: 42px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 11px;">
+        <div style="display: flex; align-items: baseline; gap: 18px;">
+          <span style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 118, 'wght' 850; font-size: 34px; letter-spacing: -.03em; color: #111114;">Archivo Expanded</span>
+          <span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; color: #3A3A40;">Source Serif 4</span>
+        </div>
+        <div style="font-family: 'Archivo', system-ui, sans-serif; font-variation-settings: 'wdth' 100, 'wght' 500; font-size: 13px; color: #6A6A72;">Display 76 / 0.96 at wdth 116 &nbsp;&middot;&nbsp; Body 18.5 / 1.60 serif &nbsp;&middot;&nbsp; measure 46ch &nbsp;&middot;&nbsp; rules 2px</div>
+        <div style="font-family: 'Source Serif 4', Georgia, serif; font-size: 15.5px; line-height: 1.58; color: #3A3A40; max-width: 62ch;">A heavy expanded grotesque shouting against a quiet reading serif &mdash; poster logic, not landing-page logic. Depth is physical: stepped type extrusion, hard offset blocks paired with a real cast shadow, and cards sitting in perspective above the page.</div>
+      </div>
+      <div style="display: flex; gap: 8px;">
+        <div class="kn-swatch" style="flex-grow: 1; height: 72px; background: #F7F4EE; border: 2px solid #111114;"></div>
+        <div class="kn-swatch" style="flex-grow: 1; height: 72px; background: {{accent}}; border: 2px solid #111114;"></div>
+        <div class="kn-swatch" style="flex-grow: 1; height: 72px; background: {{accent2}}; border: 2px solid #111114;"></div>
+        <div class="kn-swatch" style="flex-grow: 1; height: 72px; background: {{accent3}}; border: 2px solid #111114;"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#5CD8E8","options":["#5CD8E8","#9DB4F5","#E9A6D8","#F5D97A"],"section":"Brand"},"$preview":{"width":1200,"height":2180}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { active: 0 };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#5CD8E8';
+    const a = this.state.active;
+    const out = {
+      accent: accent,
+      accent2: 'oklch(0.78 0.13 262)',
+      accent3: 'oklch(0.78 0.13 320)'
+    };
+    const fills = [accent, 'oklch(0.78 0.13 262)', 'oklch(0.78 0.13 320)'];
+    for (let i = 0; i < 3; i++) {
+      const on = i === a;
+      out['cg' + i] = on ? fills[i] : '#FFFFFF';
+      out['cs' + i] = on
+        ? '10px 10px 0 #111114, 20px 24px 32px -14px rgba(17,17,20,.45)'
+        : '5px 5px 0 #111114, 12px 16px 22px -12px rgba(17,17,20,.3)';
+      out['pick' + i] = () => this.setState({ active: i });
+    }
+    return out;
+  }
+}
+</script>
+</body>
+</html>

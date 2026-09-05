@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: OmniPay Global &mdash; i3Codex</title>
+  <meta name="description" content="How i3Codex engineered OmniPay's cross-platform mobile apps, Next.js web portal, GitOps DevOps, AI fraud detection, and audited smart contracts.">
+  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="site-container site-header-inner">
+      <div style="display: flex; align-items: center; gap: 42px;">
+        <a href="./index.html" class="brand-logo" aria-label="i3Codex Home">
+          <div class="brand-logo-pill">
+            <img src="./logo.png" alt="i3Codex" class="brand-logo-img">
+          </div>
+        </a>
+        <nav aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <li><a href="./services.html" class="nav-link">Services</a></li>
+            <li><a href="./case-study.html" class="nav-link active">Work</a></li>
+            <li><a href="./about.html" class="nav-link">Company</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nav-actions">
+        <span class="lang-badge">EN</span>
+        <button type="button" class="btn btn-sm btn-primary" data-open-modal="review">Start a Project</button>
+        <button type="button" class="mobile-menu-btn" id="mobile-nav-toggle" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-drawer-content">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid var(--color-hairline);">
+        <a href="./index.html" class="brand-logo" aria-label="i3Codex Home">
+          <div class="brand-logo-pill" style="padding: 4px 12px;">
+            <img src="./logo.png" alt="i3Codex" class="brand-logo-img" style="height: 18px;">
+          </div>
+        </a>
+        <button type="button" class="modal-close-btn" id="mobile-drawer-close" aria-label="Close menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <ul class="mobile-drawer-links">
+        <li><a href="./index.html" class="mobile-drawer-link">Home</a></li>
+        <li><a href="./services.html" class="mobile-drawer-link">Services</a></li>
+        <li><a href="./case-study.html" class="mobile-drawer-link">Work &amp; Case Studies</a></li>
+        <li><a href="./about.html" class="mobile-drawer-link">Company &amp; Team</a></li>
+        <li><a href="./contact.html" class="mobile-drawer-link">Contact</a></li>
+      </ul>
+      <div style="margin-top: auto;">
+        <button type="button" class="btn btn-lg btn-primary" style="width: 100%;" data-open-modal="review">Start a Project</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Case Study Header -->
+    <section class="hero-section" style="padding-bottom: 40px;">
+      <div class="site-container">
+        <div style="display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 12px; color: var(--color-muted); margin-bottom: 30px;">
+          <a href="./case-study.html" style="color: var(--color-accent); text-decoration: none;">work</a>
+          <span>/</span>
+          <span style="color: var(--color-ink);">omnipay-fintech</span>
+        </div>
+
+        <div class="case-hero-grid">
+          <div>
+            <div style="font-size: 14.5px; color: var(--color-subtle); margin-bottom: 14px;">OmniPay Global &mdash; cross-platform fintech, United States</div>
+            <h1>
+              From mobile apps to AI fraud defense &amp; Web3 settlement.
+            </h1>
+          </div>
+
+          <div style="display: flex; flex-direction: column;">
+            <div style="display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid var(--color-hairline); font-size: 14.5px;">
+              <span class="mono" style="font-size: 12px; color: var(--color-muted);">scope</span>
+              <span style="color: var(--color-body);">Mobile apps, Web portal, DevOps, AI fraud engine, Smart contracts</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid var(--color-hairline); font-size: 14.5px;">
+              <span class="mono" style="font-size: 12px; color: var(--color-muted);">duration</span>
+              <span style="color: var(--color-body);">16 weeks to unified production launch</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid var(--color-hairline); font-size: 14.5px;">
+              <span class="mono" style="font-size: 12px; color: var(--color-muted);">team</span>
+              <span style="color: var(--color-body);">5 domain engineers + 1 principal architect</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid var(--color-hairline); border-bottom: 1px solid var(--color-hairline); font-size: 14.5px;">
+              <span class="mono" style="font-size: 12px; color: var(--color-muted);">stack</span>
+              <span style="color: var(--color-body);">Flutter, Next.js, Kubernetes, PyTorch, Solidity, Zero-Trust</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Image Slot -->
+    <section class="site-container" style="margin-bottom: 60px;">
+      <div class="photo-slot" style="height: 480px;">
+        <img src="./assets/images/case-hero.jpg" alt="Production hardware, mobile testing stations, and cloud telemetry infrastructure for OmniPay Global" loading="lazy">
+        <div class="photo-caption-tag">
+          production environment &middot; mobile device lab &amp; multi-region cloud
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Numerical Results Strip -->
+    <section class="site-container">
+      <div class="proof-grid" style="margin-top: 0; margin-bottom: 60px;">
+        <div class="proof-card">
+          <div class="proof-idx">metric/01 &mdash; reliability</div>
+          <div class="tabular-figure" style="font-size: 40px; margin-bottom: 8px;">99.99%</div>
+          <p style="font-size: 14.5px; line-height: 1.58; margin: 0;">
+            Zero downtime sustained across 18M+ mobile &amp; web transactions on Black Friday.
+          </p>
+        </div>
+        <div class="proof-card">
+          <div class="proof-idx">metric/02 &mdash; speed</div>
+          <div class="tabular-figure" style="font-size: 40px; margin-bottom: 8px;">62 ms</div>
+          <p style="font-size: 14.5px; line-height: 1.58; margin: 0;">
+            p95 checkout endpoint latency, reduced from 940ms through edge caching &amp; async queueing.
+          </p>
+        </div>
+        <div class="proof-card">
+          <div class="proof-idx">metric/03 &mdash; ai fraud precision</div>
+          <div class="tabular-figure" style="font-size: 40px; margin-bottom: 8px;">0.001%</div>
+          <p style="font-size: 14.5px; line-height: 1.58; margin: 0;">
+            Fraud loss rate achieved by custom PyTorch inference model vs 1.8% industry baseline.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Narrative Section: The Problem, The Architecture, The Outcome -->
+    <section class="site-container" style="padding-bottom: 60px;">
+      <div class="case-body-grid">
+        <div>
+          <h2>The Challenge</h2>
+          <p style="font-size: 17px; line-height: 1.7; margin-bottom: 24px;">
+            OmniPay was operating with fragmented engineering silos: disparate native iOS and Android codebases that lagged each other by months, a legacy web portal suffering high user drop-off, and fragile backend scripts that crashed under traffic spikes.
+          </p>
+          <p style="font-size: 17px; line-height: 1.7; margin-bottom: 40px;">
+            Compounding the challenge, rising fraud attacks were draining merchant trust, and impending enterprise contracts required stringent SOC2 compliance and automated Web3 escrow settlement for international accounts. They needed an all-in-one engineering partner capable of unifying mobile, web, cloud, AI, and security without pausing live transactions.
+          </p>
+
+          <h2>What We Built</h2>
+          <p style="font-size: 17px; line-height: 1.7; margin-bottom: 24px;">
+            i3Codex deployed an integrated squad spanning mobile developers, cloud architects, AI researchers, and security auditors. We delivered five synchronized systems over a 16-week sprint:
+          </p>
+
+          <div class="card" style="padding: 28px; margin: 28px 0; background: var(--color-surface);">
+            <div class="mono" style="font-size: 12px; color: var(--color-technical); margin-bottom: 12px;">integrated system architecture &mdash; before &amp; after</div>
+            <div class="case-shift-grid">
+              <div>
+                <div style="font-weight: 600; color: var(--color-chart-alert); margin-bottom: 8px;">Before (Fragmented Silos)</div>
+                <div style="font-size: 14px; color: var(--color-body); line-height: 1.6;">
+                  Separate iOS/Android codebases &bull; Monolithic web portal &bull; Manual cloud provisioning &bull; Rule-based fraud detection &bull; Latency 940ms &amp; high chargebacks
+                </div>
+              </div>
+              <div>
+                <div style="font-weight: 600; color: var(--color-chart-good); margin-bottom: 8px;">After (Unified OmniPay Stack)</div>
+                <div style="font-size: 14px; color: var(--color-body); line-height: 1.6;">
+                  Unified Flutter/Next.js frontend &bull; GitOps Kubernetes &bull; Sub-18ms PyTorch fraud inference &bull; Audited Solidity escrow &bull; 62ms p95 latency
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 32px;">
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <span class="badge badge-accent mono" style="margin-top: 2px;">01</span>
+              <div>
+                <h4 style="margin-bottom: 4px;">Cross-Platform Mobile App (iOS &amp; Android)</h4>
+                <p style="font-size: 15.5px; line-height: 1.6; color: var(--color-body); margin: 0;">
+                  Engineered with Flutter and native Swift bridges, featuring 60fps biometric checkout, local offline SQLite reconciliation, and automated TestFlight / Google Play deployment pipelines.
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <span class="badge badge-accent mono" style="margin-top: 2px;">02</span>
+              <div>
+                <h4 style="margin-bottom: 4px;">High-Performance Next.js Web Portal</h4>
+                <p style="font-size: 15.5px; line-height: 1.6; color: var(--color-body); margin: 0;">
+                  Built an ultra-fast merchant dashboard with server-side rendering, sub-second TTFB, and tokenized design systems achieving a 99/100 Lighthouse performance score.
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <span class="badge badge-accent mono" style="margin-top: 2px;">03</span>
+              <div>
+                <h4 style="margin-bottom: 4px;">DevOps, Kubernetes &amp; Multi-Region Cloud</h4>
+                <p style="font-size: 15.5px; line-height: 1.6; color: var(--color-body); margin: 0;">
+                  Architected Terraform-managed multi-region AWS EKS clusters with ArgoCD GitOps, automated canary deployments, and Prometheus/Grafana monitoring sustaining 99.99% availability.
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <span class="badge badge-accent mono" style="margin-top: 2px;">04</span>
+              <div>
+                <h4 style="margin-bottom: 4px;">AI-Powered Real-Time Fraud Detection Engine</h4>
+                <p style="font-size: 15.5px; line-height: 1.6; color: var(--color-body); margin: 0;">
+                  Trained and deployed a low-latency neural model that evaluates 120+ transaction signals in under 18ms, preventing unauthorized transactions while maintaining zero false declines for verified users.
+                </p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: flex-start;">
+              <span class="badge badge-accent mono" style="margin-top: 2px;">05</span>
+              <div>
+                <h4 style="margin-bottom: 4px;">Web3 Smart Contract Escrow &amp; DevSecOps Audit</h4>
+                <p style="font-size: 15.5px; line-height: 1.6; color: var(--color-body); margin: 0;">
+                  Authored gas-optimized Solidity smart contracts for decentralized cross-border settlements with multi-sig governance, while hardening the infrastructure to pass SOC2 Type II audit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" style="margin-top: 36px;">
+            <p class="font-voice" style="font-size: 21px; line-height: 1.48; color: var(--color-ink); margin-bottom: 16px;">
+              &ldquo;i3Codex delivered our entire mobile application, web dashboard, and AI fraud engine in 16 weeks without a single missed milestone. Their full-stack breadth across mobile, cloud, AI, and cybersecurity is unmatched.&rdquo;
+            </p>
+            <div style="font-size: 14px; font-weight: 600; color: var(--color-ink);">Rachel Stern, Chief Technology Officer, OmniPay</div>
+          </div>
+        </div>
+
+        <!-- Sidebar: Related Practice & Next Case -->
+        <div>
+          <div class="card" style="padding: 24px; margin-bottom: 24px;">
+            <div class="mono" style="font-size: 11.5px; color: var(--color-muted); margin-bottom: 12px;">practices involved</div>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <a href="./services.html#mobile" style="color: var(--color-ink); text-decoration: none; font-size: 14.5px; font-weight: 500;">
+                &rarr; Mobile App Development
+              </a>
+              <a href="./services.html#web" style="color: var(--color-ink); text-decoration: none; font-size: 14.5px; font-weight: 500;">
+                &rarr; Web &amp; SaaS Development
+              </a>
+              <a href="./services.html#devops" style="color: var(--color-ink); text-decoration: none; font-size: 14.5px; font-weight: 500;">
+                &rarr; DevOps &amp; Kubernetes
+              </a>
+              <a href="./services.html#ai" style="color: var(--color-ink); text-decoration: none; font-size: 14.5px; font-weight: 500;">
+                &rarr; AI &amp; Machine Learning
+              </a>
+              <a href="./services.html#blockchain" style="color: var(--color-ink); text-decoration: none; font-size: 14.5px; font-weight: 500;">
+                &rarr; Blockchain &amp; Web3
+              </a>
+              <a href="./services.html#security" style="color: var(--color-ink); text-decoration: none; font-size: 14.5px; font-weight: 500;">
+                &rarr; Cybersecurity &amp; DevSecOps
+              </a>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 24px;">
+            <div class="mono" style="font-size: 11.5px; color: var(--color-muted); margin-bottom: 12px;">more work</div>
+            <h4 style="margin-bottom: 8px;">Autonomous AI Document Extraction</h4>
+            <p style="font-size: 13.5px; line-height: 1.5; color: var(--color-body); margin-bottom: 14px;">
+              How our applied AI squad engineered automated multi-modal parsing across 250k legal contracts with 99.4% citation accuracy.
+            </p>
+            <button type="button" class="btn btn-sm btn-secondary" data-open-modal="review">Inquire about case study</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Review CTA Strip -->
+    <section class="cta-strip">
+      <div class="site-container cta-grid">
+        <div>
+          <h2>Build your next flagship platform with i3Codex.</h2>
+          <p class="lead" style="margin-bottom: 0;">
+            A 45-minute technical session directly with a senior engineering lead. We evaluate your requirements and provide an actionable blueprint.
+          </p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <button type="button" class="btn btn-lg btn-primary" data-open-modal="review">Start a Project</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-columns">
+        <div>
+          <a href="./index.html" class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-logo-pill" style="padding: 7px 16px;">
+              <img src="./logo.png" alt="i3Codex" class="brand-logo-img" style="height: 24px;">
+            </div>
+          </a>
+          <p style="font-size: 14.5px; color: var(--color-subtle); max-width: 32ch; line-height: 1.6;">
+            End-to-end mobile apps, modern web platforms, cloud DevOps, applied AI, smart contracts, and cybersecurity engineering.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>services</h5>
+          <ul class="footer-links">
+            <li><a href="./services.html#mobile" class="footer-link">Mobile App Dev</a></li>
+            <li><a href="./services.html#web" class="footer-link">Web Apps &amp; SaaS</a></li>
+            <li><a href="./services.html#devops" class="footer-link">DevOps &amp; Cloud</a></li>
+            <li><a href="./services.html#ai" class="footer-link">AI &amp; Machine Learning</a></li>
+            <li><a href="./services.html#blockchain" class="footer-link">Blockchain &amp; Web3</a></li>
+            <li><a href="./services.html#security" class="footer-link">Cybersecurity</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>company</h5>
+          <ul class="footer-links">
+            <li><a href="./about.html" class="footer-link">About</a></li>
+            <li><a href="./case-study.html" class="footer-link">Work &amp; Case Studies</a></li>
+            <li><a href="./about.html#careers" class="footer-link">Careers</a></li>
+            <li><a href="./contact.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>direct contact</h5>
+          <ul class="footer-links">
+            <li class="mono" style="font-size: 13.5px; color: var(--color-body);">hello@i3codex.com</li>
+            <li class="mono" style="font-size: 13.5px; color: var(--color-body);">+1 (415) 890-4321</li>
+            <li style="font-size: 13.5px; color: var(--color-subtle); line-height: 1.5;">240 2nd Street<br>San Francisco, CA</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 i3Codex Systems Inc. All rights reserved.</span>
+        <div style="display: flex; gap: 24px;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Security Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Book a Review Modal Dialog -->
+  <div class="modal-backdrop" id="review-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" data-close-modal aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+        <div class="brand-logo-pill" style="padding: 4px 10px;">
+          <img src="./logo.png" alt="i3Codex" class="brand-logo-img" style="height: 16px;">
+        </div>
+        <span class="mono" style="font-size: 11.5px; color: var(--color-muted);">// direct technical consultation</span>
+      </div>
+
+      <div class="eyebrow" style="margin-bottom: 12px;">
+        <span class="eyebrow-line"></span>
+        Direct with a Senior Engineer
+      </div>
+
+      <h2 id="modal-title" style="margin-bottom: 10px;">Start a project with i3Codex</h2>
+      <p style="font-size: 15px; color: var(--color-subtle); margin-bottom: 24px;">
+        45 minutes. No sales pitch, no deck. Discuss your product specs directly with a principal engineer.
+      </p>
+
+      <form id="review-booking-form">
+        <div class="form-group">
+          <label class="form-label">What is your primary engineering domain?</label>
+          <div class="chips-group">
+            <span class="chip active" data-chip="mobile">Mobile App</span>
+            <span class="chip" data-chip="web">Web Application</span>
+            <span class="chip" data-chip="devops">DevOps &amp; Cloud</span>
+            <span class="chip" data-chip="ai">AI / ML Solutions</span>
+            <span class="chip" data-chip="blockchain">Blockchain &amp; Web3</span>
+            <span class="chip" data-chip="security">Cybersecurity</span>
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label for="review-name" class="form-label">Your Name</label>
+            <input type="text" id="review-name" class="form-input" placeholder="Alex Rivers" required>
+          </div>
+          <div class="form-group">
+            <label for="review-email" class="form-label">Work Email</label>
+            <input type="email" id="review-email" class="form-input" placeholder="alex@company.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="review-notes" class="form-label">Brief project goals or challenges</label>
+          <textarea id="review-notes" class="form-textarea" placeholder="e.g. Building an iOS/Android fintech app with automated Kubernetes backend and biometric security..."></textarea>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 28px;">
+          <span style="font-family: var(--font-mono); font-size: 11.5px; color: var(--color-muted);">// no NDAs required to talk</span>
+          <button type="submit" class="btn btn-md btn-primary">Confirm 45-min Session</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
